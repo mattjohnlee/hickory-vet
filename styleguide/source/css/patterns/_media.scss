@@ -20,10 +20,6 @@ figure {
     @include small;
     color: $caption-color;
     margin-top: .5em;
-
-    @include breakpoint($m) {
-    	padding-right: 36%;
-    }
   }
 }
 

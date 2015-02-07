@@ -9,44 +9,12 @@ table.responsive {
 	margin: 2em 0;
 
 	th {
-		padding-right: 3em !important;
 		color: $heading-color; 
 		cursor: pointer;
 		@include font-bold;
 		vertical-align: top;
-
-		&:hover {
-			color: $orange;
-		}
-
-		&:after {
-			font-family: "FontAwesome";
-			margin-left: .5em;
-			display: inline;
-			position: absolute;
-			content: "\f0dc";
-			font-size: .8em;
-			margin-top: .1em;
-		}
-
-		&.headerSortDown {
-			&:after {
-				content: "\f0de";
-				margin-top: .3em;
-			}
-		}
-
-		&.headerSortUp {
-			&:after {
-				content: "\f0dd";
-				margin-top: -.15em;
-			}
-		}
-
-		.tablesorter-header-inner {
-			display: inline;
-		}
 	}
+
 	tbody {
 		tr {
 			border-bottom: 1px solid $border-color;
@@ -61,18 +29,6 @@ table.responsive {
 
 		&:last-child {
 			padding-right: 0;
-		}
-	}
-
-	.pub-name {
-		width: 60%;
-	}
-
-	.cover {
-		width: 10%;
-
-		img {
-			max-width: 120px;
 		}
 	}
 }
@@ -94,23 +50,7 @@ This query will take effect for any screen smaller than 1024px
 		}
 
 		thead {
-			&:before {
-				content: "Sort by: ";
-				display: block;
-			}
-
-			tr { 
-				margin: 1em 0;
-				overflow: hidden;
-			}
-
-			th {
-				padding: 1em 0;
-				border-top: 1px solid $link-color;
-				&:last-child {
-					border-bottom: 1px solid $link-color;
-				}
-			}
+			display: none;
 		}
 
 		tfoot {
@@ -147,91 +87,20 @@ This query will take effect for any screen smaller than 1024px
 			left: .7em;
 			width: 45%; 
 			@include font-bold;
-			color: $purple;
 			padding-right: 10px; 
 			white-space: nowrap;
 		}
 	}
 
-
-	/* styles specifically for #pub-list table */
-	table#pub-list {
-		td, td.pub-name { 
-			/* Behave  like a "row" */
-			border: none;
-			border-bottom: 1px solid $border-color;
-			position: relative;
-			float: left;
-			padding-right: 0;
-			padding-left: 0;
-			width: 70%;
-
-			&:last-child {
-				border-bottom: none;
-			}
-
-			&.cover {
-				float: right;
-				width: 20%;
-				border: none;
-				padding: 1em 0;
-
-				img {
-					max-width: 100%;
-					float: right;
-				}
-			}
-
-			&.pub-date:before, &.author:before {
-				position: relative;
-				top: auto;
-				left: auto;
-				width: auto;
-				text-transform: uppercase;
-				padding-right: 0;
-				@include font-bold;
-			}
-			&.pub-date:before {
-				content: "Published: ";
-			}
-			&.author:before {
-				content: "Author: ";
-			}
-		}
-	}
-
 	/* Label for data on specific tables */
 	#investment-list {
-		td:nth-of-type(1):before { content: "Enterprise Name"; }
-		td:nth-of-type(2):before { content: "Investment Type"; }
-		td:nth-of-type(3):before { content: "Vintage Year"; }
-		td:nth-of-type(4):before { content: "Investment Amount"; }
-		td:nth-of-type(5):before { content: "Enterprise Scale"; }
-		td:nth-of-type(6):before { content: "Financial Tool"; }
-		td:nth-of-type(7):before { content: "Tax Status"; }
+		td:nth-of-type(1):before { content: "Value"; }
+		td:nth-of-type(2):before { content: "Value"; }
+		td:nth-of-type(3):before { content: "Value"; }
+		td:nth-of-type(4):before { content: "Value"; }
+		td:nth-of-type(5):before { content: "Value"; }
+		td:nth-of-type(6):before { content: "Value"; }
+		td:nth-of-type(7):before { content: "Value"; }
 	}
 }
 
-
-/* this query will take effect for any screen smaller than 600px */
-
-@media only screen and (max-width: 699px)  {
-
-	/* styles specifically for #pub-list table */
-	table#pub-list {
-		td, td.pub-name {
-			width: 55%;
-		}
-
-		td.cover {
-			width: 40%;
-		}
-	}
-
-	/* styles specifically for #investment-list table */
-	table#investment-list {
-		td {
-			padding-left: 60%;
-		}
-	}
-}

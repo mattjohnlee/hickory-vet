@@ -4,12 +4,15 @@ Color values
 ////////////////////////////////////////////////////////////////////////////
 */
 
-$purple: rgb(118,126,210);
-$orange: rgb(255,128,0);
-$green: rgb(127,196,44);
-$blue: rgb(5,174,191);
 
-$gray: rgb(128,133,135);
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Gray values
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$gray: #666666;
 $gray-light-1: tint($gray, 10%);
 $gray-light-2: tint($gray, 20%);
 $gray-light-3: tint($gray, 30%);
@@ -29,14 +32,14 @@ Standard applications of color variables
 */
 
 $text-color: black; 
-$text-color-subtle: $gray-light-1; 
-$heading-color: $purple;
-$caption-color: $gray-light-2;
+$text-color-subtle: lighten($text-color, 75%); 
+$heading-color: black;
+$caption-color: $gray-light-4;
 
-$link-color: $purple;
-$link-color-hover: $orange;
+$link-color: blue;
+$link-color-hover: green;
 
-$selection-bg-color: transparentize($green, .5);
+$selection-bg-color: transparentize($link-color, .75);
 $selection-text-color: $text-color;
 
 $error: red;
@@ -48,8 +51,8 @@ $grid-border: 1px solid $gray-light-6;
 $background-color: #fff;
 $background-color-subtle: #eee;
 
-$footer-background-color: $purple;
-$footer-text-color: white;
+$footer-background-color: $gray-light-9;
+$footer-text-color: $text-color;
 
 
 
@@ -80,42 +83,42 @@ $display: $sans;
 
 
 @mixin font-regular { 
-	font-family: 'Guardian TextSans Web', $sans;
+	font-family: 'CustomFont', $sans;
 	font-weight:  400;
 	font-style:   normal;
 	font-stretch: normal;
 }
 
 @mixin font-bold { 
-  font-family: 'Guardian TextSans Web', $sans;
+  font-family: 'CustomFont', $sans;
   font-weight:  700;
   font-style:   normal;
   font-stretch: normal;
 }
 
 @mixin font-italic { 
-  font-family: 'Guardian TextSans Web', $sans;
+  font-family: 'CustomFont', $sans;
   font-weight:  400;
   font-style:   italic;
   font-stretch: normal;
 }
 
 @mixin font-bolditalic { 
-  font-family: 'Guardian TextSans Web', $sans;
+  font-family: 'CustomFont', $sans;
   font-weight:  700;
   font-style:   italic;
   font-stretch: normal;
 }
 
 @mixin font-display { 
-  font-family: 'Guardian Sans Web', $sans;
+  font-family: 'CustomFont', $sans;
   font-weight:  300;
   font-style:   normal;
   font-stretch: normal;
 }
 
 @mixin font-displayitalic { 
-  font-family: 'Guardian Sans Web', $sans;
+  font-family: 'CustomFont', $sans;
   font-weight:  300;
   font-style:   italic;
   font-stretch: normal;

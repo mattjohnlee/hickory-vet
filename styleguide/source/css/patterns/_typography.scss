@@ -7,20 +7,14 @@ Headings
 
 h1 {
   @include heading-1;
-  @include caps;
-  color: $orange;
-  font-weight: 200;
 }
 
 h2 {
   @include heading-2;
-  font-weight: 200;
 }
 
 h3 {
   @include heading-3;
-  @include font-bold;
-  color: $orange;
 }
 
 h4 {
@@ -70,7 +64,6 @@ dl {
   @include clearfix;
 
   dt {
-    color: $orange;
     @include li;
     float: left;
     clear: left;
@@ -87,7 +80,6 @@ dl {
 }
 
 blockquote {
-  color: $orange;
   margin: 2em 0;
 
   p {

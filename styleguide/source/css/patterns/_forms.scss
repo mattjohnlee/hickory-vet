@@ -48,14 +48,14 @@ textarea {
   margin-right: 0;
   margin: 0;
   width: 100%;
-  border: none;
+  border: 1px solid $border-color;
   @include border-radius(0);
   outline: none;
-  background: $gray-light-8; 
+  background: white; 
   @include animate;
 
   &:focus {
-    background: lighten($purple, 30%); 
+    border: 1px solid darken($border-color, 30%);
   }
 }
 textarea {
@@ -73,71 +73,42 @@ form {
 }
 
 label {
-  /* uncomment if you want to style the label, but since I'm hiding it, styles are kinda pointless
-    @include paragraph;
+  @include paragraph;
   @include small;
   display: block;
   color: $text-color-subtle;
   margin: 1.25rem 0 .25rem;
-  */
 
-  /* to make hiding optional, wrap these styles in class "hide" */
+  /* if you want to hide labels semantically 
   position: absolute;
   height: 0;
   overflow: hidden;
-
+*/
 }
 
 select, input[type="select"] {
+  /*
   @include appearance(none);
-  color: $purple;
   font-size: 1rem;
   outline: none;
-  padding: .65em 40px .65em 0; /* .625em instead of .75em because the font-size is 1rem instead of @include small */
-  background: url(../img/select-arrow.svg) 90% 50% no-repeat;
+  padding: .65em 40px .65em 0; 
   position: relative;
   @include border-radius(0);
   border: none;
-  @-moz-document url-prefix() { 
-      background-image: none; /* since you can't make the browser UI arrow disappear in FF */
-      padding: .5em 40px .5em 0; 
-      border: 1px solid $border-color;
-  }
 
   &:active, &:focus {
-    @include font-regular; /* otherwise, the font size jumps around on focus */
+    @include font-regular;
   } 
+  */
 }
 
-.ie select, .ie input[type="select"] {
-      background-image: none; /* since you can't make the browser UI arrow disappear in IE */
-}
 
 .form-group {
-  position: relative;
-
-  button {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: 0;
-  }
 }
 
-
-.field-container, .form-item { /* .form-item is the class added in Drupal forms */
-  margin-bottom: 1em;
+.field-container { 
 }
 
-.inline {
-  .field-container, .form-item {
-    margin-bottom: 0;
-  }  
-  fieldset {
-    margin-bottom: 1em;
-  }
-}
 
 /* set input placeholder color to text color */
 

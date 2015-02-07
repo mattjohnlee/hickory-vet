@@ -20,39 +20,25 @@
 /* reusable patterns: typography levels, images, figures, tags, social media icons, notifications, etc. */
 @import "patterns/animations";
 @import "patterns/breadcrumbs";
-@import "patterns/comments";
 @import "patterns/forms";
-@import "patterns/filtering";
 @import "patterns/links";
 @import "patterns/media";
-@import "patterns/metadata";
 @import "patterns/navigation";
 @import "patterns/notifications";
 @import "patterns/pagination";
 @import "patterns/social-media";
 @import "patterns/tables";
 @import "patterns/tags";
-@import "patterns/twitter";
 @import "patterns/typography";
 
 /* page layouts */
 @import "layout/global";
 @import "layout/header";
 @import "layout/footer";
-@import "layout/sidebar-articles";
-@import "layout/blog";
-@import "layout/concepts";
-@import "layout/publications";
-@import "layout/team";
-@import "layout/careers";
-@import "layout/timeline";
 
 /* individual components, usually from Bower*/
-//@import "plugins/font-awesome-full"; /* only use this if you need the full FontAwesome set */
-@import "plugins/font-awesome-subset"; /* subset is WAY smaller */
-@import "plugins/multitoggle";
-@import "plugins/owl-carousel-base";
-@import "plugins/owl-carousel-theme";
+// @import "plugins/owl-carousel-base";
+// @import "plugins/owl-carousel-theme";
 
 /* styles for print and old ie */
 @import "print";

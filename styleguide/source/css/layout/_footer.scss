@@ -1,8 +1,6 @@
 footer {
-	position: relative;
 	@include clearfix;
 	clear: both;
-	width: 100%;
 	padding: $section-spacing 0 0 0; 
 	background-color: $footer-background-color;
 	color: $footer-text-color;
@@ -21,90 +19,50 @@ footer {
 	}
 
 	.footer-logo {
-		@include breakpoint($m) {
-			@include column(6);
-		}
-		@include breakpoint($l) {
-			@include column(8);
-		}
 	}
 
 	.contact-info {
-		margin-bottom: $section-spacing;
-		@include breakpoint($m) {
-			@include column(3);
-			@include last;
-		}
-		@include breakpoint($l) {
-			@include column(2);
-			@include last;
-		}
 	}
 
 	.social-media {
-		margin-top: 2em;
-		overflow: hidden;
-		@include breakpoint($m) {
-			overflow: visible;
+	}
+}
+
+.backtotop {
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	margin: 2em 0 0;
+	clear: both;
+	text-align: center;
+
+	a {
+		color: $footer-background-color;
+		padding: 1.5em;
+		background-color: tint($footer-background-color, 65%);
+		display: block;
+		text-decoration: none;
+
+		&:hover, &:active {
+			background-color: white;
 		}
 
-		li {
-			margin: 0 1.5em 0 0;
-		}
-
-		a {
-			color: tint($footer-background-color, 65%);
-			border-color: tint($footer-background-color, 65%);
-
-			&:hover {
-				color: white;
-				border-color: white !important;
-			}			
+		i {
+			margin-right: 1em;
 		}
 	}
 
-	.backtotop {
-		text-transform: uppercase;
-		letter-spacing: .1em;
-		margin: 2em 0 0;
-		clear: both;
-		text-align: center;
-
-		a {
-			color: $footer-background-color;
-			padding: 1.5em;
-			background-color: tint($footer-background-color, 65%);
-			display: block;
-			text-decoration: none;
-
-			&:hover, &:active {
-				background-color: white;
-			}
-
-			i {
-				margin-right: 1em;
-			}
-		}
-
-		@include breakpoint($m) {
-			display: none;
-		}
+	@include breakpoint($m) {
+		display: none;
 	}
 }
 
 .nav-footer {
 	margin-bottom: $section-spacing;
-	@include breakpoint($m) {
-		@include column(3);
-	}
-	@include breakpoint($l) {
-		@include column(2);
-	}
 
 	li {
 		margin-bottom: 0;
 		@include small;
-		border-bottom: 1px solid tint($footer-background-color, 15%);
+		border-bottom: 1px solid $border-color;
 
 		&:last-child {
 			border: none;

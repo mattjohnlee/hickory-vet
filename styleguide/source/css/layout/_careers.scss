@@ -1,7 +1,0 @@
-.job-preview {
-	@include divider-bottom(1px, 1em, $border-color);
-
-	&:last-child {
-		border-bottom: none;
-	}
-}

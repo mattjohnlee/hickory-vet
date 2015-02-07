@@ -22,21 +22,13 @@ $xl: 1200px;
 */
 
 html {
-  height: 100%;
   font-size: 1em; /* change this for different breakpoints to make a responsive typographic scale */
 }
 
 body {
-  height: 100%;
   @include copy-face;
   color: $text-color;
   position: relative;
-  padding-top: 100px; /* offset for fixed header */
-  z-index: 1;
-
-  @include breakpoint($l) {
-    padding-top: 180px; /* offset for fixed header */
-  }
 }
 
 ::selection {
@@ -62,23 +54,6 @@ hr {
   border: none;
 }
 
-.hero {
-  @include column(12);
-}
-
-.teaser {
-  @include breakpoint($m) {
-    @include column(8);
-  }
-  @include breakpoint($l) {
-    padding-right: 2.5%; /* just to give the columns a little more breathing room at wider widths */   
-  }
-
-  @include breakpoint($xl) {
-    padding-right: 5%; /* just to give the columns a little more breathing room at wider widths */   
-  }
-}
-
 .primary {
   margin-bottom: $section-spacing;
   clear: both;
@@ -86,14 +61,6 @@ hr {
 
   @include breakpoint($m) {
     @include column(8);    
-  }
-
-  @include breakpoint($l) {
-    padding-right: 2.5%; /* just to give the columns a little more breathing room at wider widths */   
-  }
-
-  @include breakpoint($xl) {
-    padding-right: 5%; /* just to give the columns a little more breathing room at wider widths */   
   }
 
   ul, ol {
@@ -107,33 +74,9 @@ hr {
     list-style: decimal;
   }
 
-  ul:not(.stats) {
-    @include custom-bullets; 
-  }
-
   .twocolumn {
     @include breakpoint($m) {
       @include column-count(2);
-    }
-  }
-
-  blockquote {
-    border-top: 8px solid;
-    padding-top: 1em;
-    margin: 2em 1em;
-  
-    @include breakpoint($m) {
-      margin: .375em 2em 2em -2%;
-      float: left;
-      width: 50%;
-    }
-
-    @include breakpoint($l) {
-      width: 66.666%;
-    }
-
-    @include breakpoint($xl) {
-      margin-left: -5%;
     }
   }
 }
@@ -151,110 +94,4 @@ hr {
     @include last;    
     float: right;
   }
-}
-
-
-.stats {
-  list-style: none;
-  @include clearfix;
-
-  li {
-    @include breakpoint($s) {
-      @include column(6);
-      @include last-col2;
-    }
-    @include breakpoint($m) {
-      @include column(4);
-      @include last-col3;
-    }
-
-    strong {
-      display: block;
-      font-size: ms(3.25);
-      font-weight: 200;
-      @include divider-top(8px, .25em);
-    }
-
-    &:nth-child(1) {
-      strong {
-        color: $green;
-      }
-    }
-    &:nth-child(2) {
-      strong {
-        color: $orange;
-      }
-    }
-    &:nth-child(3) {
-      strong {
-        color: $blue;
-      }
-    }
-  }
-}
-
-.colored-bg {
-  @include colored-bg;
-
-  &.blue {
-    background: $blue;
-  }
-
-  &.purple {
-    background: $purple;
-  }
-
-  &.green {
-    background: $green;
-  }
-
-  &.orange {
-    background: $orange;
-  }
-
-  &.gray {
-    background: $gray;
-  }
-
-  &.swoosh {
-    background: #dfdfde url(../img/swoosh.svg) no-repeat center center;
-    background-size: cover;
-  }
-
-  .sidebar {
-    border-top: 1px solid white;
-    border-color: transparentize(white,.5);
-    padding: $grid_padding 0 0 0;
-
-    @include breakpoint($m) {
-      border-top: none;
-      border-left: 1px solid white;
-      border-color: transparentize(white,.5);
-      padding: 0 0 0 $grid_padding;
-    }
-  }
-
-  .floating-title {
-    float: left;
-    margin-top: .6rem;
-    max-width: calc(100% - 75px);
-    padding-right: 1rem;
-    @include box-sizing(border-box);
-  }
-
-  .comment-count-container {
-    float: left;
-    margin: 0 0 1em;
-  }
-
-  .post-body {
-    clear: left;
-  }
-}
-
-.swoosh-bg {
-  padding-top: $section-spacing;
-  margin-bottom: $section-spacing;
-  background: #dfdfde url(../img/swoosh.svg) no-repeat center center;
-  background-size: cover;
 }

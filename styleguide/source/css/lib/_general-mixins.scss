@@ -89,7 +89,6 @@
     &:before {
       content: "\2022";
       padding-right: .2em;
-      color: $orange;
     }
   }
 
@@ -104,20 +103,17 @@
 
 
 @mixin social-media-icons {
-  float: left;
-
   li {
-    //float: left;
     display: inline-block;
     font-size: 1.5em;
-    margin: 0 .25em .25em;
+    margin: 0 1em .25em 0;
 
     @include breakpoint($m) {
       font-size: 1.15em;
     }
 
     @include breakpoint($l) {
-      margin: 0 .75em .75em;
+      margin: 0 .75em .75em 0;
       font-size: 1.15em;
     }
 
@@ -137,94 +133,5 @@
         border-color: $link-color-hover;
       }
     }
-  }
-}
-
-
-@mixin gutterless-3col {
-  margin-bottom: 2em;
-
-  > * {
-    border-top: $grid-border;
-    padding: 2em 0;
-
-    > * {
-      margin-top: 0;
-    }
-
-    @include breakpoint($m) {
-      @include column(6);
-      width: 50%;
-      height: 25em;
-      overflow: hidden;
-      padding: 2em;
-      margin-right: 0;
-      border-top: none;
-      border-right: $grid-border;
-
-      &:nth-child(-n+2) {
-        padding-top: 0;
-      }
-
-      &:nth-child(n+3) {
-        border-top: $grid-border;
-      }
-
-      &:nth-child(2n+2) {
-        border-right: none;
-      }
-    }
-
-    @include breakpoint($l) {
-      @include column(4);
-      width: 33.333%;
-      padding: 2em;
-      margin-right: 0;
-      border-top: none;
-      border-right: $grid-border;
-
-      &:nth-child(-n+3) {
-        padding-top: 0;
-      }
-
-      &:nth-child(n+3) {
-        border-top: none;
-      }
-
-      &:nth-child(n+4) {
-        border-top: $grid-border;
-      }
-
-      &:nth-child(2n+2) {
-        border-right: $grid-border;
-      }
-
-      &:nth-child(3n+3) {
-        border-right: none;
-      }
-    }
-  }
-}
-
-
-@mixin colored-bg {
-  background: $gray;
-  padding-top: $section-spacing/2;
-  margin-bottom: $section-spacing;
-
-  @include breakpoint($m) {
-    padding-top: $section-spacing;
-  }
-
-  h1, h2, h3, h4, h5, h6, p, li, li:before {
-    color: white !important;
-  }
-
-  .comment-svg-art {
-    fill: white;
-  }
-
-  a {
-    @include link-colored-bg;
   }
 }

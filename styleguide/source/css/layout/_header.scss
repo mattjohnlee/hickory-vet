@@ -1,150 +1,26 @@
 header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%; 
-	z-index: 9999;
-    background: white;
-	border-top: 10px solid $purple;
-	border-bottom: 1px solid $border-color;
-	@include box-shadow(0 5px 10px rgba(125,125,125,.25));
-	@include animate;
-	//height: $header-short;
-	height: 100%;
-	max-height: $header-short - 10px; /* makes up for the 10px top border */
+	border-bottom: 1px solid black;
+}
 
-	&.active {
-		max-height: 100%;
-	}
+.header-padding {
+	@include container;
+	overflow: visible; /* lets dropdown nav show */
+}
 
-	@include breakpoint($l){
-		height: $header-tall; /* I'd really prefer not to define the height, but otherwise the animation/redraw gets messed up by the box shadow */
-		max-height: none;
-	}
-
-	.header-padding {
-		@include container;
-		overflow: visible; /* lets dropdown nav show */
-		height: 100%;
-	}
-
-	/* Logo styles from old project, good for animating on scroll */
-
-	.main-logo {
-		display: inline-block;
-		float: left;
-		padding: 0;
-		margin: 1rem 0;
-		background: white;
-
-		@include breakpoint($l){
-			margin-top: 1.33em;
-			@include animate;
-		}
-
-		a {
-			background: url("../img/logo.svg") 0 0 no-repeat;
-			position: relative;
-			display: block;
-			text-indent: -9999px; 
-			text-decoration: none;
-			width: 130px;
-			height: 30px;
-			background-size: 130px 30px;
-
-			@include breakpoint($l){
-				width: 252px;
-				height: 59px;
-				background-size: 252px 59px;
-				@include animate;
-			}
-		}
-	}
-
-	.social-media {
-		display: none;
-		overflow: hidden;
-		max-height: 4em;
-		@include animate;
-		@include breakpoint($l){
-			display: block;
-			float: right;
-
-			li {
-				margin: 0 0 0 1.5em;
-			}
-		}
-	}
-
-	.nav-meta {
-		overflow: hidden;
-		max-height: 4em;
-		@include animate;
-	}
-
-	&.short {
-		@include breakpoint($l) {
-			height: $header-short;
-			.main-logo {
-				margin: 1rem 0;
-				a {
-					width: 130px;
-					height: 30px;
-					background-size: 130px 30px;
-				}
-			}
-
-			.social-media, .nav-meta {
-				max-height: 0;
-				margin: 0;
-			}
-		}
-	}
-
-	&.tall {
-		@include breakpoint($l) {
-			height: $header-tall;
-
-			.main-logo {
-				margin-top: 1.33em;
-				a {
-					width: 252px;
-					height: 59px;
-					background-size: 252px 59px;
-				}
-			}
-
-			.social-media {
-				max-height: 4em;
-				margin: 1em 0;
-			}
-			.nav-meta {
-				max-height: 4em;
-				margin: 1.25em 0 0;
-			}
-		}
+.main-logo {
+	a {
+		// background: url("../img/logo.svg") 0 0 no-repeat; SVG if possible
+		background: url("../img/logo.png") 0 0 no-repeat;
+		position: relative;
+		display: block;
+		text-indent: -9999px; 
+		text-decoration: none;
+		width: 525px;
+		height: 153px;
+		background-size: 525px 153px;
 	}
 }
 
 .ie8 header .main-logo a {
 	background: url("../img/logo.png") 0 0 no-repeat;
 }
-
-.mobile-nav-wrapper {
-	clear: both;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
-	height: 88%; // for Android browser, which doesn't support calc, probably cuz it failed math class, stupid Android
-	height: calc(100% - 70px);		
-
-	&.active {
-	}
-
-	@include breakpoint($l) {
-		height: auto;
-		overflow: visible;
-		float: right;
-		clear: right !important;
-	}
-}
-

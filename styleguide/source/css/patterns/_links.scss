@@ -8,8 +8,6 @@ a {
   }
 }
 
-/*
-
 a[href$=".pdf"] { 
   &:before {
     content: "\f1c1"; 
@@ -23,26 +21,5 @@ a[href$=".doc"] {
     content: "\f1c2"; 
     font-family: FontAwesome;
     padding-right: 0.5em;
-  }
-}
-
-*/
-
-a[href$=".pdf"], a[href$=".doc"] { 
-  &:before {
-    content: '';
-    background: url("../img/download.svg") 0 0 no-repeat;
-    height: 30px;
-    width: 35px;
-    float: left; 
-  }
-}
-
-.subscribe {
-  @include font-bold;
-  padding: 1em 0;
-  display: block;
-  @include breakpoint($s) {
-    float: right;
   }
 }
