@@ -1,0 +1,147 @@
+@mixin concept-featured-color($concept-featured-color) {
+	a {
+		article {
+			background: $concept-featured-color;	  			
+			border-top: 8px solid $concept-featured-color;	
+		}
+
+		&:hover {
+			@include breakpoint($non-mobile) {
+				article {
+					background: white;
+				}
+				.comment-svg-art {
+					fill: $concept-featured-color;
+				}
+				h1, h2, h3, h4, h5, h6, p, li, li:before {
+					color: $concept-featured-color !important;
+
+					a {
+					  color: $concept-featured-color !important;
+					}
+				}
+			}
+		}	  			
+	}
+}
+
+.concepts-featured {
+	a {
+		article {
+			@include colored-bg;
+		  	padding: 1em 3em;
+		  	height: 30em;
+		  	margin: 0;
+		  	overflow: hidden;
+		  	@include box-sizing(border-box); 
+			@include breakpoint($m) {
+			  	padding: 1em 3em; /* overrides breakpoint in mixin colored-bg */
+			}
+		}
+
+  		.concept-quote {
+			@include breakpoint($m) {
+				clear: right;
+			}
+  			display: none;
+  		}
+
+  		&:hover {
+  			text-decoration: none;
+
+  			@include breakpoint($non-mobile) {
+	  			.concept-content {
+	  				display: none;
+	  			}
+
+	  			.concept-quote {
+	  				display: block;
+	  			}
+  			}
+  		}
+	}
+
+	h4 {
+		@include heading-2;
+		font-weight: 200;
+
+		&:before {
+			content: "“";
+			margin-left: -.3em;
+		}
+		&:after {
+			content: "”";
+		}
+	}
+
+	.owl-item {
+	  	&:nth-child(3n+1) { /* #1, #4, #7, etc. */
+			@include concept-featured-color($blue);
+	  	}
+	  	&:nth-child(3n+2) { /* #2, #5, #8, etc. */
+			@include concept-featured-color($green);
+	  	}
+	  	&:nth-child(3n+3) { /* #3, #6, #9, etc. */
+			@include concept-featured-color($orange);
+	  	}
+	}
+
+	.comment-count {
+		float: right;
+		margin: 0 0 1em 1em;
+	}
+
+	h2 {
+		@include breakpoint($m) {
+			clear: right;
+		}
+	}	
+}
+
+.concepts {
+  .comment-count-container {
+    float: right;
+    margin: 0 0 0 .25em;
+
+    @include breakpoint($m){
+      float: none;
+      margin: 0;
+    }
+  }
+
+  &.grid {
+    @include gutterless-3col;
+  }
+
+  &.list {
+    margin-bottom: 2em;
+    
+    > * {
+      display: table;
+      table-layout: fixed;
+      @include divider-bottom(1px, 1em, $gray-light-6);
+      width: 100%;
+
+      > * {
+        display: block;
+
+        @include breakpoint($m){
+          display: table-cell;
+          vertical-align: top;
+  
+          &:nth-child(1){
+            width: 10%;
+          }
+
+          &:nth-child(2){
+            width: 30%;
+          }
+
+          &:nth-child(3){
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}

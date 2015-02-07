@@ -1,0 +1,213 @@
+/* based on http://codepen.io/bradfrost/full/qwJvF */
+
+a.menu-link {
+  float: right;
+  display: block;
+  font-size: 1.75em;
+  margin: .5em .25em 0;
+
+  &.active {
+    i {
+      color: $link-color-hover;
+    }
+  }
+}
+
+.menu {
+  clear: both;
+  @include animate;
+
+
+  > ul {
+    ul {
+      clear: both;
+      @include animate;
+    }
+  }
+}
+
+.menu {
+  overflow: hidden;
+  max-height: 0;
+  background: white;
+  /*margin: 0 -3.5%;  undoes the .container padding, allows borders on li's to be full width */
+  /*width: 107%;  makes it extend full width; double check this on mobile to make sure there's no overflow */
+  @include breakpoint($l) {
+    width: auto;
+  }
+
+  > ul {
+    ul {
+      overflow: hidden;
+      max-height: 0;
+      //background: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.menu.active, .js .menu > ul ul.active {
+  max-height: 55em;
+}
+
+.menu {
+  > ul {
+    border-top: 1px solid $gray-light-6;
+  }
+  li {
+    margin-bottom: 0;
+    border-bottom: 1px solid $gray-light-6;
+
+    a {
+      @include caps;
+      display: block;
+      padding: 1em 0 1.25em 2em; 
+      position: relative;
+      font-size: 1.25em;
+
+      &:before {
+        content: "\f10c";
+        font-family: "FontAwesome";
+        position: absolute;
+        left: 0;
+        font-size: 1.5em;
+        margin-top: -.25em;
+      }
+
+      &:hover, &:focus, &.active {
+        color: $link-color-hover;
+        text-decoration: none;
+      }
+    }
+
+    ul {
+      li {
+        border: none;
+        a {
+          text-transform: none;
+          padding: 0 0 1em 2.75em;
+          font-size: 1em;
+          letter-spacing: 0;
+          margin: 0 0 .75em 0;
+
+          &:before {
+            content: none;
+          }
+        }
+
+        &:last-child {
+          a {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &.has-subnav > a {
+      /* no "after" symbol designated in the design, but let's leave this here just in case
+      &:after {
+        content: '+';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        font-size: 1.5em;
+        padding: 0.25em 0.5em;
+      }
+
+      &.active:after {
+        content: "-";
+      }
+      */
+    }
+  }
+}
+
+@include breakpoint($l) {
+
+  a.menu-link {
+    display: none;
+  }
+  .menu {
+    max-height: none;
+    overflow: visible;
+    background: none;
+    margin: 0;
+    > ul {
+      ul {
+        max-height: none;
+        overflow: visible;
+        background: none;
+        background: #808080;
+        display: none;
+      }
+      li:hover > ul {
+        display: block;
+      }
+    }
+  }
+
+  .menu {
+    ul {
+      //margin: 0 0 0 -0.25em;
+      border: 0;
+    }
+    li {
+      margin-left: 2em;
+      border: 0;
+      a {
+        padding-left: 2em;
+      }
+      &.has-subnav > a {
+        /* 
+        //padding-right: 2em;
+        &:before {
+          content: "o";
+          font-size: 1em;
+          padding: 1em 0.5em 1em 0;
+        }
+        &:after {
+          content: "";
+          padding: 0;
+        }
+        */
+      }
+    }
+    .level-1 > li.has-subnav > a:after {
+      //content: "▼";
+    }
+    > ul {
+      li {
+        //margin: 0 0.25em;
+      }
+      > li {
+        display: inline-block;
+        position: relative;
+      }
+      ul {
+        position: absolute;
+        top: 0;
+        left: 12em;
+        width: 12em;
+        padding: 1em;
+
+        li {
+          position: relative;
+          margin: 0;
+
+          a {
+            padding: 0;
+          }
+        }
+        &.level-2 {
+          top: 4.625em; /* or, y'know...something */
+          left: 0; /* for Android, which sucks at math */
+          left: calc(50% - 6em); /* puts the left edge of the dropdown in the middle of the parent <a>, then subtracts half its width so it's centered */
+          background: white;
+          background: rgba(255,255,255,.95);
+          border-top: 2px solid $link-color-hover;
+          @include box-shadow(0 5px 10px rgba(125,125,125,.25));
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+/* 12-column grid */
+
+$columnwidth: 4%; /* change this to make columns wider or narrower; gutters will automatically adjust; 8.333% will make grid gutterless */
+$gutterwidth: (100% - ($columnwidth*12))/11; /* not used to literally create gutters--justification does that--but used to calculate width of multi-column elements */
+
+@mixin grid-container {
+	text-align: justify;
+	font-size: 0.1px; /* eliminate horizontal whitespace between grid columns */
+	line-height: 0.1px;  /* eliminate vertical whitespace between grid containers */
+	margin: 0 auto;
+
+	&:after {
+	    content: '';
+	    display: inline-block;
+	    width: 100%;
+	}
+
+	> * {
+		display: inline-block;
+		text-align: left;
+		vertical-align: top;
+		font-size: 1rem; /* resets font size to the base rem, allowing us to use em sizing like normal */
+		/* margin-bottom: $gutterwidth; vertical spacing between rows; set to 0 if you want a gutterless grid */
+		/* width: $columnwidth; defaults to single column, unless specified otherwise in CSS */
+	}
+
+	.gap {
+		display: inline-block;
+		min-height: 0;
+		height: 0;
+		padding: 0;
+		margin: 0;
+		font-size: 0;
+	}
+}
+
+@mixin column($num) {
+	width: ($columnwidth*$num) + ($gutterwidth * ($num - 1));
+}
+
+@mixin prepend($num) {
+	margin-left: ($columnwidth*$num) + ($gutterwidth*$num);
+}
+
+@mixin append($num) {
+	margin-right: ($columnwidth*$num) + ($gutterwidth*$num);
+}
+
+
+
+
+/* CSS classes for applying grid directly, instead of through sass */
+
+.grid-container { /* in case you want to apply the grid-container directly through an element's class and not a scss include */
+	@include grid-container;
+}
+
+.column1 {
+	@include column(1);
+}
+.column2 {
+	@include column(2);
+}
+.column3 {
+	@include column(3);
+}
+.column4 {
+	@include column(4);
+}
+.column5 {
+	@include column(5);
+}
+.column6 {
+	@include column(6);
+}
+.column7 {
+	@include column(7);
+}
+.column8 {
+	@include column(8);
+}
+.column9 {
+	@include column(9);
+}
+.column10 {
+	@include column(10);
+}
+.column11 {
+	@include column(11);
+}
+.column12 {
+	@include column(12);
+}

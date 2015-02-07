@@ -1,0 +1,190 @@
+.filtering {
+	background: $gray-light-7;
+	padding: .5em 0;
+	margin-bottom: $section-spacing;
+
+	input[type="email"],
+	input[type="password"],
+	input[type="text"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="search"],
+	input[type="url"],
+	input[type="date"],
+	textarea {
+		background: white;
+	}
+
+	.filtering-contents, .sorting-contents {
+
+		@include breakpoint($l) {
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+		}
+
+		> * {
+			margin: 1em 0;
+			@include breakpoint($l) {
+				margin: 0;
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+		.concepts-sort {
+
+			> * {
+				margin: 1em 0;
+				@include breakpoint($l) {
+					margin: 0;
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+			li {
+				@include breakpoint($l) {
+					margin-left:.5em;
+				}
+				
+			}
+		}
+		li {
+			display: inline-block;
+			margin: 0 1em 0 0;
+		}
+	}
+	.sorting-contents > * {
+		vertical-align: top;
+		padding: 0;
+	}
+
+	h4, .subscribe {
+		margin: 0;
+		line-height: 1;
+	}
+
+	h4 {
+		color: $text-color;
+	}
+
+	.subscribe {
+		@include font-bold;
+		float: none;
+		padding: 0;
+		@include breakpoint($l) {
+			float: right;
+		}
+	}
+	
+
+	
+	/* specific cell widths--unless widths are specified, table cells will evenly distribute width */
+
+	
+
+	#filter-by, #sort-by {
+		width: 4em;
+	}
+
+	#select-categories {
+		width: 18em;
+	}
+
+	.sort-links {
+		width: 16em;
+	}
+
+	#subscribe {
+		width: 8em;
+	}
+
+	.filter-buttons {
+		width: 6em;
+	}
+
+	#button-add {
+		width: 4em;
+	}
+
+	#button-submit {
+		width: 6em;
+
+	}
+
+	#charts-data {
+		width: 8em;
+	}
+	.month-year {
+		width: 14em;
+		float: left;
+		@include breakpoint($l) {
+			float: none;
+		}
+	}
+}
+
+.filtering.publications-search {
+	background: none;
+	margin-bottom: 0;
+
+	form {
+		border: {
+			top: 8px solid $purple;
+			bottom: 8px solid $purple;
+		} 
+		padding: 1em 0;
+		overflow: hidden;
+	}
+
+	label {
+		margin-top: 1rem;
+	}
+
+	input[type="email"],
+	input[type="password"],
+	input[type="text"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="search"],
+	input[type="url"],
+	input[type="date"],
+	textarea {
+		background: $gray-light-8;
+
+		&:focus {
+		  background: lighten($purple, 30%); 
+		}
+	}
+
+	.filtering-contents > * {
+		padding: 0 1em 1.25em 0;
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
+
+.filter-buttons {
+	display: none;
+
+	@include breakpoint($m) {
+		display: block;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0 1em 0 0;
+		line-height: 1;
+
+		a, a:hover {
+			color: white;
+			font-size: 1.5em;
+			text-decoration: none;
+
+			&.active {
+				color: $orange;
+			}
+		}
+	}
+}

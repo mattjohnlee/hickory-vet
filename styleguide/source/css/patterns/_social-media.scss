@@ -1,0 +1,11 @@
+.social-media {
+  @include social-media-icons;
+  margin: 1em 0;
+  float: none;
+}
+
+.icon-label {
+	  position: absolute;
+	  height: 0;
+	  overflow: hidden;
+}

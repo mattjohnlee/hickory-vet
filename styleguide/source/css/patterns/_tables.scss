@@ -1,0 +1,237 @@
+/* 
+Modified from CSS Tricks: http://css-tricks.com/responsive-data-tables/
+*/
+
+
+table.responsive { 
+	width: 100%; 
+	border-collapse: collapse; 
+	margin: 2em 0;
+
+	th {
+		padding-right: 3em !important;
+		color: $heading-color; 
+		cursor: pointer;
+		@include font-bold;
+		vertical-align: top;
+
+		&:hover {
+			color: $orange;
+		}
+
+		&:after {
+			font-family: "FontAwesome";
+			margin-left: .5em;
+			display: inline;
+			position: absolute;
+			content: "\f0dc";
+			font-size: .8em;
+			margin-top: .1em;
+		}
+
+		&.headerSortDown {
+			&:after {
+				content: "\f0de";
+				margin-top: .3em;
+			}
+		}
+
+		&.headerSortUp {
+			&:after {
+				content: "\f0dd";
+				margin-top: -.15em;
+			}
+		}
+
+		.tablesorter-header-inner {
+			display: inline;
+		}
+	}
+	tbody {
+		tr {
+			border-bottom: 1px solid $border-color;
+		}
+	}
+
+	td { 
+		padding: 1em 2em 1em 0;
+		line-height: 1.5;
+		vertical-align: top;
+		font-size: ms(-.25);
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	.pub-name {
+		width: 60%;
+	}
+
+	.cover {
+		width: 10%;
+
+		img {
+			max-width: 120px;
+		}
+	}
+}
+
+
+/* 
+This query will take effect for any screen smaller than 1024px
+*/
+
+@media only screen and (max-width: 1023px)  {
+
+	/* Force table to not be like tables anymore */
+
+	table.responsive {
+		display: block; 
+
+		thead, tbody, th, td, tr { 
+			display: block; 
+		}
+
+		thead {
+			&:before {
+				content: "Sort by: ";
+				display: block;
+			}
+
+			tr { 
+				margin: 1em 0;
+				overflow: hidden;
+			}
+
+			th {
+				padding: 1em 0;
+				border-top: 1px solid $link-color;
+				&:last-child {
+					border-bottom: 1px solid $link-color;
+				}
+			}
+		}
+
+		tfoot {
+			clear: both;
+			width: 100%;
+		}
+		
+		tr {
+			border-top: 2px solid $link-color;
+			clear: both;
+
+			&:first-child {
+				border: none;
+			}
+		}
+		
+		td { 
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid $border-color;
+			position: relative;
+			padding-left: 50%;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		td:before { 
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 1.05em; /* compensates for smallcaps styling; if no smallcaps, reset this to .8em so it matches the td padding */
+			left: .7em;
+			width: 45%; 
+			@include font-bold;
+			color: $purple;
+			padding-right: 10px; 
+			white-space: nowrap;
+		}
+	}
+
+
+	/* styles specifically for #pub-list table */
+	table#pub-list {
+		td, td.pub-name { 
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid $border-color;
+			position: relative;
+			float: left;
+			padding-right: 0;
+			padding-left: 0;
+			width: 70%;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&.cover {
+				float: right;
+				width: 20%;
+				border: none;
+				padding: 1em 0;
+
+				img {
+					max-width: 100%;
+					float: right;
+				}
+			}
+
+			&.pub-date:before, &.author:before {
+				position: relative;
+				top: auto;
+				left: auto;
+				width: auto;
+				text-transform: uppercase;
+				padding-right: 0;
+				@include font-bold;
+			}
+			&.pub-date:before {
+				content: "Published: ";
+			}
+			&.author:before {
+				content: "Author: ";
+			}
+		}
+	}
+
+	/* Label for data on specific tables */
+	#investment-list {
+		td:nth-of-type(1):before { content: "Enterprise Name"; }
+		td:nth-of-type(2):before { content: "Investment Type"; }
+		td:nth-of-type(3):before { content: "Vintage Year"; }
+		td:nth-of-type(4):before { content: "Investment Amount"; }
+		td:nth-of-type(5):before { content: "Enterprise Scale"; }
+		td:nth-of-type(6):before { content: "Financial Tool"; }
+		td:nth-of-type(7):before { content: "Tax Status"; }
+	}
+}
+
+
+/* this query will take effect for any screen smaller than 600px */
+
+@media only screen and (max-width: 699px)  {
+
+	/* styles specifically for #pub-list table */
+	table#pub-list {
+		td, td.pub-name {
+			width: 55%;
+		}
+
+		td.cover {
+			width: 40%;
+		}
+	}
+
+	/* styles specifically for #investment-list table */
+	table#investment-list {
+		td {
+			padding-left: 60%;
+		}
+	}
+}

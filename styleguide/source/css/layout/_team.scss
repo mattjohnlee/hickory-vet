@@ -1,0 +1,69 @@
+.bio-list {
+  > *, .bio-unit {
+    margin: 0 0 2em;
+    @include breakpoint($s) {
+      @include column(6);
+      @include last-col2;
+    }
+
+    @include breakpoint($l) {
+      @include column(4);
+      @include last-col3;
+    }
+  }
+}
+
+.bio-unit {
+  img {
+    @include animate;
+  }
+
+  figcaption {
+    @include animate;
+    background-color: $purple;
+    color: white;
+    padding: 1em;
+    margin: 0;
+  }
+
+  a {
+
+    &:hover {
+      text-decoration: none;
+
+      img {
+        @include opacity(.9);
+      }
+
+      figcaption {
+        background-color: $gray-light-8;
+        color: $purple;
+      }
+    }
+  }
+}
+
+.bio-contact-icons {
+  text-align: center;
+
+  li {
+    a {
+      color: $link-color;
+      border-color: $link-color;
+    }
+  }
+}
+
+.team-title {
+  @include heading-1;
+  @include caps;
+  color: $gray;
+}
+
+.team-publications {
+  @include heading-3;
+  @include divider-bottom(8px, .25em);
+  color: $orange;
+  @include font-bold;
+  margin-bottom: 1.5em;
+}

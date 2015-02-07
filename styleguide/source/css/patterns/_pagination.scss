@@ -1,0 +1,45 @@
+.pagination {
+  float: left;
+  padding-top: 2em;
+  li {
+    @include font-bold;
+    @include smallcaps;
+    float: left;
+    margin: 0 .25em 0 0;
+
+    &:before {
+      content: '' !important;
+    }
+
+    a {
+      border: none;
+      padding: .5em .65em .5em .75em;   
+  
+      &.next {
+        margin-left: .25em;
+        &:after {
+          font-family: 'FontAwesome';
+          content: "\f054";
+          color: $purple;
+          font-size: .85em;
+        }
+      }
+
+      &.previous {
+        margin-right: .25em;
+        &:before {
+          font-family: 'FontAwesome';
+          content: "\f053";
+          color: $purple;
+          font-size: .85em;
+        }
+      }
+    }
+
+    &.current_page {
+      a {
+        border: 1px solid;     
+      }
+    }
+  }
+}

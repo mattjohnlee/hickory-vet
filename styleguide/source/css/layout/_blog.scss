@@ -1,0 +1,214 @@
+@mixin blog-featured-color($blog-featured-color) {
+	background-color: $blog-featured-color;
+	background-color: transparentize($blog-featured-color, .1);
+  //@include box-shadow (inset 20px 20px 150px transparentize(darken($blog-featured-color, 5%), 0.15));
+	@include animate-slow;
+
+	&:hover {
+		background-color: lighten($blog-featured-color, 5%);
+		background-color: lighten(transparentize($blog-featured-color, .05), 5%);
+	}
+}
+
+
+
+.blog-featured {
+  overflow: hidden;
+  margin: 0 0 $section-spacing 0;
+
+  @include breakpoint($m){
+    background: #dfdfde url(../img/swoosh-black.svg) no-repeat center center;
+    background-size: cover;
+  }
+
+  > * {
+  	display: block;
+  	position: relative;
+  	padding: 2em 2em 0 2em;
+    overflow: hidden;
+  	@include box-sizing(border-box); 
+
+  	@include breakpoint($m) {
+  		@include column(6);
+  		width: 50%;
+  		margin: 0;
+	  	height: 20em;
+  	}
+
+  	@include breakpoint($l) {
+  		@include column(4);
+  		width: 33.332%;
+  		margin: 0;
+	  	height: 20em;
+      overflow: hidden;
+  	}
+
+  	&:first-child {
+	  	@include breakpoint($m) {
+	  		@include column(12);
+	  		margin: 0;
+	
+		  	h2 {
+  				font-size: 4em;
+		  	}
+	  	}
+	  	@include breakpoint($l) {
+	  		width: 66.665%;
+	  		margin: 0;
+        h2 {
+          font-size: 3.5em;
+        }
+	  	}
+      @include breakpoint($xl) {
+        h2 {
+          font-size: 4em;
+        }
+      }
+  	}
+
+  	&:nth-child(4n+1) { /* #1, #5 */
+  		@include blog-featured-color($purple);
+  	}
+  	&:nth-child(4n+2) { /* #2 */
+  		@include blog-featured-color($blue);
+  	}
+  	&:nth-child(4n+3) { /* #3 */
+  		@include blog-featured-color($green);
+  	}
+  	&:nth-child(4n+4) { /* #4 */
+  		@include blog-featured-color($orange);
+  	}
+
+
+  	&:nth-child(2) { /* #2 */
+  		@include breakpoint($l) {
+  			height: 17em;
+  		}
+  	}
+  	&:nth-child(3) { /* #3 */
+  		@include breakpoint($l) {
+  			clear: left;
+  		}
+  	}
+  	&:nth-child(5) { /* #5 */
+  		@include breakpoint($l) {
+  			height: 23em;
+  			margin-top: -3em;
+  		}
+  	}
+
+  	.blog-preview-image {
+  		background-color: rgba(0,0,0,.6);
+  		position: absolute;
+  		top: 0;
+  		bottom: 0;
+  		left: 0;
+  		right: 0;
+      width: 100%;
+  		z-index: 0;
+  		margin: 0;
+  	}
+
+  	img {
+  		@include opacity(.35);
+  		@include animate-slow;
+      /* trick for vertical centering, IE8 and up */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translateX(-50%) translateY(-50%) translateZ(0));
+      max-width: none;
+  	}
+
+  	h2, h3, h4, h5, p {
+  		margin-top: 0;
+  		color: white;
+  		color: transparentize(white,.15);
+  		position: relative;
+  		z-index: 1;
+  		@include animate;
+  	}
+
+    p {
+      margin-bottom: 0;
+      max-width: 25em;
+    }
+
+    h3 {
+      display: none;
+    }
+
+  	&:hover { /* when colored blocks are hovered... */
+  		text-decoration: none;
+
+	  	h2, h3, h4, h5, p {
+	  		color: white;
+	  	}
+
+  		img {
+  			@include opacity(.75);
+  		}
+  	}
+  }
+}
+
+.blog-list {
+}
+
+.blog-preview {
+  @include divider-bottom(1px, $section-spacing/2, $border-color);
+  clear: both;
+  @include column(12);
+
+  &:last-child {
+    border: none;
+  }
+  &.starred {
+
+    h2 {
+      position: relative;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        top: 5px;
+        left: -30px;
+        width: 25px;
+        height: 25px;
+        background: url(../img/star.svg) no-repeat center center;
+
+        @include breakpoint($l) {
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+.blog-preview-image {
+  margin: 0;
+  @include column(3);
+
+  @include breakpoint($m) {
+    @include last;
+    float: right;
+  }
+  @include breakpoint($l) {
+    @include column(2);
+    @include last;
+    float: right;
+  }
+}
+
+.blog-preview-text {
+  @include column(9);
+  @include last;
+
+  @include breakpoint($m) {
+    @include column(9);
+  }
+
+  @include breakpoint($l) {
+    @include column(10);
+  }
+}

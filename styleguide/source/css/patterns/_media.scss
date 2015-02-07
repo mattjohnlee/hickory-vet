@@ -1,0 +1,29 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+Images, iframes, figures
+////////////////////////////////////////////////////////////////////////////
+*/
+
+
+img, iframe {
+  max-width: 100%;
+  display: block;
+  -webkit-transform: translateZ(0);
+}
+
+figure {
+  margin: 0 0 2em 0; 
+
+  figcaption {
+    @include paragraph;
+    @include font-regular;
+    @include small;
+    color: $caption-color;
+    margin-top: .5em;
+
+    @include breakpoint($m) {
+    	padding-right: 36%;
+    }
+  }
+}
+

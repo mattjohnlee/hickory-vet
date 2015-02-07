@@ -1,0 +1,36 @@
+.breadcrumbs {
+  display: none;
+  padding: 1em 0;
+  list-style: none;
+
+  @include breakpoint($s) {
+    display: block;
+    float: left;
+  }
+  
+  li {
+    @include font-regular;
+    font-size: ms(-.5);
+    line-height: 0;
+    display: inline-block;
+
+    &:after {
+      content: '>';
+      color: $caption-color;
+      padding: 0 .125rem 0 0.5em;
+    }
+
+    a {
+    }
+
+    &:last-child {
+      a {
+        color: $caption-color;
+      }
+
+      &:after {
+        content: '';        
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+/* THESE ARE VERY ROUGH PRELIM STYLES */
+
+
+.timeline {
+	h2 {
+		text-align: center;
+	}
+}
+
+.timeline-nav {
+	background-color: $purple;
+	margin-top: 1em;
+
+	ul {
+	    overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+	    white-space: nowrap;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0;
+	}
+
+	a {
+		color: white;
+		padding: 1em;
+		display: block;
+		&:hover {
+			background-color: white;
+			color: $link-color-hover;
+			text-decoration: none;
+		}
+	}
+}
+
+.event {
+	background-color: #fff;
+	overflow: hidden;
+	padding: $grid_padding;
+
+	.heron, .world {
+		&:first-child {
+			border-bottom: 1px solid $border-color;
+			padding: 0 0 $grid_padding;
+			margin: 0 0 $grid_padding;
+		}
+
+		@include breakpoint($s){
+			@include column(6);
+			@include last-col2;
+
+			&:first-child {
+				border-bottom: none;
+				border-right: 1px solid $border-color;
+				margin: 0;
+				padding: 0 $grid_padding 0 0;
+			}
+		}
+	}
+}

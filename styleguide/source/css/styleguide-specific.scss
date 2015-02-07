@@ -1,0 +1,200 @@
+/*------------------------------------*\
+    $PATTERN LAB-SPECIFIC STYLES
+\*------------------------------------*/
+/**
+ * This stylesheet is for styles you want to include only when the interface is being viewed within Pattern Lab.
+ * This is helpful for displaying demo styles for grids, animations, color swatches, etc
+ * It's also helpful for overriding context-specific styles like fixed or absolutely positioned elements
+ * These styles will not be your production CSS.
+ */
+@import "sass/screen";
+ 
+
+/* Style Guide Interface Colors */ 
+$sg-primary : #222;
+$sg-secondary : #808080;
+$sg-tertiary : #ddd;
+$sg-quaternary : #fff;
+$sg-quinary : #999;
+$sg-tint : rgba(255,255,255,0.05);
+$sg-tint-2 : rgba(255,255,255,0.25);
+$sg-tone : rgba(0,0,0,0.1);
+$sg-tone-2 : rgba(0,0,0,0.3);
+
+/* Typography */
+$sg-font-size-norm : 100%;
+$sg-font-size-sm : 70%;
+$sg-font-size-large : 120%;
+
+/* Defaults */
+$sg-space : 1em;
+$sg-doublespace : $sg-space*2;
+$sg-pad : 1em;
+$sg-pad-half : $sg-pad/2;
+
+/* Dimensions */
+$offset-top: 2em;
+
+/* Breakpoints */
+$sg-bp-small : 24em;
+$sg-bp-small-2 : 30em;
+$sg-bp-med : 48em;
+$sg-bp-large : 72em;
+$sg-bp-xl : 80em;
+
+$animate-quick: 0.2s;
+
+
+.pl {
+	body {
+		padding-top: 0;
+	}
+
+	header {
+		position: relative;
+	}
+}
+
+
+
+#sg-patterns { /* class of div that wraps all styleguide patterns */
+	padding: 2em;
+
+
+	// Demo to show grid system - in this stylesheet because it shouldn't be included in the production styles
+	.grid {
+		overflow: hidden;
+		margin-bottom: 1rem;
+	
+		.unit {
+			background: $gray-light-4;
+			text-align: center;
+			margin-bottom: $sg-pad-half;
+			padding: 1em 0;
+			
+			&:nth-of-type(2n) {
+				background: $gray-light-8;
+			}
+		}
+
+		&.col2 {
+			.unit {
+				@include column(6);
+				@include last-col2;
+			}
+		}
+		&.col3 {
+			.unit {
+				@include column(4);
+				@include last-col3;
+			}
+		}
+		&.col4 {
+			.unit {
+				@include column(3);
+				@include last-col4;
+			}
+		}
+		&.col6 {
+			.unit {
+				@include column(2);
+				@include last-col6;
+			}
+		}
+	}
+
+	//Demo box for animation
+	.demo-animate {
+		background: #ddd;
+		padding: $sg-pad;
+		margin-bottom: $sg-space;
+		text-align: center;
+		position: relative;
+
+		.demo-shape {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 20px;
+			background: $sg-secondary;
+		}
+
+		&:hover {
+			> .demo-shape {
+				left: 100%;
+				margin-left: -20px;
+			}
+		}
+
+		&.regular {
+			.demo-shape {
+				@include animate;
+			}
+		}
+		&.slow {
+			.demo-shape {
+				@include animate-slow;
+			}
+		}
+		&.fast {
+			.demo-shape {
+				@include animate-fast;
+			}
+		}
+	}
+
+	// Style Guide color swatches
+	.sg-colors {
+		overflow: hidden;
+
+		li {
+			overflow: hidden;
+			border: 1px solid $sg-tertiary;
+			padding: 0.5em;
+			margin: 0 0 2em 0;
+
+			@include breakpoint($s) {
+				@include column(6);
+				@include last-col2;
+			}
+
+			@include breakpoint($m) {
+				@include column(3);
+				@include last-col4;
+			}
+
+			@include breakpoint($l) {
+				@include column(2);
+				@include last-col6;
+			}
+		}
+	}
+
+	.sg-swatch {
+		display: block;
+		height: 4em;
+		width: 100%;
+		margin: 0;	
+	}
+
+	.sg-label {
+		line-height: 1;
+	}
+
+	// Style Guide font sample
+	.sg-fonts {
+		p {
+			font-size: 2em;
+			@include breakpoint($m) {
+				@include column(6);
+				@include last-col2;
+			}
+		}
+	}
+
+	blockquote {
+		margin-left: 0;
+	}
+}
+

@@ -1,0 +1,32 @@
+// variables, mixins and extends related to media queries.
+
+// full docs here:
+// https://github.com/canarymason/breakpoint
+
+// default option here is "false". Set it to true & it will do px to em calculations for you.
+$breakpoint-to-ems: true;
+
+// create $breakpoint variables like so
+// assume min-width (by default) if only a number
+// set min-width/max-width if both values are numbers
+$s: 600px;
+$m: 768px;
+$l: 1024px;
+$xl: 1400px;
+
+
+$non-mobile: 1025px;
+$container-max-width: 1170px;
+$tablet-v: 840px;
+$tablet-h: 1025px;
+
+// media query for hi-resolution displays
+// $breakpoint-hi-res: 2 device-pixel-ratio;
+
+
+
+
+
+
+
+

@@ -3,30 +3,27 @@
 	"htmlClass": "pl",
 	"bodyClass": "body",
 	"img": {
-		"landscape-4x3": {
-			"src": "../../images/fpo_4x3.png",
-			"alt": "4x3 Image"
+		"landscape-2x1": {
+			"src": "http://placehold.it/1600x800",
+			"alt": "2x1 Image"
 		},
-		"landscape-16x9": {
-			"src": "../../images/fpo_16x9.png",
-			"alt": "16x9 Image"
+		"landscape-3x2": {
+			"src": "http://placehold.it/900x600",
+			"alt": "3x2 Image"
 		},
 		"square": {
-			"src": "../../images/fpo_square.png",
+			"src": "http://placehold.it/800x800",
 			"alt": "Square Thumbnail"
 		},
-		"avatar" : {
-			"src" : "../../images/fpo_avatar.png",
-			"alt" : "Person Name"
-		},
-		"rectangle": {
-			"src": "http://placeimg.com/400/300/tech",
-			"alt": "Rectangle"
+		"portrait-2x3": {
+			"src": "http://placehold.it/600x900",
+			"alt": "2x3 Image"
 		}
 	},
 	"headline" : {
 		"short" : "Lorem ipsum dolor sit (37 characters)",
-		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
+		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)",
+		"long" : "Whaaaaaat!?"
 	},
 	"excerpt" : {
 		"short" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -43,6 +40,7 @@
 		"last": "Way",
 		"lasti": "W"
 	},
+	"jobTitle" : "Director",
 	"year" : {
 		"long": "2013",
 		"short": "13"
@@ -83,6 +81,11 @@
 		{ },
 		{ }
 	],
+
+	"sidebar" : {
+		"title": "Sidebar Title"
+	},
+
 	"latest-posts" : [
 		{ },
 		{ },

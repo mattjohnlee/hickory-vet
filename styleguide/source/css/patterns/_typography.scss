@@ -1,0 +1,170 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+Headings
+////////////////////////////////////////////////////////////////////////////
+*/
+
+
+h1 {
+  @include heading-1;
+  @include caps;
+  color: $orange;
+  font-weight: 200;
+}
+
+h2 {
+  @include heading-2;
+  font-weight: 200;
+}
+
+h3 {
+  @include heading-3;
+  @include font-bold;
+  color: $orange;
+}
+
+h4 {
+  @include heading-4;
+}
+
+h5 {
+  @include heading-5;
+}
+
+h6 {
+  @include heading-6;
+}
+
+.divider-bottom {
+  @include divider-bottom;
+}
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Block-level Elements
+////////////////////////////////////////////////////////////////////////////
+*/
+
+
+p {
+  @include paragraph;
+  margin-bottom: 1em;
+}
+
+ul, ol {
+  li {
+  margin-bottom: 1em;
+  }
+}
+
+li {
+  @include li;
+}
+
+ul.bullets {
+  @include custom-bullets; 
+}
+
+dl {
+  @include clearfix;
+
+  dt {
+    color: $orange;
+    @include li;
+    float: left;
+    clear: left;
+    &:after {
+      content: ":";
+      margin-right: .25em;
+    }
+  }
+  dd {
+    @include li;
+    float: left;
+    margin-bottom: 1em;
+  }
+}
+
+blockquote {
+  color: $orange;
+  margin: 2em 0;
+
+  p {
+    font-size: ms(.75);
+    font-weight: 200;
+    font-style: italic;
+
+    &:before, &:after {
+      font-size: ms(2.5);
+      position: absolute;
+      line-height: .8;
+    }
+
+    &:before {
+      content: '“';
+      text-indent: -.5em;
+    }
+
+    &:after {
+      content: '”';
+    }
+  }
+
+  a {
+    display: block;
+  }
+}
+
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Inline Elements
+////////////////////////////////////////////////////////////////////////////
+*/
+
+
+strong, b {
+  @include font-bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+.font-bolditalic {
+  @include font-bolditalic;
+}
+
+.font-display {
+  @include font-display;
+}
+
+.font-displayitalic {
+  @include font-displayitalic;
+}
+
+.font-fallback {
+  @include font-fallback;
+}
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Special Formatting
+////////////////////////////////////////////////////////////////////////////
+*/
+ .small {
+  @include small;
+ }
+
+ .smallcaps {
+  @include smallcaps;
+ }
+
+.caps {
+  @include caps;
+}

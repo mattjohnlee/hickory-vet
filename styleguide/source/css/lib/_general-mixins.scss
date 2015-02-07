@@ -1,0 +1,230 @@
+@mixin container($maxwidth: 81.25rem) {
+  margin: auto;
+  max-width: 1300px; /* for browsers that don't do rems */
+  max-width: $maxwidth;
+  padding: 0 3.5%;
+  @include clearfix;
+  clear: both;
+}
+
+
+
+
+
+
+@mixin divider-top($border-weight:1px, $spacing:1em, $border-color:auto) {
+  padding-top: $spacing/2;
+  border-top: $border-weight solid;
+  margin-top: $spacing;
+  border-color: $border-color;
+}
+
+@mixin divider-right($border-weight:1px, $spacing:1em, $border-color:auto) {
+  padding-right: $spacing/2;
+  border-right: $border-weight solid;
+  margin-right: $spacing;
+  border-color: $border-color;
+}
+
+@mixin divider-bottom($border-weight:1px, $spacing:1em, $border-color:auto) {
+  padding-bottom: $spacing/2;
+  border-bottom: $border-weight solid;
+  margin-bottom: $spacing;
+  border-color: $border-color;
+}
+
+@mixin divider-left($border-weight:1px, $spacing:1em, $border-color:auto) {
+  padding-left: $spacing/2;
+  border-left: $border-weight solid;
+  margin-left: $spacing;
+  border-color: $border-color;
+}
+
+
+@mixin divider-none {
+  padding: 0;
+  border: 0 none;
+  margin: 0;
+}
+
+
+@mixin button {
+    @include appearance(none);
+    @include border-radius(0);
+    @include font-regular;
+    background: $link-color;
+    color: white !important;
+    @include smallcaps;
+    width: auto;
+    cursor: pointer;
+    display: block;
+    padding: .75em 1em .5em;
+    @include animate;
+    border: none;
+
+    &:hover, &:focus {
+      background: $link-color-hover;
+      border: none;
+      text-decoration: none;
+    }
+}
+
+@mixin button-form {
+  @include button;
+  border: 0 none;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+
+@mixin custom-bullets { /* applied to ul's to give them custom-designed bullets */
+  list-style: none;
+  margin: 0 0 1em 0;
+  text-indent: -.5em;
+
+  li {
+    line-height: 1.5;
+    &:before {
+      content: "\2022";
+      padding-right: .2em;
+      color: $orange;
+    }
+  }
+
+  @include breakpoint($m) {
+    text-indent: -.75em;
+
+    li:before {
+      padding-right: .45em;
+    }
+  }
+}
+
+
+@mixin social-media-icons {
+  float: left;
+
+  li {
+    //float: left;
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 0 .25em .25em;
+
+    @include breakpoint($m) {
+      font-size: 1.15em;
+    }
+
+    @include breakpoint($l) {
+      margin: 0 .75em .75em;
+      font-size: 1.15em;
+    }
+
+    a {
+      color: $gray-light-4;
+      border: 1px solid $gray-light-4;
+      text-align: center;
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      padding: .375em;
+      line-height: 1.25; /* keeps the FontAwesome icon centered */
+      @include border-radius(50%);
+
+      &:hover {
+        color: $link-color-hover;
+        border-color: $link-color-hover;
+      }
+    }
+  }
+}
+
+
+@mixin gutterless-3col {
+  margin-bottom: 2em;
+
+  > * {
+    border-top: $grid-border;
+    padding: 2em 0;
+
+    > * {
+      margin-top: 0;
+    }
+
+    @include breakpoint($m) {
+      @include column(6);
+      width: 50%;
+      height: 25em;
+      overflow: hidden;
+      padding: 2em;
+      margin-right: 0;
+      border-top: none;
+      border-right: $grid-border;
+
+      &:nth-child(-n+2) {
+        padding-top: 0;
+      }
+
+      &:nth-child(n+3) {
+        border-top: $grid-border;
+      }
+
+      &:nth-child(2n+2) {
+        border-right: none;
+      }
+    }
+
+    @include breakpoint($l) {
+      @include column(4);
+      width: 33.333%;
+      padding: 2em;
+      margin-right: 0;
+      border-top: none;
+      border-right: $grid-border;
+
+      &:nth-child(-n+3) {
+        padding-top: 0;
+      }
+
+      &:nth-child(n+3) {
+        border-top: none;
+      }
+
+      &:nth-child(n+4) {
+        border-top: $grid-border;
+      }
+
+      &:nth-child(2n+2) {
+        border-right: $grid-border;
+      }
+
+      &:nth-child(3n+3) {
+        border-right: none;
+      }
+    }
+  }
+}
+
+
+@mixin colored-bg {
+  background: $gray;
+  padding-top: $section-spacing/2;
+  margin-bottom: $section-spacing;
+
+  @include breakpoint($m) {
+    padding-top: $section-spacing;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, li, li:before {
+    color: white !important;
+  }
+
+  .comment-svg-art {
+    fill: white;
+  }
+
+  a {
+    @include link-colored-bg;
+  }
+}

@@ -1,0 +1,76 @@
+.sidebar-article {
+  margin-bottom: $section-spacing;
+  color: $caption-color;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    @include caps;
+    @include font-bold;
+    font-size: 1em; /* IE8 */
+    font-size: 1rem;
+    color: $gray;
+    border-bottom: 8px solid $purple;
+    padding-bottom: .25em;
+    margin-bottom: .75em;
+  }
+
+  .date {
+    margin-top: -1em;
+  }
+}
+
+.contributor {
+  background: $gray-light-8;
+  border-top: 8px solid $orange;
+  overflow: hidden;
+
+  img {
+    @include breakpoint($s){
+      @include column(6);
+      @include last;
+    }
+    @include breakpoint($m){
+      @include column(12);
+    }
+  }
+
+  .article-text {
+    padding: 1em;
+
+    @include breakpoint($s){
+      @include column(6);
+    }
+    @include breakpoint($m){
+      @include column(12);
+    }
+
+    p {
+      padding: 0;
+    }
+  }
+}
+
+
+.discussed_concept {
+  text-align: center;
+
+  h2 {
+    text-align: left;
+  }
+  
+  h3 {
+    @include font-display;
+    color: $heading-color;
+    font-size: ms(1.5);
+  }
+}
+
+.related_publications {
+  img {
+    max-width: 100px;
+    margin-bottom: .5em;
+  }
+}

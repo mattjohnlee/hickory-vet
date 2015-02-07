@@ -1,0 +1,142 @@
+/* 
+////////////////////////////////////////////////////////////////////////////
+Color values
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$purple: rgb(118,126,210);
+$orange: rgb(255,128,0);
+$green: rgb(127,196,44);
+$blue: rgb(5,174,191);
+
+$gray: rgb(128,133,135);
+$gray-light-1: tint($gray, 10%);
+$gray-light-2: tint($gray, 20%);
+$gray-light-3: tint($gray, 30%);
+$gray-light-4: tint($gray, 40%);
+$gray-light-5: tint($gray, 50%);
+$gray-light-6: tint($gray, 60%);
+$gray-light-7: tint($gray, 70%);
+$gray-light-8: tint($gray, 80%);
+$gray-light-9: tint($gray, 90%);
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Standard applications of color variables
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$text-color: black; 
+$text-color-subtle: $gray-light-1; 
+$heading-color: $purple;
+$caption-color: $gray-light-2;
+
+$link-color: $purple;
+$link-color-hover: $orange;
+
+$selection-bg-color: transparentize($green, .5);
+$selection-text-color: $text-color;
+
+$error: red;
+$valid: green;
+
+$border-color: $gray-light-8;
+$grid-border: 1px solid $gray-light-6;
+
+$background-color: #fff;
+$background-color-subtle: #eee;
+
+$footer-background-color: $purple;
+$footer-text-color: white;
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Layout/spacing variables
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$section-spacing: 4em;
+$header-tall: 140px;
+$header-short: 70px;
+$form-padding: .75em;
+
+
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Typographic variables
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$sans: Helvetica, Arial, sans-serif;
+$serif: Georgia, 'Times New Roman', serif;
+$display: $sans;
+
+
+@mixin font-regular { 
+	font-family: 'Guardian TextSans Web', $sans;
+	font-weight:  400;
+	font-style:   normal;
+	font-stretch: normal;
+}
+
+@mixin font-bold { 
+  font-family: 'Guardian TextSans Web', $sans;
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@mixin font-italic { 
+  font-family: 'Guardian TextSans Web', $sans;
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@mixin font-bolditalic { 
+  font-family: 'Guardian TextSans Web', $sans;
+  font-weight:  700;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@mixin font-display { 
+  font-family: 'Guardian Sans Web', $sans;
+  font-weight:  300;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@mixin font-displayitalic { 
+  font-family: 'Guardian Sans Web', $sans;
+  font-weight:  300;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@mixin font-fallback { 
+  font-family: $sans;
+}
+
+
+
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Modular Scale variables
+////////////////////////////////////////////////////////////////////////////
+*/
+
+$ms-ratio: $golden;
+$ms-base: 1rem;
+
+

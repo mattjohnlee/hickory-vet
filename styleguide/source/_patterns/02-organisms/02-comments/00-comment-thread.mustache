@@ -1,12 +1,8 @@
-<section class="comments section">
-	<div class="comments-container" id="comments-container">
-		<h2 class="section-title">59 Comments</h2>
-		{{> molecules-comment-form }} 
-		<ul class="comment-list">
-			{{# listItems.five }}
-				{{> molecules-single-comment }} 
-			{{/ listItems.five }}
-		</ul>
-	</div>
-	{{> molecules-pagination }} 
-</section>
+<div class="comment-wrapper">
+	<h2 class="divider-bottom">Comments</h2>
+	{{>molecules-comment-form}}
+	{{# listItems.three }} <!-- repeats a pattern a given # of times -->
+		{{>molecules-comment-level-0}}
+		{{>molecules-comment-level-1}}
+	{{/ listItems.three }}	
+</div>
