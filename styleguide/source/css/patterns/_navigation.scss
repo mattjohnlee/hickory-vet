@@ -15,3 +15,17 @@
 	margin-top: $section-spacing;
 	clear: both;
 }
+
+.nav-secondary {
+	li {
+		@include divider-bottom;
+	}
+
+	a {
+		&:before {
+			content: "\f178";
+			font-family: "FontAwesome";
+			margin-right: .5em;
+		}
+	}
+}

@@ -484,6 +484,20 @@ figure figcaption {
   clear: both;
 }
 
+/* line 20, patterns/_navigation.scss */
+.nav-secondary li {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+  border-color: auto;
+}
+/* line 25, patterns/_navigation.scss */
+.nav-secondary a:before {
+  content: "\f178";
+  font-family: "FontAwesome";
+  margin-right: .5em;
+}
+
 /* 
 ////////////////////////////////////////////////////////////////////////////
 Error/Valid Messages (defaults are kinda messy...need to tidy up)

@@ -1,73 +1,1981 @@
-/*
-Syntax error: File to import not found or unreadable: sass/screen.
-              Load paths:
-                /Users/Matt/Sites/hickory-vet/styleguide/source/css
-                /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets
-                /Library/Ruby/Gems/2.0.0/gems/sassy-maps-0.3.2/stylesheets
-                /Library/Ruby/Gems/2.0.0/gems/breakpoint-2.4.2/stylesheets
-                /Library/Ruby/Gems/2.0.0/gems/modular-scale-2.0.5/stylesheets
-                Compass::SpriteImporter
-        on line 10 of /Users/Matt/Sites/hickory-vet/styleguide/source/css/styleguide-specific.scss
+/*------------------------------------*\
+    $PATTERN LAB-SPECIFIC STYLES
+\*------------------------------------*/
+/**
+ * This stylesheet is for styles you want to include only when the interface is being viewed within Pattern Lab.
+ * This is helpful for displaying demo styles for grids, animations, color swatches, etc
+ * It's also helpful for overriding context-specific styles like fixed or absolutely positioned elements
+ * These styles will not be your production CSS.
+ */
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
-Backtrace:
-/Users/Matt/Sites/hickory-vet/styleguide/source/css/styleguide-specific.scss:10
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/import_node.rb:66:in `rescue in import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:283:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:151:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.3.4/lib/sass/engine.rb:274:in `render'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.4/lib/compass/import-once/engine.rb:17:in `block in render'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.4/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.4/lib/compass/import-once/engine.rb:16:in `render'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:171:in `block (2 levels) in compile'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:153:in `timed'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:166:in `block in compile'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/logger.rb:46:in `red'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:165:in `compile'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:144:in `compile_if_required'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:129:in `block (2 levels) in run'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:127:in `each'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:127:in `block in run'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:153:in `timed'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:126:in `run'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/watcher/compiler.rb:24:in `compile'
-/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/forwardable.rb:171:in `compile'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:101:in `sass_modified'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:89:in `sass_callback'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/watcher/watch.rb:14:in `call'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/watcher/watch.rb:14:in `run_callback'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:69:in `block in listen_callback'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:66:in `each'
-/Library/Ruby/Gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:66:in `listen_callback'
-/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:236:in `call'
-/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:236:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/listener.rb:271:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `call'
-/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `report_changes'
-/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:313:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/listen-1.1.6/lib/listen/adapter.rb:289:in `block in start_poller'
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* core components: grids, colors, fonts, media queries, etc. */
+/* 
+////////////////////////////////////////////////////////////////////////////
+Color values
+////////////////////////////////////////////////////////////////////////////
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: sass/screen.\A               Load paths:\A                 /Users/Matt/Sites/hickory-vet/styleguide/source/css\A                 /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets\A                 /Library/Ruby/Gems/2.0.0/gems/sassy-maps-0.3.2/stylesheets\A                 /Library/Ruby/Gems/2.0.0/gems/breakpoint-2.4.2/stylesheets\A                 /Library/Ruby/Gems/2.0.0/gems/modular-scale-2.0.5/stylesheets\A                 Compass::SpriteImporter\A         on line 10 of /Users/Matt/Sites/hickory-vet/styleguide/source/css/styleguide-specific.scss"; }
+/* 
+////////////////////////////////////////////////////////////////////////////
+Gray values
+////////////////////////////////////////////////////////////////////////////
+*/
+/* 
+////////////////////////////////////////////////////////////////////////////
+Standard applications of color variables
+////////////////////////////////////////////////////////////////////////////
+*/
+/* 
+////////////////////////////////////////////////////////////////////////////
+Layout/spacing variables
+////////////////////////////////////////////////////////////////////////////
+*/
+/* 
+////////////////////////////////////////////////////////////////////////////
+Typographic variables
+////////////////////////////////////////////////////////////////////////////
+*/
+/* 
+////////////////////////////////////////////////////////////////////////////
+Modular Scale variables
+////////////////////////////////////////////////////////////////////////////
+*/
+/* 
+////////////////////////////////////////////////////////////////////////////
+Typographic mixins and extends
+////////////////////////////////////////////////////////////////////////////
+*/
+/* 
+////////////////////////////////////////////////////////////////////////////
+Embed custom fonts here
+////////////////////////////////////////////////////////////////////////////
+*/
+/* reusable patterns: typography levels, images, figures, tags, social media icons, notifications, etc. */
+/* 
+////////////////////////////////////////////////////////////////////////////
+Animate all properties
+////////////////////////////////////////////////////////////////////////////
+*/
+/* 
+////////////////////////////////////////////////////////////////////////////
+Animate specific properties
+////////////////////////////////////////////////////////////////////////////
+*/
+/* line 1, patterns/_breadcrumbs.scss */
+.breadcrumbs {
+  display: none;
+  padding: 1em 0;
+  list-style: none;
+}
+@media (min-width: 37.5em) {
+  /* line 1, patterns/_breadcrumbs.scss */
+  .breadcrumbs {
+    display: block;
+    float: left;
+  }
+}
+/* line 11, patterns/_breadcrumbs.scss */
+.breadcrumbs li {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 0.78615rem;
+  line-height: 0;
+  display: inline-block;
+}
+/* line 17, patterns/_breadcrumbs.scss */
+.breadcrumbs li:after {
+  content: '>';
+  color: #a3a3a3;
+  padding: 0 .125rem 0 0.5em;
+}
+/* line 27, patterns/_breadcrumbs.scss */
+.breadcrumbs li:last-child a {
+  color: #a3a3a3;
+}
+/* line 31, patterns/_breadcrumbs.scss */
+.breadcrumbs li:last-child:after {
+  content: '';
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+From 40 Weeks, so it'll need some TLC
+////////////////////////////////////////////////////////////////////////////
+*/
+/* site-wide form styles */
+/* get rid of "default" iOS button styling for submit buttons */
+/* line 11, patterns/_forms.scss */
+input[type=submit] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/* line 15, patterns/_forms.scss */
+*[type="submit"], *.submit {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  background: blue;
+  color: white !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  width: auto;
+  cursor: pointer;
+  display: block;
+  padding: .75em 1em .5em;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  border: none;
+  border: 0 none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+}
+/* line 65, lib/_general-mixins.scss */
+*[type="submit"]:hover, *[type="submit"]:focus, *.submit:hover, *.submit:focus {
+  background: green;
+  border: none;
+  text-decoration: none;
+}
+/* line 75, lib/_general-mixins.scss */
+*[type="submit"]:hover, *[type="submit"]:focus, *.submit:hover, *.submit:focus {
+  cursor: pointer;
+}
+/* line 20, patterns/_forms.scss */
+*[type="submit"] + *[type="submit"], *[type="submit"] + *.submit, *.submit + *[type="submit"], *.submit + *.submit {
+  margin-left: 1em;
+}
+
+/* line 25, patterns/_forms.scss */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+input[type="date"],
+textarea {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .875em;
+  padding: 0.75em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #bfbfbf;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 0;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+  background: white;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 49, patterns/_forms.scss */
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  border: 1px solid #949494;
+}
+
+/* line 53, patterns/_forms.scss */
+textarea {
+  min-height: 100px;
+}
+
+/* line 57, patterns/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  float: left;
+  margin-right: 0.75em;
+}
+
+/* line 63, patterns/_forms.scss */
+form {
+  position: relative;
+}
+
+/* line 67, patterns/_forms.scss */
+label {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 1em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1rem;
+  line-height: 1.5;
+  font-size: .875em;
+  display: block;
+  color: #bfbfbf;
+  margin: 1.25rem 0 .25rem;
+  /* if you want to hide labels semantically 
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+*/
+}
+
+/* line 81, patterns/_forms.scss */
+select, input[type="select"] {
+  /*
+  @include appearance(none);
+  font-size: 1rem;
+  outline: none;
+  padding: .65em 40px .65em 0; 
+  position: relative;
+  @include border-radius(0);
+  border: none;
+
+  &:active, &:focus {
+    @include font-regular;
+  } 
+  */
+}
+
+/* set input placeholder color to text color */
+/* line 107, patterns/_forms.scss */
+::-webkit-input-placeholder {
+  color: #bfbfbf;
+  vertical-align: top;
+}
+
+/* line 111, patterns/_forms.scss */
+::-moz-placeholder {
+  color: #bfbfbf;
+  vertical-align: top;
+}
+
+/* line 115, patterns/_forms.scss */
+:-ms-input-placeholder {
+  color: #bfbfbf;
+  vertical-align: top;
+}
+
+/* line 119, patterns/_forms.scss */
+:-moz-placeholder {
+  color: #bfbfbf;
+  vertical-align: top;
+}
+
+/* line 1, patterns/_links.scss */
+a {
+  color: blue;
+  text-decoration: none;
+}
+/* line 20, lib/_typographic-mixins.scss */
+a:hover, a:focus {
+  color: green;
+  text-decoration: underline;
+}
+/* line 4, patterns/_links.scss */
+a.button-link {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  background: blue;
+  color: white !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  width: auto;
+  cursor: pointer;
+  display: block;
+  padding: .75em 1em .5em;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  border: none;
+  display: inline-block;
+  margin: 0;
+}
+/* line 65, lib/_general-mixins.scss */
+a.button-link:hover, a.button-link:focus {
+  background: green;
+  border: none;
+  text-decoration: none;
+}
+
+/* line 12, patterns/_links.scss */
+a[href$=".pdf"]:before {
+  content: "\f1c1";
+  font-family: FontAwesome;
+  padding-right: 0.5em;
+}
+
+/* line 20, patterns/_links.scss */
+a[href$=".doc"]:before {
+  content: "\f1c2";
+  font-family: FontAwesome;
+  padding-right: 0.5em;
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Images, iframes, figures
+////////////////////////////////////////////////////////////////////////////
+*/
+/* line 8, patterns/_media.scss */
+img, iframe {
+  max-width: 100%;
+  display: block;
+  -webkit-transform: translateZ(0);
+}
+
+/* line 14, patterns/_media.scss */
+figure {
+  margin: 0 0 2em 0;
+}
+/* line 17, patterns/_media.scss */
+figure figcaption {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 1em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: .875em;
+  color: #a3a3a3;
+  margin-top: .5em;
+}
+
+/* line 2, patterns/_navigation.scss */
+.nav-main li, .nav-footer li {
+  display: block;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+  border-color: auto;
+}
+@media (min-width: 48em) {
+  /* line 2, patterns/_navigation.scss */
+  .nav-main li, .nav-footer li {
+    display: inline-block;
+    padding: 0;
+    border: 0 none;
+    margin: 0;
+    padding: 0 1em;
+  }
+}
+
+/* line 14, patterns/_navigation.scss */
+.nav-main {
+  margin-top: 2rem;
+  clear: both;
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Error/Valid Messages (defaults are kinda messy...need to tidy up)
+////////////////////////////////////////////////////////////////////////////
+*/
+/* line 9, patterns/_notifications.scss */
+.messages li {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+}
+/* line 13, patterns/_notifications.scss */
+.messages .error {
+  padding-top: 10px;
+  color: red;
+}
+/* line 17, patterns/_notifications.scss */
+.messages .success {
+  color: green;
+  padding-top: 10px;
+}
+
+/* line 24, patterns/_notifications.scss */
+.errorlist li {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  color: red;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+/* line 33, patterns/_notifications.scss */
+.message, .error-message, .valid-message {
+  display: block;
+  margin: 1em 0;
+  float: left;
+}
+
+/* line 40, patterns/_notifications.scss */
+.invalid .error-message {
+  float: none;
+}
+
+/* line 45, patterns/_notifications.scss */
+.error-message, .valid-message, .message {
+  margin: -.75em 0 1.75em 0;
+  font-size: 0.78615rem;
+  clear: both;
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+/* line 51, patterns/_notifications.scss */
+.error-message a, .valid-message a, .message a {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+/* line 56, patterns/_notifications.scss */
+.error-message ul li, .valid-message ul li, .message ul li {
+  font-size: 0.78615rem;
+}
+
+/* line 62, patterns/_notifications.scss */
+.message {
+  color: #bfbfbf;
+}
+
+/* line 66, patterns/_notifications.scss */
+.error-message {
+  color: red;
+}
+/* line 68, patterns/_notifications.scss */
+.error-message li {
+  line-height: 1;
+}
+/* line 70, patterns/_notifications.scss */
+.error-message li:before {
+  content: "\f0aa";
+  font-family: "FontAwesome";
+  margin-right: .375em;
+  font-size: .9em;
+  float: left;
+}
+
+/* line 81, patterns/_notifications.scss */
+.valid-message {
+  color: green;
+}
+/* line 83, patterns/_notifications.scss */
+.valid-message:before {
+  content: "\f058";
+  font-family: "FontAwesome";
+  margin-right: .375em;
+  font-size: .9em;
+  float: left;
+}
+
+/* Form notifications */
+/* line 98, patterns/_notifications.scss */
+label.valid {
+  color: green;
+  font-weight: bold;
+}
+/* line 103, patterns/_notifications.scss */
+label.error {
+  color: red;
+  font-weight: bold;
+}
+
+/* line 110, patterns/_notifications.scss */
+input.is-valid {
+  border: 1px solid green;
+  background: #e6ffe6;
+}
+/* line 115, patterns/_notifications.scss */
+input.is-error {
+  border: 1px solid red;
+  background: #ffe5e5;
+}
+
+/* line 1, patterns/_pagination.scss */
+.pagination {
+  float: left;
+  padding-top: 2em;
+}
+/* line 4, patterns/_pagination.scss */
+.pagination li {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  float: left;
+  margin: 0 .25em 0 0;
+}
+/* line 10, patterns/_pagination.scss */
+.pagination li a {
+  border: none;
+  padding: .5em .65em .5em .75em;
+}
+/* line 16, patterns/_pagination.scss */
+.pagination li.current_page a {
+  border-bottom: 1px solid;
+}
+
+/* line 106, lib/_general-mixins.scss */
+.social-media li {
+  display: inline-block;
+  font-size: 1.5em;
+  margin: 1em 1em 1em 0;
+}
+@media (min-width: 48em) {
+  /* line 106, lib/_general-mixins.scss */
+  .social-media li {
+    margin: 0 1em 1em 0;
+    font-size: 1.15em;
+  }
+}
+@media (min-width: 64em) {
+  /* line 106, lib/_general-mixins.scss */
+  .social-media li {
+    margin: 0 .75em .75em 0;
+    font-size: 1.15em;
+  }
+}
+/* line 121, lib/_general-mixins.scss */
+.social-media li a {
+  color: #a3a3a3;
+  border: 1px solid #a3a3a3;
+  text-align: center;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding: .375em;
+  line-height: 1.25;
+  /* keeps the FontAwesome icon centered */
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 132, lib/_general-mixins.scss */
+.social-media li a:hover {
+  color: green;
+  border-color: green;
+}
+
+/* line 5, patterns/_social-media.scss */
+.icon-label {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 
+Modified from CSS Tricks: http://css-tricks.com/responsive-data-tables/
+*/
+/* line 6, patterns/_tables.scss */
+table.responsive {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+}
+/* line 11, patterns/_tables.scss */
+table.responsive td, table.responsive th {
+  border: 1px solid #e0e0e0;
+  padding: 1em 2em;
+  line-height: 1.5;
+  vertical-align: top;
+  font-size: 0.88665rem;
+  text-align: center;
+}
+/* line 19, patterns/_tables.scss */
+table.responsive td:first-child, table.responsive th:first-child {
+  border-left: none;
+  text-align: left;
+}
+/* line 23, patterns/_tables.scss */
+table.responsive td:last-child, table.responsive th:last-child {
+  border-right: none;
+}
+/* line 28, patterns/_tables.scss */
+table.responsive th {
+  border-top: none;
+  color: black;
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* 
+This query will take effect for any screen smaller than 1024px
+*/
+@media only screen and (max-width: 1023px) {
+  /* Force table to not be like tables anymore */
+  /* line 44, patterns/_tables.scss */
+  table.responsive {
+    display: block;
+  }
+  /* line 47, patterns/_tables.scss */
+  table.responsive thead, table.responsive tbody, table.responsive th, table.responsive td, table.responsive tr {
+    display: block;
+  }
+  /* line 51, patterns/_tables.scss */
+  table.responsive thead {
+    display: none;
+  }
+  /* line 55, patterns/_tables.scss */
+  table.responsive tfoot {
+    clear: both;
+    width: 100%;
+  }
+  /* line 60, patterns/_tables.scss */
+  table.responsive tr {
+    border-top: 2px solid blue;
+    clear: both;
+  }
+  /* line 64, patterns/_tables.scss */
+  table.responsive tr:first-child {
+    border: none;
+  }
+  /* line 69, patterns/_tables.scss */
+  table.responsive td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    padding-left: 50%;
+  }
+  /* line 76, patterns/_tables.scss */
+  table.responsive td:last-child {
+    border-bottom: none;
+  }
+  /* line 81, patterns/_tables.scss */
+  table.responsive td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 1.05em;
+    /* compensates for smallcaps styling; if no smallcaps, reset this to .8em so it matches the td padding */
+    left: .7em;
+    width: 45%;
+    font-family: "CustomFont", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /* Label for data on specific tables */
+  /* line 96, patterns/_tables.scss */
+  #investment-list td:nth-of-type(1):before {
+    content: "";
+  }
+  /* line 97, patterns/_tables.scss */
+  #investment-list td:nth-of-type(2):before {
+    content: "Sun";
+  }
+  /* line 98, patterns/_tables.scss */
+  #investment-list td:nth-of-type(3):before {
+    content: "Mon";
+  }
+  /* line 99, patterns/_tables.scss */
+  #investment-list td:nth-of-type(4):before {
+    content: "Tues";
+  }
+  /* line 100, patterns/_tables.scss */
+  #investment-list td:nth-of-type(5):before {
+    content: "Wed";
+  }
+  /* line 101, patterns/_tables.scss */
+  #investment-list td:nth-of-type(6):before {
+    content: "Thu";
+  }
+  /* line 102, patterns/_tables.scss */
+  #investment-list td:nth-of-type(7):before {
+    content: "Fri";
+  }
+  /* line 103, patterns/_tables.scss */
+  #investment-list td:nth-of-type(8):before {
+    content: "Sat";
+  }
+}
+/* line 1, patterns/_tags.scss */
+.tags {
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+/* line 5, patterns/_tags.scss */
+.tags li {
+  float: left;
+  margin: 0 .25em 0 0;
+  text-indent: 0;
+}
+/* line 10, patterns/_tags.scss */
+.tags li:after {
+  content: ',';
+}
+/* line 15, patterns/_tags.scss */
+.tags li:last-child:after {
+  content: none;
+}
+
+/* line 22, patterns/_tags.scss */
+.tag-label {
+  float: left;
+  margin-right: .25em;
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Headings
+////////////////////////////////////////////////////////////////////////////
+*/
+/* line 8, patterns/_typography.scss */
+h1 {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  color: black;
+  margin: 1.5em 0 0.25em;
+  line-height: 1.3;
+  clear: both;
+  font-size: 2.75em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 2.61803rem;
+}
+/* line 44, lib/_typographic-mixins.scss */
+h1:first-of-type {
+  margin-top: 0;
+  /* so the first heading in any given container lines up flush */
+}
+/* line 47, lib/_typographic-mixins.scss */
+h1 a {
+  color: blue;
+  text-decoration: none;
+}
+/* line 20, lib/_typographic-mixins.scss */
+h1 a:hover, h1 a:focus {
+  color: green;
+  text-decoration: underline;
+}
+
+/* line 12, patterns/_typography.scss */
+h2 {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  color: black;
+  margin: 1.5em 0 0.25em;
+  line-height: 1.3;
+  clear: both;
+  font-size: 2em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 2.05817rem;
+}
+/* line 44, lib/_typographic-mixins.scss */
+h2:first-of-type {
+  margin-top: 0;
+  /* so the first heading in any given container lines up flush */
+}
+/* line 47, lib/_typographic-mixins.scss */
+h2 a {
+  color: blue;
+  text-decoration: none;
+}
+/* line 20, lib/_typographic-mixins.scss */
+h2 a:hover, h2 a:focus {
+  color: green;
+  text-decoration: underline;
+}
+
+/* line 16, patterns/_typography.scss */
+h3 {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  color: black;
+  margin: 1.5em 0 0.25em;
+  line-height: 1.3;
+  clear: both;
+  font-size: 1.5em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1.61803rem;
+}
+/* line 44, lib/_typographic-mixins.scss */
+h3:first-of-type {
+  margin-top: 0;
+  /* so the first heading in any given container lines up flush */
+}
+/* line 47, lib/_typographic-mixins.scss */
+h3 a {
+  color: blue;
+  text-decoration: none;
+}
+/* line 20, lib/_typographic-mixins.scss */
+h3 a:hover, h3 a:focus {
+  color: green;
+  text-decoration: underline;
+}
+
+/* line 20, patterns/_typography.scss */
+h4 {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  color: black;
+  margin: 1.5em 0 0.25em;
+  line-height: 1.3;
+  clear: both;
+  font-size: 1.2em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1.27202rem;
+}
+/* line 44, lib/_typographic-mixins.scss */
+h4:first-of-type {
+  margin-top: 0;
+  /* so the first heading in any given container lines up flush */
+}
+/* line 47, lib/_typographic-mixins.scss */
+h4 a {
+  color: blue;
+  text-decoration: none;
+}
+/* line 20, lib/_typographic-mixins.scss */
+h4 a:hover, h4 a:focus {
+  color: green;
+  text-decoration: underline;
+}
+
+/* line 24, patterns/_typography.scss */
+h5 {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  color: black;
+  margin: 1.5em 0 0.25em;
+  line-height: 1.3;
+  clear: both;
+  font-size: 1em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1rem;
+}
+/* line 44, lib/_typographic-mixins.scss */
+h5:first-of-type {
+  margin-top: 0;
+  /* so the first heading in any given container lines up flush */
+}
+/* line 47, lib/_typographic-mixins.scss */
+h5 a {
+  color: blue;
+  text-decoration: none;
+}
+/* line 20, lib/_typographic-mixins.scss */
+h5 a:hover, h5 a:focus {
+  color: green;
+  text-decoration: underline;
+}
+
+/* line 28, patterns/_typography.scss */
+h6 {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  color: black;
+  margin: 1.5em 0 0.25em;
+  line-height: 1.3;
+  clear: both;
+  font-size: 0.875em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 0.78615rem;
+}
+/* line 44, lib/_typographic-mixins.scss */
+h6:first-of-type {
+  margin-top: 0;
+  /* so the first heading in any given container lines up flush */
+}
+/* line 47, lib/_typographic-mixins.scss */
+h6 a {
+  color: blue;
+  text-decoration: none;
+}
+/* line 20, lib/_typographic-mixins.scss */
+h6 a:hover, h6 a:focus {
+  color: green;
+  text-decoration: underline;
+}
+
+/* line 32, patterns/_typography.scss */
+.divider-bottom {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+  border-color: auto;
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Block-level Elements
+////////////////////////////////////////////////////////////////////////////
+*/
+/* line 44, patterns/_typography.scss */
+p {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 1em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+/* line 50, patterns/_typography.scss */
+ul li, ol li {
+  margin-bottom: 1em;
+}
+
+/* line 55, patterns/_typography.scss */
+li {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 1em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* line 59, patterns/_typography.scss */
+ul.bullets {
+  /* applied to ul's to give them custom-designed bullets */
+  list-style: none;
+  margin: 0 0 1em 0;
+  text-indent: -.5em;
+}
+/* line 87, lib/_general-mixins.scss */
+ul.bullets li {
+  line-height: 1.5;
+}
+/* line 89, lib/_general-mixins.scss */
+ul.bullets li:before {
+  content: "\2022";
+  padding-right: .2em;
+}
+@media (min-width: 48em) {
+  /* line 59, patterns/_typography.scss */
+  ul.bullets {
+    text-indent: -.75em;
+  }
+  /* line 98, lib/_general-mixins.scss */
+  ul.bullets li:before {
+    padding-right: .45em;
+  }
+}
+
+/* line 63, patterns/_typography.scss */
+dl {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 66, patterns/_typography.scss */
+dl dt {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 1em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1rem;
+  line-height: 1.5;
+  float: left;
+  clear: left;
+}
+/* line 70, patterns/_typography.scss */
+dl dt:after {
+  content: ":";
+  margin-right: .25em;
+}
+/* line 75, patterns/_typography.scss */
+dl dd {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 1em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1rem;
+  line-height: 1.5;
+  float: left;
+  margin-bottom: 1em;
+}
+
+/* line 82, patterns/_typography.scss */
+blockquote {
+  margin: 1em 2em;
+  padding: 0 2em;
+  border-left: 2px solid #e0e0e0;
+}
+/* line 87, patterns/_typography.scss */
+blockquote p {
+  font-size: 1.43463rem;
+  font-weight: 200;
+  font-style: italic;
+}
+/* line 93, patterns/_typography.scss */
+blockquote a {
+  display: block;
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Inline Elements
+////////////////////////////////////////////////////////////////////////////
+*/
+/* line 108, patterns/_typography.scss */
+strong, b {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* line 112, patterns/_typography.scss */
+em, i {
+  font-style: italic;
+}
+
+/* line 116, patterns/_typography.scss */
+.font-bolditalic {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+/* line 120, patterns/_typography.scss */
+.font-display {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+/* line 124, patterns/_typography.scss */
+.font-displayitalic {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+/* line 128, patterns/_typography.scss */
+.font-fallback {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////
+Special Formatting
+////////////////////////////////////////////////////////////////////////////
+*/
+/* line 139, patterns/_typography.scss */
+.small {
+  font-size: .875em;
+}
+
+/* line 143, patterns/_typography.scss */
+.smallcaps {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+}
+
+/* line 147, patterns/_typography.scss */
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* line 151, patterns/_typography.scss */
+.phone {
+  font-size: 1.61803rem;
+}
+
+/* page layouts */
+/* 
+////////////////////////////////////////////////////////////////////////////
+Styles not specific to any particular site page. Place things like "general" paragraph styles, heading styles, base list styles, etc. here.
+
+If you're calling the container mixin, you can define a custom max-width. Otherwise, the max-width's default value is 81.25em (1300px)
+
+.container {
+  @include container(70em);
+}
+////////////////////////////////////////////////////////////////////////////
+*/
+/* 
+////////////////////////////////////////////////////////////////////////////
+General Typographic Styles
+$s: 600px;
+$m: 768px;
+$l: 1024px;
+$xl: 1200px;
+////////////////////////////////////////////////////////////////////////////
+*/
+/* line 24, layout/_global.scss */
+html {
+  font-size: 1em;
+  /* change this for different breakpoints to make a responsive typographic scale */
+}
+
+/* line 28, layout/_global.scss */
+body {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  color: black;
+  position: relative;
+}
+
+/* line 34, layout/_global.scss */
+::selection {
+  background: rgba(0, 0, 255, 0.25);
+  color: black;
+}
+
+/* line 39, layout/_global.scss */
+::-moz-selection {
+  /* Firefox */
+  background: rgba(0, 0, 255, 0.25);
+  color: black;
+}
+
+/* line 47, layout/_global.scss */
+.container {
+  margin: auto;
+  max-width: 1300px;
+  /* for browsers that don't do rems */
+  max-width: 81.25rem;
+  padding: 0 3.5%;
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+}
+
+/* line 51, layout/_global.scss */
+hr {
+  background-color: #e0e0e0;
+  height: 1px;
+  border: none;
+}
+
+/* line 57, layout/_global.scss */
+.primary {
+  margin-bottom: 2rem;
+  clear: both;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 100%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+@media (min-width: 48em) {
+  /* line 57, layout/_global.scss */
+  .primary {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 65.5%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+/* line 66, layout/_global.scss */
+.primary ul, .primary ol {
+  margin: 0 0 1em 0;
+}
+/* line 68, layout/_global.scss */
+.primary ul li, .primary ol li {
+  margin-bottom: 1em;
+}
+/* line 73, layout/_global.scss */
+.primary ol {
+  list-style: decimal;
+}
+@media (min-width: 48em) {
+  /* line 77, layout/_global.scss */
+  .primary .twocolumn {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+/* line 84, layout/_global.scss */
+.clear-none {
+  clear: none;
+}
+
+/* line 88, layout/_global.scss */
+.sidebar {
+  margin-bottom: 2rem;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 100%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+@media (min-width: 48em) {
+  /* line 88, layout/_global.scss */
+  .sidebar {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 31%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-right: 0;
+    float: right;
+  }
+}
+
+/* line 1, layout/_header.scss */
+header {
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  /* line 6, layout/_header.scss */
+  header .contact-info {
+    float: left;
+    text-align: left;
+  }
+  /* line 11, layout/_header.scss */
+  header .emergency {
+    float: right;
+  }
+}
+/* line 16, layout/_header.scss */
+header p {
+  margin-bottom: 0;
+}
+
+/* line 21, layout/_header.scss */
+.header-padding {
+  margin: auto;
+  max-width: 1300px;
+  /* for browsers that don't do rems */
+  max-width: 81.25rem;
+  padding: 0 3.5%;
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+  padding-top: 1rem;
+  overflow: visible;
+  /* lets dropdown nav show */
+}
+
+/* line 27, layout/_header.scss */
+.main-logo {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+/* line 31, layout/_header.scss */
+.main-logo a {
+  background: url("../img/logo-temp.png") center no-repeat;
+  position: relative;
+  display: block;
+  text-indent: -9999px;
+  text-decoration: none;
+  width: 221px;
+  height: 82px;
+  background-size: 221px 82px;
+}
+
+/* line 44, layout/_header.scss */
+.ie8 header .main-logo a {
+  background: url("../img/logo-temp.png") 0 0 no-repeat;
+}
+
+/* line 1, layout/_footer.scss */
+footer {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+  padding: 2rem 0 0 0;
+  background-color: #efefef;
+  color: black;
+}
+/* line 8, layout/_footer.scss */
+footer .footer-padding {
+  margin: auto;
+  max-width: 1300px;
+  /* for browsers that don't do rems */
+  max-width: 81.25rem;
+  padding: 0 3.5%;
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+}
+/* line 12, layout/_footer.scss */
+footer p, footer li {
+  margin-bottom: 0;
+  font-size: .875em;
+}
+
+/* line 19, layout/_footer.scss */
+.nav-footer li:first-child {
+  padding-left: 0;
+}
+@media (min-width: 48em) {
+  /* line 18, layout/_footer.scss */
+  .nav-footer {
+    float: left;
+  }
+}
+
+/* line 27, layout/_footer.scss */
+.footer-contact {
+  margin-bottom: 2rem;
+}
+@media (min-width: 48em) {
+  /* line 27, layout/_footer.scss */
+  .footer-contact {
+    float: right;
+  }
+}
+
+/* line 34, layout/_footer.scss */
+.backtotop {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin: 0;
+  clear: both;
+  text-align: center;
+}
+/* line 41, layout/_footer.scss */
+.backtotop a {
+  color: #efefef;
+  padding: 1.5em;
+  background-color: #666666;
+  display: block;
+  text-decoration: none;
+}
+/* line 48, layout/_footer.scss */
+.backtotop a:hover, .backtotop a:active {
+  background-color: #848484;
+}
+/* line 52, layout/_footer.scss */
+.backtotop a i {
+  margin-right: 1em;
+}
+@media (min-width: 48em) {
+  /* line 34, layout/_footer.scss */
+  .backtotop {
+    display: none;
+  }
+}
+
+/* individual components, usually from Bower*/
+/* styles for print and old ie */
+@media print {
+  /* line 8, print.scss */
+  * {
+    text-shadow: none !important;
+    color: #000 !important;
+    border-color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* line 16, print.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+    border: none;
+  }
+
+  /* line 22, print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 26, print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 31, print.scss */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /*pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }*/
+  /* line 42, print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 46, print.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 51, print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  /* line 55, print.scss */
+  p, h2, h3, h4, h5 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 68, print.scss */
+  select {
+    background: #fff !important;
+  }
+}
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* Style Guide Interface Colors */
+/* Typography */
+/* Defaults */
+/* Dimensions */
+/* Breakpoints */
+/* line 49, styleguide-specific.scss */
+.pl body {
+  padding-top: 0;
+}
+/* line 53, styleguide-specific.scss */
+.pl header {
+  position: relative;
+}
+
+/* line 60, styleguide-specific.scss */
+#sg-patterns {
+  /* class of div that wraps all styleguide patterns */
+  padding: 2em;
+}
+/* line 65, styleguide-specific.scss */
+#sg-patterns .grid {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+/* line 69, styleguide-specific.scss */
+#sg-patterns .grid .unit {
+  background: #a3a3a3;
+  text-align: center;
+  margin-bottom: 0.5em;
+  padding: 1em 0;
+}
+/* line 75, styleguide-specific.scss */
+#sg-patterns .grid .unit:nth-of-type(2n) {
+  background: #e0e0e0;
+}
+/* line 81, styleguide-specific.scss */
+#sg-patterns .grid.col2 .unit {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 48.25%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 58, lib/_grid-bearded.scss */
+#sg-patterns .grid.col2 .unit:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 60, lib/_grid-bearded.scss */
+.lt-ie8 #sg-patterns .grid.col2 .unit:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 66, lib/_grid-bearded.scss */
+#sg-patterns .grid.col2 .unit:nth-of-type(2n+2) {
+  margin-right: 0;
+  float: right;
+}
+/* line 70, lib/_grid-bearded.scss */
+#sg-patterns .grid.col2 .unit:nth-of-type(2n+3) {
+  clear: both;
+}
+/* line 87, styleguide-specific.scss */
+#sg-patterns .grid.col3 .unit {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 31%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 76, lib/_grid-bearded.scss */
+#sg-patterns .grid.col3 .unit:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 78, lib/_grid-bearded.scss */
+.lt-ie8 #sg-patterns .grid.col3 .unit:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 84, lib/_grid-bearded.scss */
+#sg-patterns .grid.col3 .unit:nth-of-type(3n+3) {
+  margin-right: 0;
+  float: right;
+}
+/* line 88, lib/_grid-bearded.scss */
+#sg-patterns .grid.col3 .unit:nth-of-type(3n+4) {
+  clear: both;
+}
+/* line 93, styleguide-specific.scss */
+#sg-patterns .grid.col4 .unit {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 22.375%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 94, lib/_grid-bearded.scss */
+#sg-patterns .grid.col4 .unit:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 96, lib/_grid-bearded.scss */
+.lt-ie8 #sg-patterns .grid.col4 .unit:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 102, lib/_grid-bearded.scss */
+#sg-patterns .grid.col4 .unit:nth-of-type(4n+4) {
+  margin-right: 0;
+  float: right;
+}
+/* line 106, lib/_grid-bearded.scss */
+#sg-patterns .grid.col4 .unit:nth-of-type(4n+5) {
+  clear: both;
+}
+/* line 99, styleguide-specific.scss */
+#sg-patterns .grid.col6 .unit {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 13.75%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 112, lib/_grid-bearded.scss */
+#sg-patterns .grid.col6 .unit:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 114, lib/_grid-bearded.scss */
+.lt-ie8 #sg-patterns .grid.col6 .unit:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 120, lib/_grid-bearded.scss */
+#sg-patterns .grid.col6 .unit:nth-of-type(6n+6) {
+  margin-right: 0;
+  float: right;
+}
+/* line 124, lib/_grid-bearded.scss */
+#sg-patterns .grid.col6 .unit:nth-of-type(6n+7) {
+  clear: both;
+}
+/* line 107, styleguide-specific.scss */
+#sg-patterns .demo-animate {
+  background: #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  position: relative;
+}
+/* line 114, styleguide-specific.scss */
+#sg-patterns .demo-animate .demo-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  background: gray;
+}
+/* line 124, styleguide-specific.scss */
+#sg-patterns .demo-animate:hover > .demo-shape {
+  left: 100%;
+  margin-left: -20px;
+}
+/* line 131, styleguide-specific.scss */
+#sg-patterns .demo-animate.regular .demo-shape {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 136, styleguide-specific.scss */
+#sg-patterns .demo-animate.slow .demo-shape {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 141, styleguide-specific.scss */
+#sg-patterns .demo-animate.fast .demo-shape {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.125s;
+  -o-transition-duration: 0.125s;
+  -webkit-transition-duration: 0.125s;
+  transition-duration: 0.125s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 148, styleguide-specific.scss */
+#sg-patterns .sg-colors {
+  overflow: hidden;
+}
+/* line 151, styleguide-specific.scss */
+#sg-patterns .sg-colors li {
+  overflow: hidden;
+  border: 1px solid #dddddd;
+  padding: 0.5em;
+  margin: 0 0 2em 0;
+}
+@media (min-width: 37.5em) {
+  /* line 151, styleguide-specific.scss */
+  #sg-patterns .sg-colors li {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+  /* line 58, lib/_grid-bearded.scss */
+  #sg-patterns .sg-colors li:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 60, lib/_grid-bearded.scss */
+  .lt-ie8 #sg-patterns .sg-colors li:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 66, lib/_grid-bearded.scss */
+  #sg-patterns .sg-colors li:nth-of-type(2n+2) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 70, lib/_grid-bearded.scss */
+  #sg-patterns .sg-colors li:nth-of-type(2n+3) {
+    clear: both;
+  }
+}
+@media (min-width: 48em) {
+  /* line 151, styleguide-specific.scss */
+  #sg-patterns .sg-colors li {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 22.375%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+  /* line 94, lib/_grid-bearded.scss */
+  #sg-patterns .sg-colors li:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 96, lib/_grid-bearded.scss */
+  .lt-ie8 #sg-patterns .sg-colors li:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 102, lib/_grid-bearded.scss */
+  #sg-patterns .sg-colors li:nth-of-type(4n+4) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 106, lib/_grid-bearded.scss */
+  #sg-patterns .sg-colors li:nth-of-type(4n+5) {
+    clear: both;
+  }
+}
+@media (min-width: 64em) {
+  /* line 151, styleguide-specific.scss */
+  #sg-patterns .sg-colors li {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 13.75%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+  /* line 112, lib/_grid-bearded.scss */
+  #sg-patterns .sg-colors li:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 114, lib/_grid-bearded.scss */
+  .lt-ie8 #sg-patterns .sg-colors li:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 120, lib/_grid-bearded.scss */
+  #sg-patterns .sg-colors li:nth-of-type(6n+6) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 124, lib/_grid-bearded.scss */
+  #sg-patterns .sg-colors li:nth-of-type(6n+7) {
+    clear: both;
+  }
+}
+/* line 174, styleguide-specific.scss */
+#sg-patterns .sg-swatch {
+  display: block;
+  height: 4em;
+  width: 100%;
+  margin: 0;
+}
+/* line 181, styleguide-specific.scss */
+#sg-patterns .sg-label {
+  line-height: 1;
+}
+/* line 187, styleguide-specific.scss */
+#sg-patterns .sg-fonts p {
+  font-size: 2em;
+}
+@media (min-width: 48em) {
+  /* line 187, styleguide-specific.scss */
+  #sg-patterns .sg-fonts p {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+  /* line 58, lib/_grid-bearded.scss */
+  #sg-patterns .sg-fonts p:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 60, lib/_grid-bearded.scss */
+  .lt-ie8 #sg-patterns .sg-fonts p:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 66, lib/_grid-bearded.scss */
+  #sg-patterns .sg-fonts p:nth-of-type(2n+2) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 70, lib/_grid-bearded.scss */
+  #sg-patterns .sg-fonts p:nth-of-type(2n+3) {
+    clear: both;
+  }
+}
+/* line 196, styleguide-specific.scss */
+#sg-patterns blockquote {
+  margin-left: 0;
+}
