@@ -4,19 +4,19 @@
 	"bodyClass": "body",
 	"img": {
 		"landscape-2x1": {
-			"src": "http://placehold.it/1600x800",
+			"src": "http://placeimg.com/1600/800/animals", 
 			"alt": "2x1 Image"
 		},
 		"landscape-3x2": {
-			"src": "http://placehold.it/900x600",
+			"src": "http://placeimg.com/900/600/animals", 
 			"alt": "3x2 Image"
 		},
 		"square": {
-			"src": "http://placehold.it/800x800",
+			"src": "http://placeimg.com/800/800/animals", 
 			"alt": "Square Thumbnail"
 		},
 		"portrait-2x3": {
-			"src": "http://placehold.it/600x900",
+			"src": "http://placeimg.com/600/900/animals", 
 			"alt": "2x3 Image"
 		}
 	},
