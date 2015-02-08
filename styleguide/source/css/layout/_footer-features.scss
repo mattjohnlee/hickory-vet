@@ -1,0 +1,32 @@
+.spotlight {
+	border: 1px solid $border-color;
+	overflow: hidden;
+
+	img {
+		@include column(4);
+	}
+	.spotlight-text {
+		@include column(8);
+		padding: $grid_padding $grid_padding $grid_padding 0;
+		@include last;
+	}
+}
+
+.featured-pet {
+	overflow: hidden;
+	img {
+		@include column(6);
+	}
+	.spotlight-text {
+		@include column(6);
+		padding: $grid_padding $grid_padding $grid_padding 0;
+		@include last;
+	}
+}
+
+.previously-featured-pets {
+	a {
+		@include column(3);
+		@include last-col4;
+	}
+}

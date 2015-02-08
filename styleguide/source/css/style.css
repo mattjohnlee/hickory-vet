@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -457,6 +458,13 @@ figure figcaption {
   font-size: .875em;
   color: #a3a3a3;
   margin-top: .5em;
+}
+
+/* line 26, patterns/_media.scss */
+.circle {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 
 /* line 2, patterns/_navigation.scss */
@@ -1171,12 +1179,32 @@ blockquote a {
   display: block;
 }
 
+/* line 98, patterns/_typography.scss */
+.thank-you-quote {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+/* line 104, patterns/_typography.scss */
+.thank-you-quote p:before {
+  content: "“";
+}
+/* line 107, patterns/_typography.scss */
+.thank-you-quote p:after {
+  content: "”";
+}
+/* line 112, patterns/_typography.scss */
+.thank-you-quote cite {
+  display: block;
+  text-align: right;
+}
+
 /* 
 ////////////////////////////////////////////////////////////////////////////
 Inline Elements
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 108, patterns/_typography.scss */
+/* line 126, patterns/_typography.scss */
 strong, b {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1184,12 +1212,12 @@ strong, b {
   font-stretch: normal;
 }
 
-/* line 112, patterns/_typography.scss */
+/* line 130, patterns/_typography.scss */
 em, i {
   font-style: italic;
 }
 
-/* line 116, patterns/_typography.scss */
+/* line 134, patterns/_typography.scss */
 .font-bolditalic {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1197,7 +1225,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 120, patterns/_typography.scss */
+/* line 138, patterns/_typography.scss */
 .font-display {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1205,7 +1233,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 124, patterns/_typography.scss */
+/* line 142, patterns/_typography.scss */
 .font-displayitalic {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1213,7 +1241,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 128, patterns/_typography.scss */
+/* line 146, patterns/_typography.scss */
 .font-fallback {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -1223,25 +1251,25 @@ em, i {
 Special Formatting
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 139, patterns/_typography.scss */
+/* line 157, patterns/_typography.scss */
 .small {
   font-size: .875em;
 }
 
-/* line 143, patterns/_typography.scss */
+/* line 161, patterns/_typography.scss */
 .smallcaps {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .8em;
 }
 
-/* line 147, patterns/_typography.scss */
+/* line 165, patterns/_typography.scss */
 .caps {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* line 151, patterns/_typography.scss */
+/* line 169, patterns/_typography.scss */
 .phone {
   font-size: 1.61803rem;
 }
@@ -1530,6 +1558,96 @@ footer p, footer li {
   .backtotop {
     display: none;
   }
+}
+
+/* line 1, layout/_footer-features.scss */
+.spotlight {
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+/* line 5, layout/_footer-features.scss */
+.spotlight img {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 31%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 8, layout/_footer-features.scss */
+.spotlight .spotlight-text {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 65.5%;
+  margin-right: 3.5%;
+  margin-left: 0;
+  padding: 3.5% 3.5% 3.5% 0;
+  margin-right: 0;
+}
+
+/* line 15, layout/_footer-features.scss */
+.featured-pet {
+  overflow: hidden;
+}
+/* line 17, layout/_footer-features.scss */
+.featured-pet img {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 48.25%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 20, layout/_footer-features.scss */
+.featured-pet .spotlight-text {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 48.25%;
+  margin-right: 3.5%;
+  margin-left: 0;
+  padding: 3.5% 3.5% 3.5% 0;
+  margin-right: 0;
+}
+
+/* line 28, layout/_footer-features.scss */
+.previously-featured-pets a {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 22.375%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 94, lib/_grid-bearded.scss */
+.previously-featured-pets a:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 96, lib/_grid-bearded.scss */
+.lt-ie8 .previously-featured-pets a:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 102, lib/_grid-bearded.scss */
+.previously-featured-pets a:nth-of-type(4n+4) {
+  margin-right: 0;
+  float: right;
+}
+/* line 106, lib/_grid-bearded.scss */
+.previously-featured-pets a:nth-of-type(4n+5) {
+  clear: both;
 }
 
 /* individual components, usually from Bower*/
