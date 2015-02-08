@@ -1,5 +1,17 @@
-.nav-main {
+.nav-main, .nav-footer {
 	li {
-		display: inline-block;
+		display: block;
+		@include divider-bottom;
+
+		@include breakpoint($m) {
+			display: inline-block;
+			@include divider-none;
+			padding: 0 1em;
+		}
 	}
+}
+
+.nav-main {
+	margin-top: $section-spacing;
+	clear: both;
 }

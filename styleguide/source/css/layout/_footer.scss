@@ -9,41 +9,44 @@ footer {
 		@include container;
 	}
 
-	a {
-		@include link-colored-bg;
-	}
-
 	p, li {
 		margin-bottom: 0;
 		@include small;
 	}
+}
 
-	.footer-logo {
+.nav-footer {
+	li:first-child {
+		padding-left: 0;
 	}
+	@include breakpoint($m) {
+		float: left;
+	}	
+}
 
-	.contact-info {
-	}
-
-	.social-media {
-	}
+.footer-contact {
+	margin-bottom: $section-spacing;
+	@include breakpoint($m) {
+		float: right;
+	}	
 }
 
 .backtotop {
 	text-transform: uppercase;
 	letter-spacing: .1em;
-	margin: 2em 0 0;
+	margin: 0;
 	clear: both;
 	text-align: center;
 
 	a {
 		color: $footer-background-color;
 		padding: 1.5em;
-		background-color: tint($footer-background-color, 65%);
+		background-color: $gray;
 		display: block;
 		text-decoration: none;
 
 		&:hover, &:active {
-			background-color: white;
+			background-color: $gray-light-2;
 		}
 
 		i {
@@ -53,32 +56,5 @@ footer {
 
 	@include breakpoint($m) {
 		display: none;
-	}
-}
-
-.nav-footer {
-	margin-bottom: $section-spacing;
-
-	li {
-		margin-bottom: 0;
-		@include small;
-		border-bottom: 1px solid $border-color;
-
-		&:last-child {
-			border: none;
-		}
-
-		a {
-			padding: 1.5em 0;
-			display: block;
-			@include link-colored-bg;
-		}
-
-		@include breakpoint($m){
-			border: none;
-			a {
-				padding: 0;
-			}
-		}
 	}
 }

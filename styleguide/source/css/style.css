@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -224,18 +223,8 @@ input[type=submit] {
 *[type="submit"] + *[type="submit"], *[type="submit"] + *.submit, *.submit + *[type="submit"], *.submit + *.submit {
   margin-left: 1em;
 }
-@media (min-width: 48em) {
-  /* line 15, patterns/_forms.scss */
-  *[type="submit"], *.submit {
-    float: right;
-  }
-  /* line 27, patterns/_forms.scss */
-  *[type="submit"] + *[type="submit"], *[type="submit"] + *.submit, *.submit + *[type="submit"], *.submit + *.submit {
-    margin-right: 1em;
-  }
-}
 
-/* line 33, patterns/_forms.scss */
+/* line 25, patterns/_forms.scss */
 input[type="email"],
 input[type="password"],
 input[type="text"],
@@ -275,7 +264,7 @@ textarea {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 57, patterns/_forms.scss */
+/* line 49, patterns/_forms.scss */
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="text"]:focus,
@@ -288,24 +277,24 @@ textarea:focus {
   border: 1px solid #949494;
 }
 
-/* line 61, patterns/_forms.scss */
+/* line 53, patterns/_forms.scss */
 textarea {
   min-height: 100px;
 }
 
-/* line 65, patterns/_forms.scss */
+/* line 57, patterns/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   float: left;
   margin-right: 0.75em;
 }
 
-/* line 71, patterns/_forms.scss */
+/* line 63, patterns/_forms.scss */
 form {
   position: relative;
 }
 
-/* line 75, patterns/_forms.scss */
+/* line 67, patterns/_forms.scss */
 label {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -326,7 +315,7 @@ label {
 */
 }
 
-/* line 89, patterns/_forms.scss */
+/* line 81, patterns/_forms.scss */
 select, input[type="select"] {
   /*
   @include appearance(none);
@@ -344,25 +333,25 @@ select, input[type="select"] {
 }
 
 /* set input placeholder color to text color */
-/* line 115, patterns/_forms.scss */
+/* line 107, patterns/_forms.scss */
 ::-webkit-input-placeholder {
   color: #bfbfbf;
   vertical-align: top;
 }
 
-/* line 119, patterns/_forms.scss */
+/* line 111, patterns/_forms.scss */
 ::-moz-placeholder {
   color: #bfbfbf;
   vertical-align: top;
 }
 
-/* line 123, patterns/_forms.scss */
+/* line 115, patterns/_forms.scss */
 :-ms-input-placeholder {
   color: #bfbfbf;
   vertical-align: top;
 }
 
-/* line 127, patterns/_forms.scss */
+/* line 119, patterns/_forms.scss */
 :-moz-placeholder {
   color: #bfbfbf;
   vertical-align: top;
@@ -471,8 +460,28 @@ figure figcaption {
 }
 
 /* line 2, patterns/_navigation.scss */
-.nav-main li {
-  display: inline-block;
+.nav-main li, .nav-footer li {
+  display: block;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+  border-color: auto;
+}
+@media (min-width: 48em) {
+  /* line 2, patterns/_navigation.scss */
+  .nav-main li, .nav-footer li {
+    display: inline-block;
+    padding: 0;
+    border: 0 none;
+    margin: 0;
+    padding: 0 1em;
+  }
+}
+
+/* line 14, patterns/_navigation.scss */
+.nav-main {
+  margin-top: 2rem;
+  clear: both;
 }
 
 /* 
@@ -634,19 +643,16 @@ input.is-error {
   border-bottom: 1px solid;
 }
 
-/* line 1, patterns/_social-media.scss */
-.social-media {
-  margin: 1em 0;
-}
 /* line 106, lib/_general-mixins.scss */
 .social-media li {
   display: inline-block;
   font-size: 1.5em;
-  margin: 0 1em .25em 0;
+  margin: 1em 1em 1em 0;
 }
 @media (min-width: 48em) {
   /* line 106, lib/_general-mixins.scss */
   .social-media li {
+    margin: 0 1em 1em 0;
     font-size: 1.15em;
   }
 }
@@ -657,7 +663,7 @@ input.is-error {
     font-size: 1.15em;
   }
 }
-/* line 120, lib/_general-mixins.scss */
+/* line 121, lib/_general-mixins.scss */
 .social-media li a {
   color: #a3a3a3;
   border: 1px solid #a3a3a3;
@@ -672,13 +678,13 @@ input.is-error {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 131, lib/_general-mixins.scss */
+/* line 132, lib/_general-mixins.scss */
 .social-media li a:hover {
   color: green;
   border-color: green;
 }
 
-/* line 6, patterns/_social-media.scss */
+/* line 5, patterns/_social-media.scss */
 .icon-label {
   position: absolute;
   height: 0;
@@ -695,29 +701,31 @@ table.responsive {
   margin: 2em 0;
 }
 /* line 11, patterns/_tables.scss */
+table.responsive td, table.responsive th {
+  border: 1px solid #e0e0e0;
+  padding: 1em 2em;
+  line-height: 1.5;
+  vertical-align: top;
+  font-size: 0.88665rem;
+  text-align: center;
+}
+/* line 19, patterns/_tables.scss */
+table.responsive td:first-child, table.responsive th:first-child {
+  border-left: none;
+  text-align: left;
+}
+/* line 23, patterns/_tables.scss */
+table.responsive td:last-child, table.responsive th:last-child {
+  border-right: none;
+}
+/* line 28, patterns/_tables.scss */
 table.responsive th {
+  border-top: none;
   color: black;
-  cursor: pointer;
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
-  vertical-align: top;
-}
-/* line 19, patterns/_tables.scss */
-table.responsive tbody tr {
-  border-bottom: 1px solid #e0e0e0;
-}
-/* line 24, patterns/_tables.scss */
-table.responsive td {
-  padding: 1em 2em 1em 0;
-  line-height: 1.5;
-  vertical-align: top;
-  font-size: 0.88665rem;
-}
-/* line 30, patterns/_tables.scss */
-table.responsive td:last-child {
-  padding-right: 0;
 }
 
 /* 
@@ -725,33 +733,33 @@ This query will take effect for any screen smaller than 1024px
 */
 @media only screen and (max-width: 1023px) {
   /* Force table to not be like tables anymore */
-  /* line 45, patterns/_tables.scss */
+  /* line 44, patterns/_tables.scss */
   table.responsive {
     display: block;
   }
-  /* line 48, patterns/_tables.scss */
+  /* line 47, patterns/_tables.scss */
   table.responsive thead, table.responsive tbody, table.responsive th, table.responsive td, table.responsive tr {
     display: block;
   }
-  /* line 52, patterns/_tables.scss */
+  /* line 51, patterns/_tables.scss */
   table.responsive thead {
     display: none;
   }
-  /* line 56, patterns/_tables.scss */
+  /* line 55, patterns/_tables.scss */
   table.responsive tfoot {
     clear: both;
     width: 100%;
   }
-  /* line 61, patterns/_tables.scss */
+  /* line 60, patterns/_tables.scss */
   table.responsive tr {
     border-top: 2px solid blue;
     clear: both;
   }
-  /* line 65, patterns/_tables.scss */
+  /* line 64, patterns/_tables.scss */
   table.responsive tr:first-child {
     border: none;
   }
-  /* line 70, patterns/_tables.scss */
+  /* line 69, patterns/_tables.scss */
   table.responsive td {
     /* Behave  like a "row" */
     border: none;
@@ -759,11 +767,11 @@ This query will take effect for any screen smaller than 1024px
     position: relative;
     padding-left: 50%;
   }
-  /* line 77, patterns/_tables.scss */
+  /* line 76, patterns/_tables.scss */
   table.responsive td:last-child {
     border-bottom: none;
   }
-  /* line 82, patterns/_tables.scss */
+  /* line 81, patterns/_tables.scss */
   table.responsive td:before {
     /* Now like a table header */
     position: absolute;
@@ -781,33 +789,37 @@ This query will take effect for any screen smaller than 1024px
   }
 
   /* Label for data on specific tables */
-  /* line 97, patterns/_tables.scss */
+  /* line 96, patterns/_tables.scss */
   #investment-list td:nth-of-type(1):before {
-    content: "Value";
+    content: "";
+  }
+  /* line 97, patterns/_tables.scss */
+  #investment-list td:nth-of-type(2):before {
+    content: "Sun";
   }
   /* line 98, patterns/_tables.scss */
-  #investment-list td:nth-of-type(2):before {
-    content: "Value";
+  #investment-list td:nth-of-type(3):before {
+    content: "Mon";
   }
   /* line 99, patterns/_tables.scss */
-  #investment-list td:nth-of-type(3):before {
-    content: "Value";
+  #investment-list td:nth-of-type(4):before {
+    content: "Tues";
   }
   /* line 100, patterns/_tables.scss */
-  #investment-list td:nth-of-type(4):before {
-    content: "Value";
+  #investment-list td:nth-of-type(5):before {
+    content: "Wed";
   }
   /* line 101, patterns/_tables.scss */
-  #investment-list td:nth-of-type(5):before {
-    content: "Value";
+  #investment-list td:nth-of-type(6):before {
+    content: "Thu";
   }
   /* line 102, patterns/_tables.scss */
-  #investment-list td:nth-of-type(6):before {
-    content: "Value";
+  #investment-list td:nth-of-type(7):before {
+    content: "Fri";
   }
   /* line 103, patterns/_tables.scss */
-  #investment-list td:nth-of-type(7):before {
-    content: "Value";
+  #investment-list td:nth-of-type(8):before {
+    content: "Sat";
   }
 }
 /* line 1, patterns/_tags.scss */
@@ -853,7 +865,7 @@ h1 {
   clear: both;
   font-size: 2.75em;
   /* for browsers not supporting rem-based scale */
-  font-size: 2.32128rem;
+  font-size: 2.61803rem;
 }
 /* line 44, lib/_typographic-mixins.scss */
 h1:first-of-type {
@@ -913,7 +925,7 @@ h3 {
   clear: both;
   font-size: 1.5em;
   /* for browsers not supporting rem-based scale */
-  font-size: 1.27202rem;
+  font-size: 1.61803rem;
 }
 /* line 44, lib/_typographic-mixins.scss */
 h3:first-of-type {
@@ -943,7 +955,7 @@ h4 {
   clear: both;
   font-size: 1.2em;
   /* for browsers not supporting rem-based scale */
-  font-size: 1rem;
+  font-size: 1.27202rem;
 }
 /* line 44, lib/_typographic-mixins.scss */
 h4:first-of-type {
@@ -973,7 +985,7 @@ h5 {
   clear: both;
   font-size: 1em;
   /* for browsers not supporting rem-based scale */
-  font-size: 0.78615rem;
+  font-size: 1rem;
 }
 /* line 44, lib/_typographic-mixins.scss */
 h5:first-of-type {
@@ -1003,7 +1015,7 @@ h6 {
   clear: both;
   font-size: 0.875em;
   /* for browsers not supporting rem-based scale */
-  font-size: 0.61803rem;
+  font-size: 0.78615rem;
 }
 /* line 44, lib/_typographic-mixins.scss */
 h6:first-of-type {
@@ -1130,30 +1142,17 @@ dl dd {
 
 /* line 82, patterns/_typography.scss */
 blockquote {
-  margin: 2em 0;
+  margin: 1em 2em;
+  padding: 0 2em;
+  border-left: 2px solid #e0e0e0;
 }
-/* line 85, patterns/_typography.scss */
+/* line 87, patterns/_typography.scss */
 blockquote p {
   font-size: 1.43463rem;
   font-weight: 200;
   font-style: italic;
 }
-/* line 90, patterns/_typography.scss */
-blockquote p:before, blockquote p:after {
-  font-size: 3.33019rem;
-  position: absolute;
-  line-height: .8;
-}
-/* line 96, patterns/_typography.scss */
-blockquote p:before {
-  content: '“';
-  text-indent: -.5em;
-}
-/* line 101, patterns/_typography.scss */
-blockquote p:after {
-  content: '”';
-}
-/* line 106, patterns/_typography.scss */
+/* line 93, patterns/_typography.scss */
 blockquote a {
   display: block;
 }
@@ -1163,7 +1162,7 @@ blockquote a {
 Inline Elements
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 121, patterns/_typography.scss */
+/* line 108, patterns/_typography.scss */
 strong, b {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1171,12 +1170,12 @@ strong, b {
   font-stretch: normal;
 }
 
-/* line 125, patterns/_typography.scss */
+/* line 112, patterns/_typography.scss */
 em, i {
   font-style: italic;
 }
 
-/* line 129, patterns/_typography.scss */
+/* line 116, patterns/_typography.scss */
 .font-bolditalic {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1184,7 +1183,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 133, patterns/_typography.scss */
+/* line 120, patterns/_typography.scss */
 .font-display {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1192,7 +1191,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 137, patterns/_typography.scss */
+/* line 124, patterns/_typography.scss */
 .font-displayitalic {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1200,7 +1199,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 141, patterns/_typography.scss */
+/* line 128, patterns/_typography.scss */
 .font-fallback {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -1210,22 +1209,27 @@ em, i {
 Special Formatting
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 152, patterns/_typography.scss */
+/* line 139, patterns/_typography.scss */
 .small {
   font-size: .875em;
 }
 
-/* line 156, patterns/_typography.scss */
+/* line 143, patterns/_typography.scss */
 .smallcaps {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .8em;
 }
 
-/* line 160, patterns/_typography.scss */
+/* line 147, patterns/_typography.scss */
 .caps {
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* line 151, patterns/_typography.scss */
+.phone {
+  font-size: 1.61803rem;
 }
 
 /* page layouts */
@@ -1299,7 +1303,7 @@ hr {
 
 /* line 57, layout/_global.scss */
 .primary {
-  margin-bottom: 4em;
+  margin-bottom: 2rem;
   clear: both;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1351,7 +1355,7 @@ hr {
 
 /* line 88, layout/_global.scss */
 .sidebar {
-  margin-bottom: 4em;
+  margin-bottom: 2rem;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1380,9 +1384,25 @@ hr {
 /* line 1, layout/_header.scss */
 header {
   border-bottom: 1px solid black;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  /* line 6, layout/_header.scss */
+  header .contact-info {
+    float: left;
+    text-align: left;
+  }
+  /* line 11, layout/_header.scss */
+  header .emergency {
+    float: right;
+  }
+}
+/* line 16, layout/_header.scss */
+header p {
+  margin-bottom: 0;
 }
 
-/* line 5, layout/_header.scss */
+/* line 21, layout/_header.scss */
 .header-padding {
   margin: auto;
   max-width: 1300px;
@@ -1392,25 +1412,31 @@ header {
   overflow: hidden;
   *zoom: 1;
   clear: both;
+  padding-top: 1rem;
   overflow: visible;
   /* lets dropdown nav show */
 }
 
-/* line 11, layout/_header.scss */
+/* line 27, layout/_header.scss */
+.main-logo {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+/* line 31, layout/_header.scss */
 .main-logo a {
-  background: url("../img/logo.png") 0 0 no-repeat;
+  background: url("../img/logo-temp.png") center no-repeat;
   position: relative;
   display: block;
   text-indent: -9999px;
   text-decoration: none;
-  width: 525px;
-  height: 153px;
-  background-size: 525px 153px;
+  width: 221px;
+  height: 82px;
+  background-size: 221px 82px;
 }
 
-/* line 24, layout/_header.scss */
+/* line 44, layout/_header.scss */
 .ie8 header .main-logo a {
-  background: url("../img/logo.png") 0 0 no-repeat;
+  background: url("../img/logo-temp.png") 0 0 no-repeat;
 }
 
 /* line 1, layout/_footer.scss */
@@ -1418,7 +1444,7 @@ footer {
   overflow: hidden;
   *zoom: 1;
   clear: both;
-  padding: 4em 0 0 0;
+  padding: 2rem 0 0 0;
   background-color: #efefef;
   color: black;
 }
@@ -1434,84 +1460,61 @@ footer .footer-padding {
   clear: both;
 }
 /* line 12, layout/_footer.scss */
-footer a {
-  color: black;
-}
-/* line 29, lib/_typographic-mixins.scss */
-footer a:hover, footer a:focus {
-  color: black;
-  text-decoration: underline;
-}
-/* line 16, layout/_footer.scss */
 footer p, footer li {
   margin-bottom: 0;
   font-size: .875em;
 }
 
-/* line 31, layout/_footer.scss */
+/* line 19, layout/_footer.scss */
+.nav-footer li:first-child {
+  padding-left: 0;
+}
+@media (min-width: 48em) {
+  /* line 18, layout/_footer.scss */
+  .nav-footer {
+    float: left;
+  }
+}
+
+/* line 27, layout/_footer.scss */
+.footer-contact {
+  margin-bottom: 2rem;
+}
+@media (min-width: 48em) {
+  /* line 27, layout/_footer.scss */
+  .footer-contact {
+    float: right;
+  }
+}
+
+/* line 34, layout/_footer.scss */
 .backtotop {
   text-transform: uppercase;
   letter-spacing: .1em;
-  margin: 2em 0 0;
+  margin: 0;
   clear: both;
   text-align: center;
 }
-/* line 38, layout/_footer.scss */
+/* line 41, layout/_footer.scss */
 .backtotop a {
   color: #efefef;
   padding: 1.5em;
-  background-color: #f9f9f9;
+  background-color: #666666;
   display: block;
   text-decoration: none;
 }
-/* line 45, layout/_footer.scss */
+/* line 48, layout/_footer.scss */
 .backtotop a:hover, .backtotop a:active {
-  background-color: white;
+  background-color: #848484;
 }
-/* line 49, layout/_footer.scss */
+/* line 52, layout/_footer.scss */
 .backtotop a i {
   margin-right: 1em;
 }
 @media (min-width: 48em) {
-  /* line 31, layout/_footer.scss */
+  /* line 34, layout/_footer.scss */
   .backtotop {
     display: none;
-  }
-}
-
-/* line 59, layout/_footer.scss */
-.nav-footer {
-  margin-bottom: 4em;
-}
-/* line 62, layout/_footer.scss */
-.nav-footer li {
-  margin-bottom: 0;
-  font-size: .875em;
-  border-bottom: 1px solid #e0e0e0;
-}
-/* line 67, layout/_footer.scss */
-.nav-footer li:last-child {
-  border: none;
-}
-/* line 71, layout/_footer.scss */
-.nav-footer li a {
-  padding: 1.5em 0;
-  display: block;
-  color: black;
-}
-/* line 29, lib/_typographic-mixins.scss */
-.nav-footer li a:hover, .nav-footer li a:focus {
-  color: black;
-  text-decoration: underline;
-}
-@media (min-width: 48em) {
-  /* line 62, layout/_footer.scss */
-  .nav-footer li {
-    border: none;
-  }
-  /* line 79, layout/_footer.scss */
-  .nav-footer li a {
-    padding: 0;
   }
 }
 

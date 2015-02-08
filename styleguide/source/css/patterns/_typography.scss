@@ -80,27 +80,14 @@ dl {
 }
 
 blockquote {
-  margin: 2em 0;
+  margin: 1em 2em;
+  padding: 0 2em;
+  border-left: 2px solid $border-color;
 
   p {
     font-size: ms(.75);
     font-weight: 200;
     font-style: italic;
-
-    &:before, &:after {
-      font-size: ms(2.5);
-      position: absolute;
-      line-height: .8;
-    }
-
-    &:before {
-      content: '“';
-      text-indent: -.5em;
-    }
-
-    &:after {
-      content: '”';
-    }
   }
 
   a {
@@ -159,4 +146,8 @@ Special Formatting
 
 .caps {
   @include caps;
+}
+
+.phone {
+  font-size: ms(1);
 }

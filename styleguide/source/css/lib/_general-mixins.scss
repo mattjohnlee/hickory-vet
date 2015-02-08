@@ -106,9 +106,10 @@
   li {
     display: inline-block;
     font-size: 1.5em;
-    margin: 0 1em .25em 0;
+    margin: 1em 1em 1em 0;
 
     @include breakpoint($m) {
+      margin: 0 1em 1em 0;
       font-size: 1.15em;
     }
 

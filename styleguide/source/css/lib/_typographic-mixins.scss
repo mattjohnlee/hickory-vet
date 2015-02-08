@@ -54,7 +54,7 @@ Typographic mixins and extends
 @mixin heading-1 {
   @include heading;
   font-size: 2.75em; /* for browsers not supporting rem-based scale */
-  font-size: ms(1.75);
+  font-size: ms(2);
 }
 
 @mixin heading-2 {
@@ -66,25 +66,25 @@ Typographic mixins and extends
 @mixin heading-3 {
   @include heading;
   font-size: 1.5em; /* for browsers not supporting rem-based scale */
-  font-size: ms(.5);
+  font-size: ms(1);
 }
 
 @mixin heading-4 {
   @include heading;
   font-size: 1.2em; /* for browsers not supporting rem-based scale */
-  font-size: ms(0);
+  font-size: ms(.5);
 }
 
 @mixin heading-5 {
   @include heading;
   font-size: 1em; /* for browsers not supporting rem-based scale */
-  font-size: ms(-.5);
+  font-size: ms(0);
 }
 
 @mixin heading-6 {
   @include heading;
   font-size: 0.875em; /* for browsers not supporting rem-based scale */
-  font-size: ms(-1);
+  font-size: ms(-.5);
 }
 
 

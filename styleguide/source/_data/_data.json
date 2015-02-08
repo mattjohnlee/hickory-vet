@@ -1,5 +1,5 @@
 {
-	"title" : "Pattern Lab",
+	"title" : "Hickory Veterinary Hospital",
 	"htmlClass": "pl",
 	"bodyClass": "body",
 	"img": {
@@ -20,6 +20,11 @@
 			"alt": "2x3 Image"
 		}
 	},
+	"contact" : {
+		"phone" : "610-828-3054",
+		"address1" : "2303 Hickory Road",
+		"address2" : "Plymouth Meeting, PA 19462"
+	},
 	"headline" : {
 		"short" : "Lorem ipsum dolor sit (37 characters)",
 		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)",
@@ -33,14 +38,10 @@
 	"description" : "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
 	"url" : "#",
 	"name" : {
-		"first": "Lacy",
-		"firsti": "L",
-		"middle": "Tommie",
-		"middlei": "T",
-		"last": "Way",
-		"lasti": "W"
+		"first": "Doctor",
+		"last": "Name"
 	},
-	"jobTitle" : "Director",
+	"jobTitle" : "Degrees",
 	"year" : {
 		"long": "2013",
 		"short": "13"

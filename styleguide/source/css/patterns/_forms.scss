@@ -20,14 +20,6 @@ input[type=submit] {
   & + *[type="submit"], & + *.submit {
     margin-left: 1em;
   }
-
-  @include breakpoint($m) {
-    float: right;
-
-    & + *[type="submit"], & + *.submit {
-      margin-right: 1em;
-    }
-  }
 }
 
 input[type="email"],
