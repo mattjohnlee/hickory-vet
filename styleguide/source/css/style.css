@@ -687,8 +687,7 @@ input.is-error {
 }
 /* line 121, lib/_general-mixins.scss */
 .social-media li a {
-  color: #a3a3a3;
-  border: 1px solid #a3a3a3;
+  border: 1px solid;
   text-align: center;
   display: inline-block;
   width: 1em;
@@ -699,11 +698,6 @@ input.is-error {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-}
-/* line 132, lib/_general-mixins.scss */
-.social-media li a:hover {
-  color: green;
-  border-color: green;
 }
 
 /* line 5, patterns/_social-media.scss */
@@ -1560,41 +1554,41 @@ footer p, footer li {
   }
 }
 
-/* line 1, layout/_footer-features.scss */
-.spotlight {
+/* line 2, layout/_footer-features.scss */
+.spotlight .box {
   border: 1px solid #e0e0e0;
   overflow: hidden;
 }
-/* line 5, layout/_footer-features.scss */
+/* line 7, layout/_footer-features.scss */
 .spotlight img {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline;
   float: left;
-  width: 31%;
+  width: 22.375%;
   margin-right: 3.5%;
   margin-left: 0;
 }
-/* line 8, layout/_footer-features.scss */
+/* line 10, layout/_footer-features.scss */
 .spotlight .spotlight-text {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline;
   float: left;
-  width: 65.5%;
+  width: 74.125%;
   margin-right: 3.5%;
   margin-left: 0;
   padding: 3.5% 3.5% 3.5% 0;
   margin-right: 0;
 }
 
-/* line 15, layout/_footer-features.scss */
+/* line 17, layout/_footer-features.scss */
 .featured-pet {
   overflow: hidden;
 }
-/* line 17, layout/_footer-features.scss */
+/* line 19, layout/_footer-features.scss */
 .featured-pet img {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1605,7 +1599,7 @@ footer p, footer li {
   margin-right: 3.5%;
   margin-left: 0;
 }
-/* line 20, layout/_footer-features.scss */
+/* line 22, layout/_footer-features.scss */
 .featured-pet .spotlight-text {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1619,7 +1613,7 @@ footer p, footer li {
   margin-right: 0;
 }
 
-/* line 28, layout/_footer-features.scss */
+/* line 30, layout/_footer-features.scss */
 .previously-featured-pets a {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1629,6 +1623,7 @@ footer p, footer li {
   width: 22.375%;
   margin-right: 3.5%;
   margin-left: 0;
+  padding-bottom: 3.5%;
 }
 /* line 94, lib/_grid-bearded.scss */
 .previously-featured-pets a:nth-of-type(1n) {
@@ -1648,6 +1643,78 @@ footer p, footer li {
 /* line 106, lib/_grid-bearded.scss */
 .previously-featured-pets a:nth-of-type(4n+5) {
   clear: both;
+}
+
+/* line 38, layout/_footer-features.scss */
+.footer-features .container > * {
+  margin: 1rem 0;
+}
+@media (min-width: 64em) {
+  /* line 41, layout/_footer-features.scss */
+  .footer-features .spotlight {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 48em) {
+  /* line 47, layout/_footer-features.scss */
+  .footer-features .featured-pet {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 64em) {
+  /* line 47, layout/_footer-features.scss */
+  .footer-features .featured-pet {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 22.375%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 48em) {
+  /* line 56, layout/_footer-features.scss */
+  .footer-features .previously-featured-pets {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 64em) {
+  /* line 56, layout/_footer-features.scss */
+  .footer-features .previously-featured-pets {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 22.375%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /* individual components, usually from Bower*/

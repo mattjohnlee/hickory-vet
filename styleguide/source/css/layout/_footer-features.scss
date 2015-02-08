@@ -1,12 +1,14 @@
 .spotlight {
-	border: 1px solid $border-color;
-	overflow: hidden;
+	.box {
+		border: 1px solid $border-color;
+		overflow: hidden;
+	}
 
 	img {
-		@include column(4);
+		@include column(3);
 	}
 	.spotlight-text {
-		@include column(8);
+		@include column(9);
 		padding: $grid_padding $grid_padding $grid_padding 0;
 		@include last;
 	}
@@ -28,5 +30,37 @@
 	a {
 		@include column(3);
 		@include last-col4;
+		padding-bottom: $grid_padding;
+	}
+}
+
+.footer-features {
+	.container > * {
+		margin: 1rem 0;
+	}
+	.spotlight {
+		@include breakpoint($l) {
+			@include column(6);
+		}
+	}
+
+	.featured-pet {
+		@include breakpoint($m) {
+			@include column(6);
+		}
+		@include breakpoint($l) {
+			@include column(3);
+		}
+	}
+
+	.previously-featured-pets {
+		@include breakpoint($m) {
+			@include column(6);
+			@include last;
+		}
+		@include breakpoint($l) {
+			@include column(3);
+			@include last;
+		}
 	}
 }

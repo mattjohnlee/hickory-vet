@@ -119,8 +119,7 @@
     }
 
     a {
-      color: $gray-light-4;
-      border: 1px solid $gray-light-4;
+      border: 1px solid;
       text-align: center;
       display: inline-block;
       width: 1em;
@@ -128,11 +127,6 @@
       padding: .375em;
       line-height: 1.25; /* keeps the FontAwesome icon centered */
       @include border-radius(50%);
-
-      &:hover {
-        color: $link-color-hover;
-        border-color: $link-color-hover;
-      }
     }
   }
 }
