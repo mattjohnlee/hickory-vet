@@ -3,19 +3,19 @@
 		"title": "Of the names in this list of whale authors, only those following Owen ever saw living whales",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/people",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
-				"src": "http://placeimg.com/600/600/nature",
+				"src": "http://placeimg.com/600/600/animals",
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/tech",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/tech",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -23,7 +23,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/tech",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -80,19 +80,19 @@
 		"title": "Above, Linnaeus has given you those items",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/nature",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
-				"src": "http://placeimg.com/600/600/tech",
+				"src": "http://placeimg.com/600/600/animals",
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/people",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/people",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -100,7 +100,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/people",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -157,19 +157,19 @@
 		"title": "I am aware that down to the present time, the fish styled Lamatins and Dugongs",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/tech",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
-				"src": "http://placeimg.com/600/600/people",
+				"src": "http://placeimg.com/600/600/animals",
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/nature",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/nature",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -177,7 +177,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/nature",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -238,15 +238,15 @@
 				"alt": "Avatar"
 			},
 			"square": {
-				"src": "http://placeimg.com/600/600/arch",
+				"src": "http://placeimg.com/600/600/animals",
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/people/grayscale",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/people/greyscale",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -254,7 +254,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/people/greyscale",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -311,7 +311,7 @@
 		"title": "Upon waking next morning about daylight",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/people/grayscale",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
@@ -319,11 +319,11 @@
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/arch",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/arch",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -331,7 +331,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/arch",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -388,7 +388,7 @@
 		"title": "Chapter Five: Breakfast",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/arch",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
@@ -396,11 +396,11 @@
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/people/grayscale",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/people/grayscale",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -408,7 +408,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/people/grayscale",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -465,19 +465,19 @@
 		"title": "We concocted our plans for the morrow.",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/any",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
-				"src": "http://placeimg.com/600/600/any",
+				"src": "http://placeimg.com/600/600/animals",
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/any",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/any",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -485,7 +485,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/any",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -542,19 +542,19 @@
 		"title": "Well, sir, I want to see what whaling is",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/any/grayscale",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
-				"src": "http://placeimg.com/600/600/any/grayscale",
+				"src": "http://placeimg.com/600/600/animals",
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/any/grayscale",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/any/grayscale",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -562,7 +562,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/any/grayscale",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -619,19 +619,19 @@
 		"title": "Captain Ahab is the Captain of this ship",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/any/sepia",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
-				"src": "http://placeimg.com/600/600/any/sepia",
+				"src": "http://placeimg.com/600/600/animals",
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/any/sepia",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/any/sepia",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -639,7 +639,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/any/sepia",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -696,19 +696,19 @@
 		"title": "A day or two passed, and there was great activity aboard the Pequod",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/tech/grayscale",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
-				"src": "http://placeimg.com/600/600/nature/grayscale",
+				"src": "http://placeimg.com/600/600/animals",
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/arch/grayscale",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/arch/grayscale",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -716,7 +716,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/arch/grayscale",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -773,19 +773,19 @@
 		"title": "So next morning, Queequeg and I took a very early start",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/tech/sepia",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
-				"src": "http://placeimg.com/600/600/animals/sepia",
+				"src": "http://placeimg.com/600/600/animals",
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/arch/sepia",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/arch/sepia",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -793,7 +793,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/arch/sepia",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
@@ -850,19 +850,19 @@
 		"title": "As for Peleg himself, he took it more like a philosopher",
 		"img": {
 			"avatar": {
-				"src": "http://placeimg.com/100/100/people/sepia",
+				"src": "http://placeimg.com/100/100/animals",
 				"alt": "Avatar"
 			},
 			"square": {
-				"src": "http://placeimg.com/600/600/people/sepia",
+				"src": "http://placeimg.com/600/600/animals",
 				"alt": "Square"
 			},
 			"rectangle": {
-				"src": "http://placeimg.com/600/900/people/sepia",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "Rectangle"
 			},
 			"portrait-2x3": {
-				"src": "http://placeimg.com/600/900/people/sepia",
+				"src": "http://placeimg.com/600/900/animals",
 				"alt": "2x3 Image"
 			},
 			"landscape-3x2": {
@@ -870,7 +870,7 @@
 				"alt": "2x1 Image"
 			},
 			"landscape-2x1": {
-				"src": "http://placeimg.com/1600/800/people/sepia",
+				"src": "http://placeimg.com/1600/800/animals",
 				"alt": "2x1 Image"
 			}
 		},
