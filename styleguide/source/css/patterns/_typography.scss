@@ -79,40 +79,13 @@ dl {
   }
 }
 
-blockquote {
+.pullquote {
+  font-size: ms(.75);
+  font-weight: 200;
+  font-style: italic;
   margin: 1em 2em;
   padding: 0 2em;
   border-left: 2px solid $border-color;
-
-  p {
-    font-size: ms(.75);
-    font-weight: 200;
-    font-style: italic;
-  }
-
-  a {
-    display: block;
-  }
-}
-
-.thank-you-quote {
-  margin: 0;
-  padding: 0;
-  border: none;
-
-  p {
-    &:before {
-      content: "“";
-    }
-    &:after {
-      content: "”";
-    }
-  }
-
-  cite {
-    display: block;
-    text-align: right;
-  }
 }
 
 

@@ -35,7 +35,12 @@
 @import "layout/global";
 @import "layout/header";
 @import "layout/footer";
+@import "layout/sidebar-articles";
+@import "layout/highlight-boxes";
 @import "layout/footer-features";
+@import "layout/thankyou";
+@import "layout/services";
+@import "layout/doctors";
 
 /* individual components, usually from Bower*/
 // @import "plugins/owl-carousel-base";

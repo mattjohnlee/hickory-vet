@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------------------------------------*\
     $PATTERN LAB-SPECIFIC STYLES
 \*------------------------------------*/
@@ -131,7 +132,6 @@ Animate specific properties
 /* line 1, patterns/_breadcrumbs.scss */
 .breadcrumbs {
   display: none;
-  padding: 1em 0;
   list-style: none;
 }
 @media (min-width: 37.5em) {
@@ -141,7 +141,7 @@ Animate specific properties
     float: left;
   }
 }
-/* line 11, patterns/_breadcrumbs.scss */
+/* line 10, patterns/_breadcrumbs.scss */
 .breadcrumbs li {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -151,17 +151,17 @@ Animate specific properties
   line-height: 0;
   display: inline-block;
 }
-/* line 17, patterns/_breadcrumbs.scss */
+/* line 16, patterns/_breadcrumbs.scss */
 .breadcrumbs li:after {
   content: '>';
   color: #a3a3a3;
   padding: 0 .125rem 0 0.5em;
 }
-/* line 27, patterns/_breadcrumbs.scss */
+/* line 26, patterns/_breadcrumbs.scss */
 .breadcrumbs li:last-child a {
   color: #a3a3a3;
 }
-/* line 31, patterns/_breadcrumbs.scss */
+/* line 30, patterns/_breadcrumbs.scss */
 .breadcrumbs li:last-child:after {
   content: '';
 }
@@ -198,19 +198,7 @@ input[type=submit] {
   width: auto;
   cursor: pointer;
   display: block;
-  padding: .75em 1em .5em;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.25s;
-  -o-transition-duration: 0.25s;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-  -moz-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  padding: 0.75rem;
   border: none;
   border: 0 none;
   -moz-box-sizing: border-box;
@@ -218,13 +206,13 @@ input[type=submit] {
   box-sizing: border-box;
   float: left;
 }
-/* line 65, lib/_general-mixins.scss */
+/* line 64, lib/_general-mixins.scss */
 *[type="submit"]:hover, *[type="submit"]:focus, *.submit:hover, *.submit:focus {
   background: green;
   border: none;
   text-decoration: none;
 }
-/* line 75, lib/_general-mixins.scss */
+/* line 74, lib/_general-mixins.scss */
 *[type="submit"]:hover, *[type="submit"]:focus, *.submit:hover, *.submit:focus {
   cursor: pointer;
 }
@@ -245,7 +233,7 @@ input[type="date"],
 textarea {
   font-family: Helvetica, Arial, sans-serif;
   font-size: .875em;
-  padding: 0.75em;
+  padding: 0.75rem;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -295,7 +283,7 @@ textarea {
 input[type="checkbox"],
 input[type="radio"] {
   float: left;
-  margin-right: 0.75em;
+  margin-right: 0.75rem;
 }
 
 /* line 63, patterns/_forms.scss */
@@ -341,26 +329,31 @@ select, input[type="select"] {
   */
 }
 
+/* line 104, patterns/_forms.scss */
+.field-container {
+  margin-bottom: 1rem;
+}
+
 /* set input placeholder color to text color */
-/* line 107, patterns/_forms.scss */
+/* line 111, patterns/_forms.scss */
 ::-webkit-input-placeholder {
   color: #bfbfbf;
   vertical-align: top;
 }
 
-/* line 111, patterns/_forms.scss */
+/* line 115, patterns/_forms.scss */
 ::-moz-placeholder {
   color: #bfbfbf;
   vertical-align: top;
 }
 
-/* line 115, patterns/_forms.scss */
+/* line 119, patterns/_forms.scss */
 :-ms-input-placeholder {
   color: #bfbfbf;
   vertical-align: top;
 }
 
-/* line 119, patterns/_forms.scss */
+/* line 123, patterns/_forms.scss */
 :-moz-placeholder {
   color: #bfbfbf;
   vertical-align: top;
@@ -395,24 +388,12 @@ a.button-link {
   width: auto;
   cursor: pointer;
   display: block;
-  padding: .75em 1em .5em;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.25s;
-  -o-transition-duration: 0.25s;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-  -moz-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  padding: 0.75rem;
   border: none;
   display: inline-block;
   margin: 0;
 }
-/* line 65, lib/_general-mixins.scss */
+/* line 64, lib/_general-mixins.scss */
 a.button-link:hover, a.button-link:focus {
   background: green;
   border: none;
@@ -468,6 +449,42 @@ figure figcaption {
   margin-top: .5em;
 }
 
+/* line 26, patterns/_media.scss */
+.circle {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 30, patterns/_media.scss */
+.hero {
+  position: relative;
+}
+@media (min-width: 37.5em) {
+  /* line 30, patterns/_media.scss */
+  .hero {
+    max-height: 25rem;
+    overflow: hidden;
+  }
+}
+/* line 37, patterns/_media.scss */
+.hero img {
+  width: 100%;
+}
+@media (min-width: 37.5em) {
+  /* line 41, patterns/_media.scss */
+  .hero .hero-text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    -moz-transform: translateX(0) translateY(-50%) translateZ(0);
+    -ms-transform: translateX(0) translateY(-50%) translateZ(0);
+    -webkit-transform: translateX(0) translateY(-50%) translateZ(0);
+    transform: translateX(0) translateY(-50%) translateZ(0);
+  }
+}
+
 /* line 2, patterns/_navigation.scss */
 .nav-main li, .nav-footer li {
   display: block;
@@ -475,6 +492,10 @@ figure figcaption {
   border-bottom: 1px solid;
   margin-bottom: 1em;
   border-color: auto;
+}
+/* line 6, patterns/_navigation.scss */
+.nav-main li:last-child, .nav-footer li:last-child {
+  border: none;
 }
 @media (min-width: 48em) {
   /* line 2, patterns/_navigation.scss */
@@ -487,10 +508,24 @@ figure figcaption {
   }
 }
 
-/* line 14, patterns/_navigation.scss */
+/* line 18, patterns/_navigation.scss */
 .nav-main {
   margin-top: 2rem;
   clear: both;
+}
+
+/* line 24, patterns/_navigation.scss */
+.nav-secondary li {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+  border-color: auto;
+}
+/* line 29, patterns/_navigation.scss */
+.nav-secondary a:before {
+  content: "\f178";
+  font-family: "FontAwesome";
+  margin-right: .5em;
 }
 
 /* 
@@ -652,30 +687,29 @@ input.is-error {
   border-bottom: 1px solid;
 }
 
-/* line 106, lib/_general-mixins.scss */
+/* line 112, lib/_general-mixins.scss */
 .social-media li {
   display: inline-block;
   font-size: 1.5em;
   margin: 1em 1em 1em 0;
 }
 @media (min-width: 48em) {
-  /* line 106, lib/_general-mixins.scss */
+  /* line 112, lib/_general-mixins.scss */
   .social-media li {
     margin: 0 1em 1em 0;
     font-size: 1.15em;
   }
 }
 @media (min-width: 64em) {
-  /* line 106, lib/_general-mixins.scss */
+  /* line 112, lib/_general-mixins.scss */
   .social-media li {
     margin: 0 .75em .75em 0;
     font-size: 1.15em;
   }
 }
-/* line 121, lib/_general-mixins.scss */
+/* line 127, lib/_general-mixins.scss */
 .social-media li a {
-  color: #a3a3a3;
-  border: 1px solid #a3a3a3;
+  border: 1px solid;
   text-align: center;
   display: inline-block;
   width: 1em;
@@ -686,11 +720,6 @@ input.is-error {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-}
-/* line 132, lib/_general-mixins.scss */
-.social-media li a:hover {
-  color: green;
-  border-color: green;
 }
 
 /* line 5, patterns/_social-media.scss */
@@ -1092,11 +1121,11 @@ ul.bullets {
   margin: 0 0 1em 0;
   text-indent: -.5em;
 }
-/* line 87, lib/_general-mixins.scss */
+/* line 93, lib/_general-mixins.scss */
 ul.bullets li {
   line-height: 1.5;
 }
-/* line 89, lib/_general-mixins.scss */
+/* line 95, lib/_general-mixins.scss */
 ul.bullets li:before {
   content: "\2022";
   padding-right: .2em;
@@ -1106,7 +1135,7 @@ ul.bullets li:before {
   ul.bullets {
     text-indent: -.75em;
   }
-  /* line 98, lib/_general-mixins.scss */
+  /* line 104, lib/_general-mixins.scss */
   ul.bullets li:before {
     padding-right: .45em;
   }
@@ -1171,7 +1200,7 @@ blockquote a {
 Inline Elements
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 108, patterns/_typography.scss */
+/* line 106, patterns/_typography.scss */
 strong, b {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1179,12 +1208,12 @@ strong, b {
   font-stretch: normal;
 }
 
-/* line 112, patterns/_typography.scss */
+/* line 110, patterns/_typography.scss */
 em, i {
   font-style: italic;
 }
 
-/* line 116, patterns/_typography.scss */
+/* line 114, patterns/_typography.scss */
 .font-bolditalic {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1192,7 +1221,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 120, patterns/_typography.scss */
+/* line 118, patterns/_typography.scss */
 .font-display {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1200,7 +1229,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 124, patterns/_typography.scss */
+/* line 122, patterns/_typography.scss */
 .font-displayitalic {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1208,7 +1237,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 128, patterns/_typography.scss */
+/* line 126, patterns/_typography.scss */
 .font-fallback {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -1218,25 +1247,25 @@ em, i {
 Special Formatting
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 139, patterns/_typography.scss */
+/* line 137, patterns/_typography.scss */
 .small {
   font-size: .875em;
 }
 
-/* line 143, patterns/_typography.scss */
+/* line 141, patterns/_typography.scss */
 .smallcaps {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .8em;
 }
 
-/* line 147, patterns/_typography.scss */
+/* line 145, patterns/_typography.scss */
 .caps {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* line 151, patterns/_typography.scss */
+/* line 149, patterns/_typography.scss */
 .phone {
   font-size: 1.61803rem;
 }
@@ -1331,7 +1360,7 @@ hr {
     box-sizing: border-box;
     display: inline;
     float: left;
-    width: 65.5%;
+    width: 74.125%;
     margin-right: 3.5%;
     margin-left: 0;
   }
@@ -1382,12 +1411,17 @@ hr {
     box-sizing: border-box;
     display: inline;
     float: left;
-    width: 31%;
+    width: 22.375%;
     margin-right: 3.5%;
     margin-left: 0;
     margin-right: 0;
     float: right;
   }
+}
+
+/* line 99, layout/_global.scss */
+section {
+  margin-top: 2rem;
 }
 
 /* line 1, layout/_header.scss */
@@ -1524,6 +1558,483 @@ footer p, footer li {
   /* line 34, layout/_footer.scss */
   .backtotop {
     display: none;
+  }
+}
+
+/* line 1, layout/_sidebar-articles.scss */
+.sidebar-article {
+  margin-bottom: 2rem;
+}
+
+/* line 1, layout/_highlight-boxes.scss */
+.highlight-box {
+  border: 1px solid #e0e0e0;
+  background-color: #efefef;
+  padding: 1em;
+}
+
+@media (min-width: 37.5em) {
+  /* line 9, layout/_highlight-boxes.scss */
+  .highlight-boxes.two .highlight-box {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+  /* line 58, lib/_grid-bearded.scss */
+  .highlight-boxes.two .highlight-box:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 60, lib/_grid-bearded.scss */
+  .lt-ie8 .highlight-boxes.two .highlight-box:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 66, lib/_grid-bearded.scss */
+  .highlight-boxes.two .highlight-box:nth-of-type(2n+2) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 70, lib/_grid-bearded.scss */
+  .highlight-boxes.two .highlight-box:nth-of-type(2n+3) {
+    clear: both;
+  }
+}
+/* line 17, layout/_highlight-boxes.scss */
+.highlight-boxes.three .highlight-box {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 31%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 76, lib/_grid-bearded.scss */
+.highlight-boxes.three .highlight-box:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 78, lib/_grid-bearded.scss */
+.lt-ie8 .highlight-boxes.three .highlight-box:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 84, lib/_grid-bearded.scss */
+.highlight-boxes.three .highlight-box:nth-of-type(3n+3) {
+  margin-right: 0;
+  float: right;
+}
+/* line 88, lib/_grid-bearded.scss */
+.highlight-boxes.three .highlight-box:nth-of-type(3n+4) {
+  clear: both;
+}
+
+/* line 2, layout/_footer-features.scss */
+.spotlight .box {
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+/* line 7, layout/_footer-features.scss */
+.spotlight img {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 22.375%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 10, layout/_footer-features.scss */
+.spotlight .spotlight-text {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 74.125%;
+  margin-right: 3.5%;
+  margin-left: 0;
+  padding: 3.5% 3.5% 3.5% 0;
+  margin-right: 0;
+}
+
+/* line 17, layout/_footer-features.scss */
+.featured-pet {
+  overflow: hidden;
+}
+/* line 19, layout/_footer-features.scss */
+.featured-pet img {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 48.25%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 22, layout/_footer-features.scss */
+.featured-pet .spotlight-text {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 48.25%;
+  margin-right: 3.5%;
+  margin-left: 0;
+  padding: 3.5% 3.5% 3.5% 0;
+  margin-right: 0;
+}
+
+/* line 30, layout/_footer-features.scss */
+.previously-featured-pets a {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 22.375%;
+  margin-right: 3.5%;
+  margin-left: 0;
+  padding-bottom: 3.5%;
+}
+/* line 94, lib/_grid-bearded.scss */
+.previously-featured-pets a:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 96, lib/_grid-bearded.scss */
+.lt-ie8 .previously-featured-pets a:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 102, lib/_grid-bearded.scss */
+.previously-featured-pets a:nth-of-type(4n+4) {
+  margin-right: 0;
+  float: right;
+}
+/* line 106, lib/_grid-bearded.scss */
+.previously-featured-pets a:nth-of-type(4n+5) {
+  clear: both;
+}
+
+/* line 38, layout/_footer-features.scss */
+.footer-features .container > * {
+  margin: 0 0 2rem 0;
+}
+@media (min-width: 64em) {
+  /* line 41, layout/_footer-features.scss */
+  .footer-features .spotlight {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 48em) {
+  /* line 47, layout/_footer-features.scss */
+  .footer-features .featured-pet {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 64em) {
+  /* line 47, layout/_footer-features.scss */
+  .footer-features .featured-pet {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 22.375%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 48em) {
+  /* line 56, layout/_footer-features.scss */
+  .footer-features .previously-featured-pets {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 64em) {
+  /* line 56, layout/_footer-features.scss */
+  .footer-features .previously-featured-pets {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 22.375%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 1, layout/_thankyou.scss */
+.thankyou-quote {
+  margin: 0 0 1em;
+  padding: 0;
+  border: none;
+}
+/* line 7, layout/_thankyou.scss */
+.thankyou-quote p:before {
+  content: "“";
+}
+/* line 10, layout/_thankyou.scss */
+.thankyou-quote p:after {
+  content: "”";
+}
+
+/* line 19, layout/_thankyou.scss */
+.thankyou-carousel {
+  background: #efefef;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* line 1, layout/_services.scss */
+.service-unit {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+/* line 6, layout/_services.scss */
+.service-unit .service-unit-text {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  -moz-transform: translateX(0) translateY(-50%) translateZ(0);
+  -ms-transform: translateX(0) translateY(-50%) translateZ(0);
+  -webkit-transform: translateX(0) translateY(-50%) translateZ(0);
+  transform: translateX(0) translateY(-50%) translateZ(0);
+  color: white;
+}
+
+@media (min-width: 48em) {
+  /* line 12, layout/_services.scss */
+  .service-intro {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 64em) {
+  /* line 12, layout/_services.scss */
+  .service-intro {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 22.375%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 48em) {
+  /* line 21, layout/_services.scss */
+  .service-list {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 64em) {
+  /* line 21, layout/_services.scss */
+  .service-list {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 74.125%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 31, layout/_services.scss */
+.service-list .service-unit {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 48.25%;
+  margin-right: 3.5%;
+  margin-left: 0;
+  margin-bottom: 3.5%;
+}
+/* line 58, lib/_grid-bearded.scss */
+.service-list .service-unit:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 60, lib/_grid-bearded.scss */
+.lt-ie8 .service-list .service-unit:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 66, lib/_grid-bearded.scss */
+.service-list .service-unit:nth-of-type(2n+2) {
+  margin-right: 0;
+  float: right;
+}
+/* line 70, lib/_grid-bearded.scss */
+.service-list .service-unit:nth-of-type(2n+3) {
+  clear: both;
+}
+@media (min-width: 64em) {
+  /* line 31, layout/_services.scss */
+  .service-list .service-unit {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 31%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-bottom: 3.5%;
+  }
+  /* line 76, lib/_grid-bearded.scss */
+  .service-list .service-unit:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 78, lib/_grid-bearded.scss */
+  .lt-ie8 .service-list .service-unit:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 84, lib/_grid-bearded.scss */
+  .service-list .service-unit:nth-of-type(3n+3) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 88, lib/_grid-bearded.scss */
+  .service-list .service-unit:nth-of-type(3n+4) {
+    clear: both;
+  }
+}
+
+/* line 44, layout/_services.scss */
+.service-group {
+  overflow: hidden;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+  border-color: auto;
+}
+/* line 48, layout/_services.scss */
+.service-group:last-child {
+  border: none;
+}
+
+/* line 6, layout/_doctors.scss */
+.doctor-list .doctor-unit {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 48.25%;
+  margin-right: 3.5%;
+  margin-left: 0;
+  margin-bottom: 3.5%;
+}
+/* line 58, lib/_grid-bearded.scss */
+.doctor-list .doctor-unit:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 60, lib/_grid-bearded.scss */
+.lt-ie8 .doctor-list .doctor-unit:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 66, lib/_grid-bearded.scss */
+.doctor-list .doctor-unit:nth-of-type(2n+2) {
+  margin-right: 0;
+  float: right;
+}
+/* line 70, lib/_grid-bearded.scss */
+.doctor-list .doctor-unit:nth-of-type(2n+3) {
+  clear: both;
+}
+@media (min-width: 64em) {
+  /* line 6, layout/_doctors.scss */
+  .doctor-list .doctor-unit {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 31%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-bottom: 3.5%;
+  }
+  /* line 76, lib/_grid-bearded.scss */
+  .doctor-list .doctor-unit:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 78, lib/_grid-bearded.scss */
+  .lt-ie8 .doctor-list .doctor-unit:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 84, lib/_grid-bearded.scss */
+  .doctor-list .doctor-unit:nth-of-type(3n+3) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 88, lib/_grid-bearded.scss */
+  .doctor-list .doctor-unit:nth-of-type(3n+4) {
+    clear: both;
   }
 }
 

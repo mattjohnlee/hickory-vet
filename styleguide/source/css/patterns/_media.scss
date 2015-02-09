@@ -26,3 +26,21 @@ figure {
 .circle {
   @include border-radius(50%);
 }
+
+.hero {
+  position: relative;
+  @include breakpoint($s) {
+    max-height: 25rem;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .hero-text {
+    @include breakpoint($s) {
+      @include center-vertical;
+    }
+  }
+}

@@ -3,6 +3,10 @@
 		display: block;
 		@include divider-bottom;
 
+		&:last-child {
+			border: none;
+		}
+
 		@include breakpoint($m) {
 			display: inline-block;
 			@include divider-none;

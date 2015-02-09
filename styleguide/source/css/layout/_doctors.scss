@@ -1,0 +1,70 @@
+.doctor-unit {
+	img {
+		margin-bottom: 1em;
+	}
+
+}
+
+.doctor-list {
+	margin-bottom: $grid_padding;
+
+	.doctor-unit {
+		@include breakpoint($s) {
+			@include column(6);
+			@include last-col2;
+		}
+	
+		@include breakpoint($m) {
+			@include column(4);
+			@include last-col3;
+		}
+	
+		@include breakpoint($l) {
+			@include column(3);
+			@include last-col4;
+		}
+
+		@include breakpoint($xl) {
+			@include column(2);
+			@include last-col6;
+		}
+	}
+}
+
+.doctor-photo {
+	overflow: hidden;
+	margin-bottom: $section-spacing;
+
+	@include breakpoint($s) {
+		img {
+			@include column(6);
+		}
+
+		.doctor-name {
+			@include column(6);
+			@include last;
+		}
+	}
+}
+
+.doctors-carousel {
+	.doctor-unit {
+		@include column(6);
+		@include last-col2;
+	
+		@include breakpoint($s) {
+			@include column(4);
+			@include last-col3;
+		}
+	
+		@include breakpoint($m) {
+			@include column(3);
+			@include last-col4;
+		}
+
+		@include breakpoint($l) {
+			@include column(2);
+			@include last-col6;
+		}
+	}
+}

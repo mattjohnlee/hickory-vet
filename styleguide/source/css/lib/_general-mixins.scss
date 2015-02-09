@@ -58,8 +58,7 @@
     width: auto;
     cursor: pointer;
     display: block;
-    padding: .75em 1em .5em;
-    @include animate;
+    padding: $form-padding;
     border: none;
 
     &:hover, &:focus {
@@ -78,6 +77,13 @@
   }
 }
 
+@mixin center-vertical {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  @include transform(translateX(0) translateY(-50%) translateZ(0));
+}
 
 @mixin custom-bullets { /* applied to ul's to give them custom-designed bullets */
   list-style: none;

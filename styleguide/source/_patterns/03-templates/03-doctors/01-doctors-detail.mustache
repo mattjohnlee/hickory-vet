@@ -1,3 +1,21 @@
 {{> organisms-header }}
-
+<div class="container">
+	<section class="primary">
+		{{>molecules-breadcrumbs}}
+		<div class="doctor-photo">
+			{{>atoms-image-panoramic}}
+			<div class="doctor-name">
+				<h2>{{name.first}} {{name.last}}<br>{{jobTitle}}</h2>
+			</div>
+		</div>
+		{{# listItems.three}}
+			{{>atoms-paragraph}}
+		{{/ listItems.three}}
+	</section>
+	<section class="sidebar">
+		{{>molecules-sidebar-specialties}}
+		{{>molecules-sidebar-doctor-quote}}
+	</section>
+</div>
+{{>organisms-doctors-carousel }}
 {{>organisms-footer }}

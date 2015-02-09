@@ -1,0 +1,22 @@
+.highlight-box {
+	border: 1px solid $border-color;
+	background-color: $gray-light-9;
+	padding: 1em;
+}
+
+.highlight-boxes {
+	&.two {
+		.highlight-box {
+			@include breakpoint($s) {
+				@include column(6);
+				@include last-col2;
+			}
+		}
+	}
+	&.three {
+		.highlight-box {
+			@include column(4);
+			@include last-col3;
+		}
+	}
+}

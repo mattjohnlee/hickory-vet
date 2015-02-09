@@ -1,0 +1,23 @@
+.thankyou-quote {
+  margin: 0 0 1em;
+  padding: 0;
+  border: none;
+
+  p {
+    &:before {
+      content: "“";
+    }
+    &:after {
+      content: "”";
+    }
+  }
+
+  cite {
+  }
+}
+
+.thankyou-carousel {
+  background: $gray-light-9;
+  padding: $section-spacing 0;
+  text-align: center;
+}

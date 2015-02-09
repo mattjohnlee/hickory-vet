@@ -1,0 +1,26 @@
+.sidebar-article {
+	margin-bottom: $section-spacing;
+	position: relative;
+}
+
+.doctor-quote {
+	@include divider-top;
+	@include divider-bottom;
+	p {
+		font-style: italic;
+		margin-left: 3em;
+
+		&:before {
+			content: "“";
+			font-size: 5em;
+			position: absolute;
+			left: 0;
+			top: .5rem;
+			line-height: 1;
+		}
+	}
+
+	cite {
+		margin-left: 3em;
+	}
+}

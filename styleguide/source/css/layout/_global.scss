@@ -60,7 +60,7 @@ hr {
   @include column(12);    
 
   @include breakpoint($m) {
-    @include column(8);    
+    @include column(9);    
   }
 
   ul, ol {
@@ -90,8 +90,12 @@ hr {
   @include column(12);    
 
   @include breakpoint($m) {
-    @include column(4);    
+    @include column(3);    
     @include last;    
     float: right;
   }
+}
+
+section {
+  margin-top: $section-spacing;
 }

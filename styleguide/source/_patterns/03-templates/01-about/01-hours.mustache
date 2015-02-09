@@ -1,3 +1,19 @@
 {{> organisms-header }}
-
+<div class="container">
+	<section class="sidebar">
+		{{>molecules-sidebar-nav}}
+	</section>
+	<section class="primary clear-none">
+		{{>molecules-breadcrumbs}}
+		{{>atoms-heading-h2}}
+		{{>atoms-paragraph}}
+		{{>atoms-heading-h3}}
+		{{>atoms-paragraph}}
+		{{>atoms-table}}
+	</section>
+	<section class="sidebar">
+		{{>molecules-sidebar-form}}
+	</section>
+</div>
+{{>organisms-thankyou-carousel }}
 {{>organisms-footer }}

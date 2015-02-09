@@ -1,11 +1,9 @@
 .breadcrumbs {
   display: none;
-  padding: 1em 0;
   list-style: none;
 
   @include breakpoint($s) {
     display: block;
-    float: left;
   }
   
   li {

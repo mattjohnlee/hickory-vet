@@ -1,0 +1,51 @@
+.service-unit {
+	text-align: center;
+	position: relative;
+	display: inline-block;
+
+	.service-unit-text {
+		@include center-vertical;
+		color: white;
+	}
+}
+
+.service-intro {
+	@include breakpoint($m) {
+		@include column(6);
+	}
+	@include breakpoint($l) {
+		@include column(3);
+	}
+}
+
+.service-list {
+	@include breakpoint($m) {
+		@include column(6);
+		@include last;
+	}
+	@include breakpoint($l) {
+		@include column(9);
+		@include last;
+	}
+
+	.service-unit {
+		@include column(6);
+		@include last-col2;
+		margin-bottom: $grid_padding;
+	
+		@include breakpoint($l) {
+			@include column(4);
+			@include last-col3;
+			margin-bottom: $grid_padding;
+		}
+	}
+}
+
+.service-group {
+	overflow: hidden;
+	@include divider-bottom;
+
+	&:last-child {
+		border: none;
+	}
+}
