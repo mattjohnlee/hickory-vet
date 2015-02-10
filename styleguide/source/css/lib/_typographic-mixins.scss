@@ -9,7 +9,6 @@ Typographic mixins and extends
 }
 
 @mixin title-face {
-  @include font-display;
   color: $heading-color;
 }
 
@@ -59,8 +58,8 @@ Typographic mixins and extends
 
 @mixin heading-2 {
   @include heading;
-  font-size: 2em; /* for browsers not supporting rem-based scale */
-  font-size: ms(1.5);
+  font-size: 2.25em; /* for browsers not supporting rem-based scale */
+  font-size: ms(1.75);
 }
 
 @mixin heading-3 {

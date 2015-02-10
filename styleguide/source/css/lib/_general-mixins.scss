@@ -1,4 +1,5 @@
 @mixin container($maxwidth: 81.25rem) {
+  position: relative;
   margin: auto;
   max-width: 1300px; /* for browsers that don't do rems */
   max-width: $maxwidth;

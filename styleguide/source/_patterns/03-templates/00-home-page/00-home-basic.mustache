@@ -1,4 +1,9 @@
 {{> organisms-header }}
-
+{{>organisms-homepage-carousel }}
+<div class="highlight-boxes three homepage">
+	{{# listItems.three}}
+		{{>molecules-highlight-box-homepage}}
+	{{/ listItems.three}}
+</div>
 {{>organisms-thankyou-carousel }}
 {{>organisms-footer }}

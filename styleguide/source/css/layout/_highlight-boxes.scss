@@ -1,10 +1,19 @@
 .highlight-box {
 	border: 1px solid $border-color;
-	background-color: $gray-light-9;
 	padding: 1em;
+
+	ul {
+		@extend .nav-secondary;
+		margin-bottom: 1em;
+		li {
+			@include divider-none;
+		}
+	}
 }
 
 .highlight-boxes {
+	overflow: hidden;
+
 	&.two {
 		.highlight-box {
 			@include breakpoint($s) {
@@ -13,10 +22,17 @@
 			}
 		}
 	}
-	&.three {
+	
+	&.homepage {
+		margin-bottom: -$section-spacing;
+
 		.highlight-box {
-			@include column(4);
-			@include last-col3;
+			@include breakpoint($m) {
+				@include column(4);
+				@include last-col3;
+				margin-right: 0 !important;
+				width: (100%/3)  !important;				
+			}
 		}
 	}
 }

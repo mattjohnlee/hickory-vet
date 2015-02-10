@@ -42,6 +42,7 @@
 		"last": "Name"
 	},
 	"service" : "Service",
+	"subService" : "Sub-Service",
 	"jobTitle" : "Degrees",
 	"year" : {
 		"long": "2013",
@@ -59,6 +60,7 @@
 	"day" : {
 		"long": "10",
 		"short": "10",
+		"name": "Monday",
 		"ordinal": "th"
 	},
 	"hour" : {

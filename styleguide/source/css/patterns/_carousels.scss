@@ -1,0 +1,23 @@
+.doctors-carousel, .services-carousel {
+	.doctor-unit, .service-unit {
+		@include column(6);
+		@include last-col2;
+		margin-bottom: $grid_padding;
+	
+		@include breakpoint($s) {
+			@include column(4);
+			@include last-col3;
+		}
+	
+		@include breakpoint($m) {
+			@include column(3);
+			@include last-col4;
+		}
+
+		@include breakpoint($l) {
+			@include column(2);
+			@include last-col6;
+		}
+	}
+}
+

@@ -1,6 +1,10 @@
 .sidebar-article {
 	margin-bottom: $section-spacing;
 	position: relative;
+
+	h3 {
+		@include divider-bottom(5px);
+	}
 }
 
 .doctor-quote {

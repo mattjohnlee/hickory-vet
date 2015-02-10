@@ -2,16 +2,22 @@ header {
 	border-bottom: 1px solid black;
 	text-align: center;
 
-	@include breakpoint($m) {
-		.contact-info {
-			float: left;
+	.contact-info {
+		@include breakpoint($m) {
+			position: absolute;
+			top: 1em;
+			left: 1em;
 			text-align: left;
 		}
-
-		.emergency {
-			float: right;
-		}
 	}
+		.emergency {
+			padding-bottom: 1em;
+			@include breakpoint($m) {
+				position: absolute;
+				top: 1em;
+				right: 1em;
+			}
+		}
 
 	p {
 		margin-bottom: 0;
