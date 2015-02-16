@@ -1,4 +1,38 @@
 {{> organisms-header }}
-
-{{>organisms-thankyou-carousel }}
+	<div class="container">
+		<section class="primary">
+			{{>molecules-breadcrumbs}}
+			{{>atoms-heading-h2}}
+			{{>atoms-paragraph}}
+			<form action="{{ url }}" method="post" class="form-group">           
+				{{# listItems.four}}
+					{{>atoms-input:column6}}
+				{{/ listItems.four}}
+				{{>atoms-textarea}}
+				{{>atoms-select-menu}}
+				<fieldset class="checkboxes">
+				    <legend>Prefered Day(s) of Appointment</legend>
+				    <ul>
+				    	{{# listItems.seven}}
+				        <li>{{>atoms-checkbox}}</li>
+				    	{{/ listItems.seven}}
+				    </ul>
+				</fieldset>
+				<fieldset class="checkboxes">
+				    <legend>Prefered Time of Appointment</legend>
+				    <ul>
+				    	{{# listItems.three}}
+				        <li>{{>atoms-checkbox}}</li>
+				    	{{/ listItems.three}}
+				    </ul>
+				</fieldset>
+				{{>atoms-textarea}}
+				{{>atoms-button}}
+			</form>
+		</section>
+		<section class="sidebar">
+			{{>molecules-sidebar-nav}}
+			{{>molecules-sidebar-form}}
+		</section>
+	</div>
 {{>organisms-footer }}

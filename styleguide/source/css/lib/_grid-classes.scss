@@ -1,0 +1,18 @@
+@include breakpoint($m){
+	.column6 {
+		@include column(6);
+		@include last-col2;
+	}
+	.column4 {
+		@include column(4);
+		@include last-col3;
+	}
+	.column3 {
+		@include column(3);
+		@include last-col4;
+	}
+	.column2 {
+		@include column(2);
+		@include last-col6;
+	}
+}

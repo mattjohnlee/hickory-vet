@@ -1,0 +1,50 @@
+.toggle {
+
+	/*
+	@include breakpoint($m) {
+		padding-left: 25px; 
+	}
+
+	@include breakpoint($l) {
+		padding-left: 0;
+	}
+	*/
+}
+
+.toggle-trigger {
+	position: relative;
+	padding: 1em 0 1em 1em;
+
+	&:before {
+		content: '+';
+		float: left;
+	}
+
+	&:hover {
+		cursor: pointer;
+		> * {
+			color: $link-color-hover;
+		}
+	}
+
+	&.active:before {
+		content: '-';
+	}		
+
+	p {
+		margin: 0;
+	}
+
+	h2, h4, h4 {
+		@include animate;
+		margin-bottom: 0; /* prevents funny bounce on toggle */
+	}
+}
+
+.toggle-target {
+	display: none;
+
+	> * {
+		margin: 0;
+	}
+}	

@@ -95,14 +95,17 @@ select, input[type="select"] {
 }
 
 
-.form-group {
-}
-
-.inline {
-}
-
 .field-container { 
   margin-bottom: 1rem;
+}
+
+fieldset {
+  &.checkboxes {
+    li {
+      display: inline-block;
+      margin-right: 1em;
+    }
+  }
 }
 
 

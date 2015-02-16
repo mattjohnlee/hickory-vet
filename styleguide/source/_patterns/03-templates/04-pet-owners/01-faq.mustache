@@ -1,4 +1,18 @@
 {{> organisms-header }}
-
-{{>organisms-thankyou-carousel }}
+	<div class="container">
+		<section class="primary">
+			{{>molecules-breadcrumbs}}
+			{{>atoms-heading-h2}}
+			{{>atoms-paragraph}}
+			<ul>
+				{{# listItems.four}}
+				<li>{{>molecules-toggle}}</li>
+				{{/ listItems.four}}
+			</ul>
+		</section>
+		<section class="sidebar">
+			{{>molecules-sidebar-nav}}
+			{{>molecules-sidebar-form}}
+		</section>
+	</div>
 {{>organisms-footer }}

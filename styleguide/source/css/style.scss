@@ -10,8 +10,9 @@
 
 /* core components: grids, colors, fonts, media queries, etc. */
 @import "lib/variables";
-@import "lib/grid-bearded";
 @import "lib/mediaqueries";
+@import "lib/grid-bearded";
+@import "lib/grid-classes";
 @import "lib/typographic-mixins";
 @import "lib/general-mixins";
 @import "lib/fonts";
@@ -30,6 +31,7 @@
 @import "patterns/social-media";
 @import "patterns/tables";
 @import "patterns/tags";
+@import "patterns/toggle";
 @import "patterns/typography";
 
 /* page layouts */
