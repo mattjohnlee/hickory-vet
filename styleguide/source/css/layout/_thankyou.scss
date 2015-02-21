@@ -13,6 +13,7 @@
   }
 
   cite {
+    font-style: italic;
   }
 }
 
@@ -20,4 +21,33 @@
   background: $gray-light-9;
   padding: $section-spacing 0;
   text-align: center;
+}
+
+.thankyou-unit {
+  padding: $section-spacing;
+  border: 1px solid $border-color;
+  margin-bottom: $grid_padding;
+}
+
+.thankyou-featured p {
+  font-size: 2em;
+}
+
+.thankyou-list {
+  .thankyou-unit {
+    @include breakpoint($s) {
+      @include column(6);
+      @include last-col2;
+    }
+  
+    @include breakpoint($l) {
+      @include column(4);
+      @include last-col3;
+    }
+
+    @include breakpoint($xl) {
+      @include column(3);
+      @include last-col4;
+    }
+  }
 }

@@ -1,5 +1,5 @@
-.doctors-carousel, .services-carousel {
-	.doctor-unit, .service-unit {
+.doctors-carousel, .services-carousel, .pet-carousel {
+	.doctor-unit, .service-unit, .pet-unit {
 		@include column(6);
 		@include last-col2;
 		margin-bottom: $grid_padding;

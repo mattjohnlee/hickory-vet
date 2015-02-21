@@ -1,0 +1,37 @@
+.pet-unit {
+	text-align: center;
+	position: relative;
+	display: inline-block;
+
+	.pet-name, .pet-ailment {
+		@include center-vertical;
+		color: white;
+	}
+
+	.pet-ailment {
+		display: none;
+	}
+
+	&:hover {
+		.pet-name {
+			display: none;
+		}
+		.pet-ailment {
+			display: block;
+		}
+	}
+}
+
+.pet-list {
+	.pet-unit {
+		@include column(6);
+		@include last-col2;
+		margin-bottom: $grid_padding;
+	
+		@include breakpoint($l) {
+			@include column(4);
+			@include last-col3;
+			margin-bottom: $grid_padding;
+		}
+	}
+}

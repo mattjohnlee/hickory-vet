@@ -291,7 +291,7 @@ Animate specific properties
 }
 
 /* line 2, patterns/_carousels.scss */
-.doctors-carousel .doctor-unit, .doctors-carousel .service-unit, .services-carousel .doctor-unit, .services-carousel .service-unit {
+.doctors-carousel .doctor-unit, .doctors-carousel .service-unit, .doctors-carousel .pet-unit, .services-carousel .doctor-unit, .services-carousel .service-unit, .services-carousel .pet-unit, .pet-carousel .doctor-unit, .pet-carousel .service-unit, .pet-carousel .pet-unit {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -303,27 +303,27 @@ Animate specific properties
   margin-bottom: 3.5%;
 }
 /* line 58, lib/_grid-bearded.scss */
-.doctors-carousel .doctor-unit:nth-of-type(1n), .doctors-carousel .service-unit:nth-of-type(1n), .services-carousel .doctor-unit:nth-of-type(1n), .services-carousel .service-unit:nth-of-type(1n) {
+.doctors-carousel .doctor-unit:nth-of-type(1n), .doctors-carousel .service-unit:nth-of-type(1n), .doctors-carousel .pet-unit:nth-of-type(1n), .services-carousel .doctor-unit:nth-of-type(1n), .services-carousel .service-unit:nth-of-type(1n), .services-carousel .pet-unit:nth-of-type(1n), .pet-carousel .doctor-unit:nth-of-type(1n), .pet-carousel .service-unit:nth-of-type(1n), .pet-carousel .pet-unit:nth-of-type(1n) {
   margin-right: 3.5%;
   float: left;
   clear: none;
 }
 /* line 60, lib/_grid-bearded.scss */
-.lt-ie8 .doctors-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .service-unit:nth-of-type(1n), .lt-ie8 .services-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .services-carousel .service-unit:nth-of-type(1n) {
+.lt-ie8 .doctors-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .service-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .pet-unit:nth-of-type(1n), .lt-ie8 .services-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .services-carousel .service-unit:nth-of-type(1n), .lt-ie8 .services-carousel .pet-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .service-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .pet-unit:nth-of-type(1n) {
   margin-right: 3.25%;
 }
 /* line 66, lib/_grid-bearded.scss */
-.doctors-carousel .doctor-unit:nth-of-type(2n+2), .doctors-carousel .service-unit:nth-of-type(2n+2), .services-carousel .doctor-unit:nth-of-type(2n+2), .services-carousel .service-unit:nth-of-type(2n+2) {
+.doctors-carousel .doctor-unit:nth-of-type(2n+2), .doctors-carousel .service-unit:nth-of-type(2n+2), .doctors-carousel .pet-unit:nth-of-type(2n+2), .services-carousel .doctor-unit:nth-of-type(2n+2), .services-carousel .service-unit:nth-of-type(2n+2), .services-carousel .pet-unit:nth-of-type(2n+2), .pet-carousel .doctor-unit:nth-of-type(2n+2), .pet-carousel .service-unit:nth-of-type(2n+2), .pet-carousel .pet-unit:nth-of-type(2n+2) {
   margin-right: 0;
   float: right;
 }
 /* line 70, lib/_grid-bearded.scss */
-.doctors-carousel .doctor-unit:nth-of-type(2n+3), .doctors-carousel .service-unit:nth-of-type(2n+3), .services-carousel .doctor-unit:nth-of-type(2n+3), .services-carousel .service-unit:nth-of-type(2n+3) {
+.doctors-carousel .doctor-unit:nth-of-type(2n+3), .doctors-carousel .service-unit:nth-of-type(2n+3), .doctors-carousel .pet-unit:nth-of-type(2n+3), .services-carousel .doctor-unit:nth-of-type(2n+3), .services-carousel .service-unit:nth-of-type(2n+3), .services-carousel .pet-unit:nth-of-type(2n+3), .pet-carousel .doctor-unit:nth-of-type(2n+3), .pet-carousel .service-unit:nth-of-type(2n+3), .pet-carousel .pet-unit:nth-of-type(2n+3) {
   clear: both;
 }
 @media (min-width: 37.5em) {
   /* line 2, patterns/_carousels.scss */
-  .doctors-carousel .doctor-unit, .doctors-carousel .service-unit, .services-carousel .doctor-unit, .services-carousel .service-unit {
+  .doctors-carousel .doctor-unit, .doctors-carousel .service-unit, .doctors-carousel .pet-unit, .services-carousel .doctor-unit, .services-carousel .service-unit, .services-carousel .pet-unit, .pet-carousel .doctor-unit, .pet-carousel .service-unit, .pet-carousel .pet-unit {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -334,28 +334,28 @@ Animate specific properties
     margin-left: 0;
   }
   /* line 76, lib/_grid-bearded.scss */
-  .doctors-carousel .doctor-unit:nth-of-type(1n), .doctors-carousel .service-unit:nth-of-type(1n), .services-carousel .doctor-unit:nth-of-type(1n), .services-carousel .service-unit:nth-of-type(1n) {
+  .doctors-carousel .doctor-unit:nth-of-type(1n), .doctors-carousel .service-unit:nth-of-type(1n), .doctors-carousel .pet-unit:nth-of-type(1n), .services-carousel .doctor-unit:nth-of-type(1n), .services-carousel .service-unit:nth-of-type(1n), .services-carousel .pet-unit:nth-of-type(1n), .pet-carousel .doctor-unit:nth-of-type(1n), .pet-carousel .service-unit:nth-of-type(1n), .pet-carousel .pet-unit:nth-of-type(1n) {
     margin-right: 3.5%;
     float: left;
     clear: none;
   }
   /* line 78, lib/_grid-bearded.scss */
-  .lt-ie8 .doctors-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .service-unit:nth-of-type(1n), .lt-ie8 .services-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .services-carousel .service-unit:nth-of-type(1n) {
+  .lt-ie8 .doctors-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .service-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .pet-unit:nth-of-type(1n), .lt-ie8 .services-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .services-carousel .service-unit:nth-of-type(1n), .lt-ie8 .services-carousel .pet-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .service-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .pet-unit:nth-of-type(1n) {
     margin-right: 3.25%;
   }
   /* line 84, lib/_grid-bearded.scss */
-  .doctors-carousel .doctor-unit:nth-of-type(3n+3), .doctors-carousel .service-unit:nth-of-type(3n+3), .services-carousel .doctor-unit:nth-of-type(3n+3), .services-carousel .service-unit:nth-of-type(3n+3) {
+  .doctors-carousel .doctor-unit:nth-of-type(3n+3), .doctors-carousel .service-unit:nth-of-type(3n+3), .doctors-carousel .pet-unit:nth-of-type(3n+3), .services-carousel .doctor-unit:nth-of-type(3n+3), .services-carousel .service-unit:nth-of-type(3n+3), .services-carousel .pet-unit:nth-of-type(3n+3), .pet-carousel .doctor-unit:nth-of-type(3n+3), .pet-carousel .service-unit:nth-of-type(3n+3), .pet-carousel .pet-unit:nth-of-type(3n+3) {
     margin-right: 0;
     float: right;
   }
   /* line 88, lib/_grid-bearded.scss */
-  .doctors-carousel .doctor-unit:nth-of-type(3n+4), .doctors-carousel .service-unit:nth-of-type(3n+4), .services-carousel .doctor-unit:nth-of-type(3n+4), .services-carousel .service-unit:nth-of-type(3n+4) {
+  .doctors-carousel .doctor-unit:nth-of-type(3n+4), .doctors-carousel .service-unit:nth-of-type(3n+4), .doctors-carousel .pet-unit:nth-of-type(3n+4), .services-carousel .doctor-unit:nth-of-type(3n+4), .services-carousel .service-unit:nth-of-type(3n+4), .services-carousel .pet-unit:nth-of-type(3n+4), .pet-carousel .doctor-unit:nth-of-type(3n+4), .pet-carousel .service-unit:nth-of-type(3n+4), .pet-carousel .pet-unit:nth-of-type(3n+4) {
     clear: both;
   }
 }
 @media (min-width: 48em) {
   /* line 2, patterns/_carousels.scss */
-  .doctors-carousel .doctor-unit, .doctors-carousel .service-unit, .services-carousel .doctor-unit, .services-carousel .service-unit {
+  .doctors-carousel .doctor-unit, .doctors-carousel .service-unit, .doctors-carousel .pet-unit, .services-carousel .doctor-unit, .services-carousel .service-unit, .services-carousel .pet-unit, .pet-carousel .doctor-unit, .pet-carousel .service-unit, .pet-carousel .pet-unit {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -366,28 +366,28 @@ Animate specific properties
     margin-left: 0;
   }
   /* line 94, lib/_grid-bearded.scss */
-  .doctors-carousel .doctor-unit:nth-of-type(1n), .doctors-carousel .service-unit:nth-of-type(1n), .services-carousel .doctor-unit:nth-of-type(1n), .services-carousel .service-unit:nth-of-type(1n) {
+  .doctors-carousel .doctor-unit:nth-of-type(1n), .doctors-carousel .service-unit:nth-of-type(1n), .doctors-carousel .pet-unit:nth-of-type(1n), .services-carousel .doctor-unit:nth-of-type(1n), .services-carousel .service-unit:nth-of-type(1n), .services-carousel .pet-unit:nth-of-type(1n), .pet-carousel .doctor-unit:nth-of-type(1n), .pet-carousel .service-unit:nth-of-type(1n), .pet-carousel .pet-unit:nth-of-type(1n) {
     margin-right: 3.5%;
     float: left;
     clear: none;
   }
   /* line 96, lib/_grid-bearded.scss */
-  .lt-ie8 .doctors-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .service-unit:nth-of-type(1n), .lt-ie8 .services-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .services-carousel .service-unit:nth-of-type(1n) {
+  .lt-ie8 .doctors-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .service-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .pet-unit:nth-of-type(1n), .lt-ie8 .services-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .services-carousel .service-unit:nth-of-type(1n), .lt-ie8 .services-carousel .pet-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .service-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .pet-unit:nth-of-type(1n) {
     margin-right: 3.25%;
   }
   /* line 102, lib/_grid-bearded.scss */
-  .doctors-carousel .doctor-unit:nth-of-type(4n+4), .doctors-carousel .service-unit:nth-of-type(4n+4), .services-carousel .doctor-unit:nth-of-type(4n+4), .services-carousel .service-unit:nth-of-type(4n+4) {
+  .doctors-carousel .doctor-unit:nth-of-type(4n+4), .doctors-carousel .service-unit:nth-of-type(4n+4), .doctors-carousel .pet-unit:nth-of-type(4n+4), .services-carousel .doctor-unit:nth-of-type(4n+4), .services-carousel .service-unit:nth-of-type(4n+4), .services-carousel .pet-unit:nth-of-type(4n+4), .pet-carousel .doctor-unit:nth-of-type(4n+4), .pet-carousel .service-unit:nth-of-type(4n+4), .pet-carousel .pet-unit:nth-of-type(4n+4) {
     margin-right: 0;
     float: right;
   }
   /* line 106, lib/_grid-bearded.scss */
-  .doctors-carousel .doctor-unit:nth-of-type(4n+5), .doctors-carousel .service-unit:nth-of-type(4n+5), .services-carousel .doctor-unit:nth-of-type(4n+5), .services-carousel .service-unit:nth-of-type(4n+5) {
+  .doctors-carousel .doctor-unit:nth-of-type(4n+5), .doctors-carousel .service-unit:nth-of-type(4n+5), .doctors-carousel .pet-unit:nth-of-type(4n+5), .services-carousel .doctor-unit:nth-of-type(4n+5), .services-carousel .service-unit:nth-of-type(4n+5), .services-carousel .pet-unit:nth-of-type(4n+5), .pet-carousel .doctor-unit:nth-of-type(4n+5), .pet-carousel .service-unit:nth-of-type(4n+5), .pet-carousel .pet-unit:nth-of-type(4n+5) {
     clear: both;
   }
 }
 @media (min-width: 64em) {
   /* line 2, patterns/_carousels.scss */
-  .doctors-carousel .doctor-unit, .doctors-carousel .service-unit, .services-carousel .doctor-unit, .services-carousel .service-unit {
+  .doctors-carousel .doctor-unit, .doctors-carousel .service-unit, .doctors-carousel .pet-unit, .services-carousel .doctor-unit, .services-carousel .service-unit, .services-carousel .pet-unit, .pet-carousel .doctor-unit, .pet-carousel .service-unit, .pet-carousel .pet-unit {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -398,22 +398,22 @@ Animate specific properties
     margin-left: 0;
   }
   /* line 112, lib/_grid-bearded.scss */
-  .doctors-carousel .doctor-unit:nth-of-type(1n), .doctors-carousel .service-unit:nth-of-type(1n), .services-carousel .doctor-unit:nth-of-type(1n), .services-carousel .service-unit:nth-of-type(1n) {
+  .doctors-carousel .doctor-unit:nth-of-type(1n), .doctors-carousel .service-unit:nth-of-type(1n), .doctors-carousel .pet-unit:nth-of-type(1n), .services-carousel .doctor-unit:nth-of-type(1n), .services-carousel .service-unit:nth-of-type(1n), .services-carousel .pet-unit:nth-of-type(1n), .pet-carousel .doctor-unit:nth-of-type(1n), .pet-carousel .service-unit:nth-of-type(1n), .pet-carousel .pet-unit:nth-of-type(1n) {
     margin-right: 3.5%;
     float: left;
     clear: none;
   }
   /* line 114, lib/_grid-bearded.scss */
-  .lt-ie8 .doctors-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .service-unit:nth-of-type(1n), .lt-ie8 .services-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .services-carousel .service-unit:nth-of-type(1n) {
+  .lt-ie8 .doctors-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .service-unit:nth-of-type(1n), .lt-ie8 .doctors-carousel .pet-unit:nth-of-type(1n), .lt-ie8 .services-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .services-carousel .service-unit:nth-of-type(1n), .lt-ie8 .services-carousel .pet-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .doctor-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .service-unit:nth-of-type(1n), .lt-ie8 .pet-carousel .pet-unit:nth-of-type(1n) {
     margin-right: 3.25%;
   }
   /* line 120, lib/_grid-bearded.scss */
-  .doctors-carousel .doctor-unit:nth-of-type(6n+6), .doctors-carousel .service-unit:nth-of-type(6n+6), .services-carousel .doctor-unit:nth-of-type(6n+6), .services-carousel .service-unit:nth-of-type(6n+6) {
+  .doctors-carousel .doctor-unit:nth-of-type(6n+6), .doctors-carousel .service-unit:nth-of-type(6n+6), .doctors-carousel .pet-unit:nth-of-type(6n+6), .services-carousel .doctor-unit:nth-of-type(6n+6), .services-carousel .service-unit:nth-of-type(6n+6), .services-carousel .pet-unit:nth-of-type(6n+6), .pet-carousel .doctor-unit:nth-of-type(6n+6), .pet-carousel .service-unit:nth-of-type(6n+6), .pet-carousel .pet-unit:nth-of-type(6n+6) {
     margin-right: 0;
     float: right;
   }
   /* line 124, lib/_grid-bearded.scss */
-  .doctors-carousel .doctor-unit:nth-of-type(6n+7), .doctors-carousel .service-unit:nth-of-type(6n+7), .services-carousel .doctor-unit:nth-of-type(6n+7), .services-carousel .service-unit:nth-of-type(6n+7) {
+  .doctors-carousel .doctor-unit:nth-of-type(6n+7), .doctors-carousel .service-unit:nth-of-type(6n+7), .doctors-carousel .pet-unit:nth-of-type(6n+7), .services-carousel .doctor-unit:nth-of-type(6n+7), .services-carousel .service-unit:nth-of-type(6n+7), .services-carousel .pet-unit:nth-of-type(6n+7), .pet-carousel .doctor-unit:nth-of-type(6n+7), .pet-carousel .service-unit:nth-of-type(6n+7), .pet-carousel .pet-unit:nth-of-type(6n+7) {
     clear: both;
   }
 }
@@ -1145,82 +1145,47 @@ This query will take effect for any screen smaller than 1024px
 }
 
 /* line 1, patterns/_toggle.scss */
-.js {
-  /* only works if javascript is present */
+.toggle {
+  	/*
+  	@include breakpoint($m) {
+  		padding-left: 25px; 
+  	}
+  
+  	@include breakpoint($l) {
+  		padding-left: 0;
+  	}
+  	*/
 }
-@media (min-width: 48em) {
-  /* line 2, patterns/_toggle.scss */
-  .js .toggle {
-    padding-left: 25px;
-    /* provides margin clearance for toggle arrow */
-  }
-}
-@media (min-width: 64em) {
-  /* line 2, patterns/_toggle.scss */
-  .js .toggle {
-    padding-left: 0;
-  }
-}
-/* line 15, patterns/_toggle.scss */
-.js .toggle-trigger {
+
+/* line 14, patterns/_toggle.scss */
+.toggle-trigger {
   position: relative;
-  padding: 1em 0;
+  padding: 1em 0 1em 1em;
 }
-/* line 19, patterns/_toggle.scss */
-.js .toggle-trigger:before {
-  content: '';
-  width: 20px;
-  height: 20px;
+/* line 18, patterns/_toggle.scss */
+.toggle-trigger:before {
+  content: '+';
   position: absolute;
-  top: 1.5rem;
-  left: -25px;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.25s;
-  -o-transition-duration: 0.25s;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-  -moz-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  left: 0;
 }
-@media (min-width: 37.5em) {
-  /* line 19, patterns/_toggle.scss */
-  .js .toggle-trigger:before {
-    background: url(../img/arrow-forward.png) center center no-repeat;
-    background-size: 9px 20px;
-  }
-}
-@media (min-width: 87.5em) {
-  /* line 19, patterns/_toggle.scss */
-  .js .toggle-trigger:before {
-    left: -30px;
-  }
-}
-/* line 38, patterns/_toggle.scss */
-.js .toggle-trigger:hover {
+/* line 24, patterns/_toggle.scss */
+.toggle-trigger:hover {
   cursor: pointer;
 }
-/* line 40, patterns/_toggle.scss */
-.js .toggle-trigger:hover h2 {
+/* line 26, patterns/_toggle.scss */
+.toggle-trigger:hover > * {
   color: green;
 }
-/* line 45, patterns/_toggle.scss */
-.js .toggle-trigger.active:before {
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+/* line 31, patterns/_toggle.scss */
+.toggle-trigger.active:before {
+  content: '-';
 }
-/* line 49, patterns/_toggle.scss */
-.js .toggle-trigger p {
+/* line 35, patterns/_toggle.scss */
+.toggle-trigger p {
   margin: 0;
 }
-/* line 53, patterns/_toggle.scss */
-.js .toggle-trigger h2, .js .toggle-trigger h4, .js .toggle-trigger h4 {
+/* line 39, patterns/_toggle.scss */
+.toggle-trigger h2, .toggle-trigger h4, .toggle-trigger h4 {
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
@@ -1236,9 +1201,15 @@ This query will take effect for any screen smaller than 1024px
   margin-bottom: 0;
   /* prevents funny bounce on toggle */
 }
-/* line 59, patterns/_toggle.scss */
-.js .toggle-target {
+
+/* line 45, patterns/_toggle.scss */
+.toggle-target {
   display: none;
+  padding: 0 0 1em 1em;
+}
+/* line 49, patterns/_toggle.scss */
+.toggle-target > * {
+  margin: 0;
 }
 
 /* 
@@ -2209,12 +2180,125 @@ footer p, footer li {
 .thankyou-quote p:after {
   content: "”";
 }
+/* line 15, layout/_thankyou.scss */
+.thankyou-quote cite {
+  font-style: italic;
+}
 
-/* line 19, layout/_thankyou.scss */
+/* line 20, layout/_thankyou.scss */
 .thankyou-carousel {
   background: #efefef;
   padding: 2rem 0;
   text-align: center;
+}
+
+/* line 26, layout/_thankyou.scss */
+.thankyou-unit {
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 3.5%;
+}
+
+/* line 32, layout/_thankyou.scss */
+.thankyou-featured p {
+  font-size: 2em;
+}
+
+@media (min-width: 37.5em) {
+  /* line 37, layout/_thankyou.scss */
+  .thankyou-list .thankyou-unit {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+  /* line 58, lib/_grid-bearded.scss */
+  .thankyou-list .thankyou-unit:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 60, lib/_grid-bearded.scss */
+  .lt-ie8 .thankyou-list .thankyou-unit:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 66, lib/_grid-bearded.scss */
+  .thankyou-list .thankyou-unit:nth-of-type(2n+2) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 70, lib/_grid-bearded.scss */
+  .thankyou-list .thankyou-unit:nth-of-type(2n+3) {
+    clear: both;
+  }
+}
+@media (min-width: 64em) {
+  /* line 37, layout/_thankyou.scss */
+  .thankyou-list .thankyou-unit {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 31%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+  /* line 76, lib/_grid-bearded.scss */
+  .thankyou-list .thankyou-unit:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 78, lib/_grid-bearded.scss */
+  .lt-ie8 .thankyou-list .thankyou-unit:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 84, lib/_grid-bearded.scss */
+  .thankyou-list .thankyou-unit:nth-of-type(3n+3) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 88, lib/_grid-bearded.scss */
+  .thankyou-list .thankyou-unit:nth-of-type(3n+4) {
+    clear: both;
+  }
+}
+@media (min-width: 87.5em) {
+  /* line 37, layout/_thankyou.scss */
+  .thankyou-list .thankyou-unit {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 22.375%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+  /* line 94, lib/_grid-bearded.scss */
+  .thankyou-list .thankyou-unit:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 96, lib/_grid-bearded.scss */
+  .lt-ie8 .thankyou-list .thankyou-unit:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 102, lib/_grid-bearded.scss */
+  .thankyou-list .thankyou-unit:nth-of-type(4n+4) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 106, lib/_grid-bearded.scss */
+  .thankyou-list .thankyou-unit:nth-of-type(4n+5) {
+    clear: both;
+  }
 }
 
 /* line 1, layout/_services.scss */
@@ -2535,6 +2619,102 @@ footer p, footer li {
     margin-right: 3.5%;
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+/* line 1, layout/_pets.scss */
+.pet-unit {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+/* line 6, layout/_pets.scss */
+.pet-unit .pet-name, .pet-unit .pet-ailment {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  -moz-transform: translateX(0) translateY(-50%) translateZ(0);
+  -ms-transform: translateX(0) translateY(-50%) translateZ(0);
+  -webkit-transform: translateX(0) translateY(-50%) translateZ(0);
+  transform: translateX(0) translateY(-50%) translateZ(0);
+  color: white;
+}
+/* line 11, layout/_pets.scss */
+.pet-unit .pet-ailment {
+  display: none;
+}
+/* line 16, layout/_pets.scss */
+.pet-unit:hover .pet-name {
+  display: none;
+}
+/* line 19, layout/_pets.scss */
+.pet-unit:hover .pet-ailment {
+  display: block;
+}
+
+/* line 26, layout/_pets.scss */
+.pet-list .pet-unit {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 48.25%;
+  margin-right: 3.5%;
+  margin-left: 0;
+  margin-bottom: 3.5%;
+}
+/* line 58, lib/_grid-bearded.scss */
+.pet-list .pet-unit:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 60, lib/_grid-bearded.scss */
+.lt-ie8 .pet-list .pet-unit:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 66, lib/_grid-bearded.scss */
+.pet-list .pet-unit:nth-of-type(2n+2) {
+  margin-right: 0;
+  float: right;
+}
+/* line 70, lib/_grid-bearded.scss */
+.pet-list .pet-unit:nth-of-type(2n+3) {
+  clear: both;
+}
+@media (min-width: 64em) {
+  /* line 26, layout/_pets.scss */
+  .pet-list .pet-unit {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 31%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-bottom: 3.5%;
+  }
+  /* line 76, lib/_grid-bearded.scss */
+  .pet-list .pet-unit:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 78, lib/_grid-bearded.scss */
+  .lt-ie8 .pet-list .pet-unit:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 84, lib/_grid-bearded.scss */
+  .pet-list .pet-unit:nth-of-type(3n+3) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 88, lib/_grid-bearded.scss */
+  .pet-list .pet-unit:nth-of-type(3n+4) {
+    clear: both;
   }
 }
 

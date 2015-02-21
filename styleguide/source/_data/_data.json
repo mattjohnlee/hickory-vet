@@ -3,6 +3,10 @@
 	"htmlClass": "pl",
 	"bodyClass": "body",
 	"img": {
+		"landscape-3x1": {
+			"src": "http://placeimg.com/2400/800/animals", 
+			"alt": "3x1 Image"
+		},
 		"landscape-2x1": {
 			"src": "http://placeimg.com/1600/800/animals", 
 			"alt": "2x1 Image"
@@ -27,8 +31,7 @@
 	},
 	"headline" : {
 		"short" : "Lorem ipsum dolor sit (37 characters)",
-		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)",
-		"long" : "Whaaaaaat!?"
+		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
 	},
 	"excerpt" : {
 		"short" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -44,6 +47,14 @@
 	"service" : "Service",
 	"subService" : "Sub-Service",
 	"jobTitle" : "Degrees",
+	"owner" : {
+		"name": "Jessica",
+		"last": "L."
+	},
+	"pet" : {
+		"name": "Fido",
+		"ailment": "Fractured Leg"
+	},
 	"year" : {
 		"long": "2013",
 		"short": "13"

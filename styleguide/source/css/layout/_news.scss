@@ -1,0 +1,41 @@
+.news-preview {
+	overflow: hidden;
+	@include divider-bottom(1px, 2em, $border-color);
+}
+
+.news-preview-text {
+	overflow: hidden;
+
+	.date, .tags {
+		float: left;
+		margin-right: 1.5em;
+
+		&:before {
+			font-family: "FontAwesome";
+			margin-right: .25em;
+		}
+	}
+
+	.date {
+		&:before {
+			content: "\f017";
+		}
+	}
+
+	.tags {
+		&:before {
+			content: "\f02b";
+		}
+	}
+}
+
+.news-preview-image {
+	@include breakpoint($s) {
+		float: left;
+		margin-right: $grid_padding;
+		width: 50%;
+	}
+	@include breakpoint($m) {
+		width: 25%;
+	}
+}

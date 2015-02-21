@@ -1,6 +1,7 @@
 .sidebar-article {
 	margin-bottom: $section-spacing;
 	position: relative;
+	overflow: hidden;
 
 	h3 {
 		@include divider-bottom(5px);

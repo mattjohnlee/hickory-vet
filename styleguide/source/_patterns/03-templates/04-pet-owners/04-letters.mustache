@@ -1,3 +1,24 @@
 {{> organisms-header }}
-
+<div class="container">
+	<section class="primary">
+		{{>molecules-breadcrumbs}}
+		{{>atoms-heading-h2}}
+		{{>atoms-paragraph}}
+		<div class="thankyou-featured">
+			{{>molecules-thankyou-unit}}
+		</div>
+		<div class="thankyou-list">
+			{{# listItems.twelve}}
+				{{>molecules-thankyou-unit}}
+			{{/ listItems.twelve}}
+		</div>
+		<h3>Add Your Letter of Thanks</h3>
+		{{>atoms-textarea}}
+		{{>atoms-button}}
+	</section>
+	<section class="sidebar">
+		{{>molecules-sidebar-nav}}
+		{{>molecules-sidebar-form}}
+	</section>
+</div>
 {{>organisms-footer }}
