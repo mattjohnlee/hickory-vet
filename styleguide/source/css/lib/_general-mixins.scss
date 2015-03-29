@@ -86,29 +86,6 @@
   @include transform(translateX(0) translateY(-50%) translateZ(0));
 }
 
-@mixin custom-bullets { /* applied to ul's to give them custom-designed bullets */
-  list-style: none;
-  margin: 0 0 1em 0;
-  text-indent: -.5em;
-
-  li {
-    line-height: 1.5;
-    &:before {
-      content: "\2022";
-      padding-right: .2em;
-    }
-  }
-
-  @include breakpoint($m) {
-    text-indent: -.75em;
-
-    li:before {
-      padding-right: .45em;
-    }
-  }
-}
-
-
 @mixin social-media-icons {
   li {
     display: inline-block;

@@ -1,14 +1,9 @@
-.toggle {
-
-	/*
-	@include breakpoint($m) {
-		padding-left: 25px; 
+.primary {
+	.toggle-list {
+		> li {
+			margin-bottom: 0;
+		}
 	}
-
-	@include breakpoint($l) {
-		padding-left: 0;
-	}
-	*/
 }
 
 .toggle-trigger {
@@ -47,6 +42,6 @@
 	padding: 0 0 1em 1em;
 
 	> * {
-		margin: 0;
+		//margin: 0;
 	}
 }	

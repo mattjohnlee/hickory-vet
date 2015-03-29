@@ -12,7 +12,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -34,45 +34,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -743,6 +743,24 @@ figure figcaption {
   }
 }
 
+/* line 48, patterns/_media.scss */
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* maintain aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+/* line 55, patterns/_media.scss */
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* line 2, patterns/_navigation.scss */
 .nav-main li, .nav-footer li {
   display: block;
@@ -945,27 +963,27 @@ input.is-error {
   border-bottom: 1px solid;
 }
 
-/* line 113, lib/_general-mixins.scss */
+/* line 90, lib/_general-mixins.scss */
 .social-media li {
   display: inline-block;
   font-size: 1.5em;
   margin: 1em 1em 1em 0;
 }
 @media (min-width: 48em) {
-  /* line 113, lib/_general-mixins.scss */
+  /* line 90, lib/_general-mixins.scss */
   .social-media li {
     margin: 0 1em 1em 0;
     font-size: 1.15em;
   }
 }
 @media (min-width: 64em) {
-  /* line 113, lib/_general-mixins.scss */
+  /* line 90, lib/_general-mixins.scss */
   .social-media li {
     margin: 0 .75em .75em 0;
     font-size: 1.15em;
   }
 }
-/* line 128, lib/_general-mixins.scss */
+/* line 105, lib/_general-mixins.scss */
 .social-media li a {
   border: 1px solid;
   text-align: center;
@@ -1125,7 +1143,7 @@ This query will take effect for any screen smaller than 1024px
 }
 /* line 5, patterns/_tags.scss */
 .tags li {
-  float: left;
+  display: inline;
   margin: 0 .25em 0 0;
   text-indent: 0;
 }
@@ -1144,47 +1162,39 @@ This query will take effect for any screen smaller than 1024px
   margin-right: .25em;
 }
 
-/* line 1, patterns/_toggle.scss */
-.toggle {
-  	/*
-  	@include breakpoint($m) {
-  		padding-left: 25px; 
-  	}
-  
-  	@include breakpoint($l) {
-  		padding-left: 0;
-  	}
-  	*/
+/* line 3, patterns/_toggle.scss */
+.primary .toggle-list > li {
+  margin-bottom: 0;
 }
 
-/* line 14, patterns/_toggle.scss */
+/* line 9, patterns/_toggle.scss */
 .toggle-trigger {
   position: relative;
   padding: 1em 0 1em 1em;
 }
-/* line 18, patterns/_toggle.scss */
+/* line 13, patterns/_toggle.scss */
 .toggle-trigger:before {
   content: '+';
   position: absolute;
   left: 0;
 }
-/* line 24, patterns/_toggle.scss */
+/* line 19, patterns/_toggle.scss */
 .toggle-trigger:hover {
   cursor: pointer;
 }
-/* line 26, patterns/_toggle.scss */
+/* line 21, patterns/_toggle.scss */
 .toggle-trigger:hover > * {
   color: green;
 }
-/* line 31, patterns/_toggle.scss */
+/* line 26, patterns/_toggle.scss */
 .toggle-trigger.active:before {
   content: '-';
 }
-/* line 35, patterns/_toggle.scss */
+/* line 30, patterns/_toggle.scss */
 .toggle-trigger p {
   margin: 0;
 }
-/* line 39, patterns/_toggle.scss */
+/* line 34, patterns/_toggle.scss */
 .toggle-trigger h2, .toggle-trigger h4, .toggle-trigger h4 {
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -1202,14 +1212,10 @@ This query will take effect for any screen smaller than 1024px
   /* prevents funny bounce on toggle */
 }
 
-/* line 45, patterns/_toggle.scss */
+/* line 40, patterns/_toggle.scss */
 .toggle-target {
   display: none;
   padding: 0 0 1em 1em;
-}
-/* line 49, patterns/_toggle.scss */
-.toggle-target > * {
-  margin: 0;
 }
 
 /* 
@@ -1418,37 +1424,22 @@ li {
 
 /* line 59, patterns/_typography.scss */
 ul.bullets {
-  /* applied to ul's to give them custom-designed bullets */
-  list-style: none;
-  margin: 0 0 1em 0;
-  text-indent: -.5em;
-}
-/* line 94, lib/_general-mixins.scss */
-ul.bullets li {
-  line-height: 1.5;
-}
-/* line 96, lib/_general-mixins.scss */
-ul.bullets li:before {
-  content: "\2022";
-  padding-right: .2em;
-}
-@media (min-width: 48em) {
-  /* line 59, patterns/_typography.scss */
-  ul.bullets {
-    text-indent: -.75em;
-  }
-  /* line 105, lib/_general-mixins.scss */
-  ul.bullets li:before {
-    padding-right: .45em;
-  }
+  list-style: disc;
+  margin: 0 0 1em 1em;
 }
 
-/* line 63, patterns/_typography.scss */
+/* line 64, patterns/_typography.scss */
+ol.numbers {
+  list-style: decimal;
+  margin: 0 0 1em 1.5em;
+}
+
+/* line 69, patterns/_typography.scss */
 dl {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 66, patterns/_typography.scss */
+/* line 72, patterns/_typography.scss */
 dl dt {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -1461,12 +1452,12 @@ dl dt {
   float: left;
   clear: left;
 }
-/* line 70, patterns/_typography.scss */
+/* line 76, patterns/_typography.scss */
 dl dt:after {
   content: ":";
   margin-right: .25em;
 }
-/* line 75, patterns/_typography.scss */
+/* line 81, patterns/_typography.scss */
 dl dd {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -1480,7 +1471,7 @@ dl dd {
   margin-bottom: 1em;
 }
 
-/* line 82, patterns/_typography.scss */
+/* line 88, patterns/_typography.scss */
 .pullquote {
   font-size: 1.43463rem;
   font-weight: 200;
@@ -1495,7 +1486,7 @@ dl dd {
 Inline Elements
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 99, patterns/_typography.scss */
+/* line 105, patterns/_typography.scss */
 strong, b {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1503,12 +1494,12 @@ strong, b {
   font-stretch: normal;
 }
 
-/* line 103, patterns/_typography.scss */
+/* line 109, patterns/_typography.scss */
 em, i {
   font-style: italic;
 }
 
-/* line 107, patterns/_typography.scss */
+/* line 113, patterns/_typography.scss */
 .font-bolditalic {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1516,7 +1507,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 111, patterns/_typography.scss */
+/* line 117, patterns/_typography.scss */
 .font-display {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1524,7 +1515,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 115, patterns/_typography.scss */
+/* line 121, patterns/_typography.scss */
 .font-displayitalic {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1532,7 +1523,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 119, patterns/_typography.scss */
+/* line 125, patterns/_typography.scss */
 .font-fallback {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -1542,25 +1533,25 @@ em, i {
 Special Formatting
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 130, patterns/_typography.scss */
+/* line 136, patterns/_typography.scss */
 .small {
   font-size: .875em;
 }
 
-/* line 134, patterns/_typography.scss */
+/* line 140, patterns/_typography.scss */
 .smallcaps {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .8em;
 }
 
-/* line 138, patterns/_typography.scss */
+/* line 144, patterns/_typography.scss */
 .caps {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* line 142, patterns/_typography.scss */
+/* line 148, patterns/_typography.scss */
 .phone {
   font-size: 1.61803rem;
 }
@@ -1873,8 +1864,9 @@ footer p, footer li {
 .sidebar-article {
   margin-bottom: 2rem;
   position: relative;
+  overflow: hidden;
 }
-/* line 5, layout/_sidebar-articles.scss */
+/* line 6, layout/_sidebar-articles.scss */
 .sidebar-article h3 {
   padding-bottom: 0.5em;
   border-bottom: 5px solid;
@@ -1882,7 +1874,7 @@ footer p, footer li {
   border-color: auto;
 }
 
-/* line 10, layout/_sidebar-articles.scss */
+/* line 11, layout/_sidebar-articles.scss */
 .doctor-quote {
   padding-top: 0.5em;
   border-top: 1px solid;
@@ -1893,12 +1885,12 @@ footer p, footer li {
   margin-bottom: 1em;
   border-color: auto;
 }
-/* line 13, layout/_sidebar-articles.scss */
+/* line 14, layout/_sidebar-articles.scss */
 .doctor-quote p {
   font-style: italic;
   margin-left: 3em;
 }
-/* line 17, layout/_sidebar-articles.scss */
+/* line 18, layout/_sidebar-articles.scss */
 .doctor-quote p:before {
   content: "“";
   font-size: 5em;
@@ -1907,7 +1899,7 @@ footer p, footer li {
   top: .5rem;
   line-height: 1;
 }
-/* line 27, layout/_sidebar-articles.scss */
+/* line 28, layout/_sidebar-articles.scss */
 .doctor-quote cite {
   margin-left: 3em;
 }
@@ -2718,6 +2710,53 @@ footer p, footer li {
   }
 }
 
+/* line 1, layout/_news.scss */
+.news-preview {
+  overflow: hidden;
+  padding-bottom: 1em;
+  border-bottom: 1px solid;
+  margin-bottom: 2em;
+  border-color: #e0e0e0;
+}
+
+/* line 6, layout/_news.scss */
+.news-preview-text {
+  overflow: hidden;
+}
+/* line 9, layout/_news.scss */
+.news-preview-text .date, .news-preview-text .tags {
+  float: left;
+  margin-right: 1.5em;
+}
+/* line 13, layout/_news.scss */
+.news-preview-text .date:before, .news-preview-text .tags:before {
+  font-family: "FontAwesome";
+  margin-right: .25em;
+}
+/* line 20, layout/_news.scss */
+.news-preview-text .date:before {
+  content: "\f017";
+}
+/* line 26, layout/_news.scss */
+.news-preview-text .tags:before {
+  content: "\f02b";
+}
+
+@media (min-width: 37.5em) {
+  /* line 32, layout/_news.scss */
+  .news-preview-image {
+    float: left;
+    margin-right: 3.5%;
+    width: 50%;
+  }
+}
+@media (min-width: 48em) {
+  /* line 32, layout/_news.scss */
+  .news-preview-image {
+    width: 25%;
+  }
+}
+
 /* individual components, usually from Bower*/
 /* styles for print and old ie */
 @media print {
@@ -2960,7 +2999,7 @@ footer p, footer li {
   left: 0;
   bottom: 0;
   width: 20px;
-  background: gray;
+  background: #808080;
 }
 /* line 124, styleguide-specific.scss */
 #sg-patterns .demo-animate:hover > .demo-shape {
@@ -3019,7 +3058,7 @@ footer p, footer li {
 /* line 151, styleguide-specific.scss */
 #sg-patterns .sg-colors li {
   overflow: hidden;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   padding: 0.5em;
   margin: 0 0 2em 0;
 }

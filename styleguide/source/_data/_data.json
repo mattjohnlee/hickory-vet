@@ -26,6 +26,7 @@
 	},
 	"contact" : {
 		"phone" : "610-828-3054",
+		"fax" : "610-828-0811",
 		"address1" : "2303 Hickory Road",
 		"address2" : "Plymouth Meeting, PA 19462"
 	},
@@ -47,6 +48,7 @@
 	"service" : "Service",
 	"subService" : "Sub-Service",
 	"jobTitle" : "Degrees",
+	"career" : "Job Title",
 	"owner" : {
 		"name": "Jessica",
 		"last": "L."

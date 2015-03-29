@@ -57,7 +57,13 @@ li {
 }
 
 ul.bullets {
-  @include custom-bullets; 
+  list-style: disc;
+  margin: 0 0 1em 1em;
+}
+
+ol.numbers {
+  list-style: decimal;
+  margin: 0 0 1em 1.5em;
 }
 
 dl {
