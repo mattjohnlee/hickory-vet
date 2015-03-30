@@ -1,0 +1,76 @@
+.megamenu {
+	background: transparentize($gray-light-8, .05);
+	position: absolute;
+	top: 100%;
+	bottom: auto;
+	width: 100%;
+	z-index: 1;
+	text-align: left;
+	@include animate;
+	overflow: hidden;
+	max-height: 0;
+	display: none;
+
+	@include breakpoint($nav-breakpoint) {
+		display: block;
+	}
+
+	&.active {
+		max-height: 50em;
+	}
+
+	.container {
+		padding: $section-spacing 1em;
+	}
+}
+
+#megamenu-about, #megamenu-veterinarians, #megamenu-news-events {
+	.nav-secondary {
+		@include column(3);
+	}
+
+	.megamenu-highlights {
+		@include column(9);
+		@include last;
+
+		> * {
+			@include column(6);
+			@include last-col2;
+		}
+	}
+}
+
+#megamenu-services {
+	.container {
+		> * {
+			@include column(3);
+			@include last-col4;
+		}
+	}
+}
+
+#megamenu-pet-owners {
+	.nav-secondary {
+		@include column(3);
+	}
+
+	.megamenu-highlights {
+		@include column(9);
+		@include last;
+	}
+}
+
+#megamenu-veterinarians, #megamenu-news-events {
+	.news-preview, .date {
+		margin-bottom: 0;
+	}
+
+	.news-preview-image, .tags {
+		display: none;
+	}
+
+	h2 {
+		@include paragraph;
+		@include font-bold;
+	}
+}

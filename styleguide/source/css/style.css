@@ -409,6 +409,17 @@ Animate specific properties
   }
 }
 
+/* line 24, patterns/_carousels.scss */
+.homepage-carousel {
+  display: none;
+}
+@media (min-width: 48em) {
+  /* line 24, patterns/_carousels.scss */
+  .homepage-carousel {
+    display: block;
+  }
+}
+
 /* 
 ////////////////////////////////////////////////////////////////////////////
 From 40 Weeks, so it'll need some TLC
@@ -547,7 +558,7 @@ label {
   font-size: .875em;
   display: block;
   color: #bfbfbf;
-  margin: 1.25rem 0 .25rem;
+  margin: 0 0 .25rem;
   /* if you want to hide labels semantically 
   position: absolute;
   height: 0;
@@ -574,7 +585,7 @@ select, input[type="select"] {
 
 /* line 98, patterns/_forms.scss */
 .field-container {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* line 104, patterns/_forms.scss */
@@ -764,31 +775,88 @@ figure figcaption {
 .nav-main li:last-child, .nav-footer li:last-child {
   border: none;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   /* line 2, patterns/_navigation.scss */
   .nav-main li, .nav-footer li {
     display: inline-block;
     padding: 0;
     border: 0 none;
     margin: 0;
+    padding: 0 .5em;
+  }
+}
+@media (min-width: 75em) {
+  /* line 2, patterns/_navigation.scss */
+  .nav-main li, .nav-footer li {
     padding: 0 1em;
   }
 }
-
-/* line 18, patterns/_navigation.scss */
-.nav-main {
-  margin-top: 2rem;
-  clear: both;
+@media (min-width: 87.5em) {
+  /* line 2, patterns/_navigation.scss */
+  .nav-main li, .nav-footer li {
+    padding: 0 1.5em;
+  }
 }
 
 /* line 24, patterns/_navigation.scss */
+.nav-main {
+  clear: both;
+  overflow: hidden;
+  max-height: 0;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  margin: 1em 0;
+}
+/* line 31, patterns/_navigation.scss */
+.nav-main.active {
+  max-height: 40em;
+}
+@media (min-width: 64em) {
+  /* line 24, patterns/_navigation.scss */
+  .nav-main {
+    max-height: none;
+  }
+}
+/* line 39, patterns/_navigation.scss */
+.nav-main form {
+  /* inline search form on mobile */
+  padding: 0 1em;
+}
+@media (min-width: 64em) {
+  /* line 39, patterns/_navigation.scss */
+  .nav-main form {
+    display: none;
+  }
+}
+/* line 47, patterns/_navigation.scss */
+.nav-main a#search {
+  display: none;
+}
+@media (min-width: 64em) {
+  /* line 47, patterns/_navigation.scss */
+  .nav-main a#search {
+    display: inline-block;
+  }
+}
+
+/* line 57, patterns/_navigation.scss */
 .nav-secondary li, .highlight-box ul li {
   padding-bottom: 0.5em;
   border-bottom: 1px solid;
   margin-bottom: 1em;
   border-color: auto;
 }
-/* line 29, patterns/_navigation.scss */
+/* line 62, patterns/_navigation.scss */
 .nav-secondary a:before, .highlight-box ul a:before {
   content: "\f178";
   font-family: "FontAwesome";
@@ -1162,30 +1230,31 @@ This query will take effect for any screen smaller than 1024px
 .toggle-trigger {
   position: relative;
   padding: 1em 0 1em 1em;
+  border-top: 1px solid;
 }
-/* line 13, patterns/_toggle.scss */
+/* line 14, patterns/_toggle.scss */
 .toggle-trigger:before {
   content: '+';
   position: absolute;
   left: 0;
 }
-/* line 19, patterns/_toggle.scss */
+/* line 20, patterns/_toggle.scss */
 .toggle-trigger:hover {
   cursor: pointer;
 }
-/* line 21, patterns/_toggle.scss */
+/* line 22, patterns/_toggle.scss */
 .toggle-trigger:hover > * {
   color: green;
 }
-/* line 26, patterns/_toggle.scss */
+/* line 27, patterns/_toggle.scss */
 .toggle-trigger.active:before {
   content: '-';
 }
-/* line 30, patterns/_toggle.scss */
+/* line 31, patterns/_toggle.scss */
 .toggle-trigger p {
   margin: 0;
 }
-/* line 34, patterns/_toggle.scss */
+/* line 35, patterns/_toggle.scss */
 .toggle-trigger h2, .toggle-trigger h4, .toggle-trigger h4 {
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -1203,7 +1272,7 @@ This query will take effect for any screen smaller than 1024px
   /* prevents funny bounce on toggle */
 }
 
-/* line 40, patterns/_toggle.scss */
+/* line 41, patterns/_toggle.scss */
 .toggle-target {
   display: none;
   padding: 0 0 1em 1em;
@@ -1415,22 +1484,30 @@ li {
 
 /* line 59, patterns/_typography.scss */
 ul.bullets {
-  list-style: disc;
-  margin: 0 0 1em 1em;
+  margin: 0 0 1em 0;
+}
+/* line 63, patterns/_typography.scss */
+ul.bullets li {
+  margin-left: .625em;
+  text-indent: -.625em;
+}
+/* line 66, patterns/_typography.scss */
+ul.bullets li:before {
+  content: "• ";
 }
 
-/* line 64, patterns/_typography.scss */
+/* line 72, patterns/_typography.scss */
 ol.numbers {
   list-style: decimal;
   margin: 0 0 1em 1.5em;
 }
 
-/* line 69, patterns/_typography.scss */
+/* line 77, patterns/_typography.scss */
 dl {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 72, patterns/_typography.scss */
+/* line 80, patterns/_typography.scss */
 dl dt {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -1443,12 +1520,12 @@ dl dt {
   float: left;
   clear: left;
 }
-/* line 76, patterns/_typography.scss */
+/* line 84, patterns/_typography.scss */
 dl dt:after {
   content: ":";
   margin-right: .25em;
 }
-/* line 81, patterns/_typography.scss */
+/* line 89, patterns/_typography.scss */
 dl dd {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -1462,7 +1539,7 @@ dl dd {
   margin-bottom: 1em;
 }
 
-/* line 88, patterns/_typography.scss */
+/* line 96, patterns/_typography.scss */
 .pullquote {
   font-size: 1.43463rem;
   font-weight: 200;
@@ -1477,7 +1554,7 @@ dl dd {
 Inline Elements
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 105, patterns/_typography.scss */
+/* line 113, patterns/_typography.scss */
 strong, b {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1485,12 +1562,12 @@ strong, b {
   font-stretch: normal;
 }
 
-/* line 109, patterns/_typography.scss */
+/* line 117, patterns/_typography.scss */
 em, i {
   font-style: italic;
 }
 
-/* line 113, patterns/_typography.scss */
+/* line 121, patterns/_typography.scss */
 .font-bolditalic {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1498,7 +1575,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 117, patterns/_typography.scss */
+/* line 125, patterns/_typography.scss */
 .font-display {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1506,7 +1583,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 121, patterns/_typography.scss */
+/* line 129, patterns/_typography.scss */
 .font-displayitalic {
   font-family: "CustomFont", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1514,7 +1591,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 125, patterns/_typography.scss */
+/* line 133, patterns/_typography.scss */
 .font-fallback {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -1524,25 +1601,25 @@ em, i {
 Special Formatting
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 136, patterns/_typography.scss */
+/* line 144, patterns/_typography.scss */
 .small {
   font-size: .875em;
 }
 
-/* line 140, patterns/_typography.scss */
+/* line 148, patterns/_typography.scss */
 .smallcaps {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .8em;
 }
 
-/* line 144, patterns/_typography.scss */
+/* line 152, patterns/_typography.scss */
 .caps {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* line 148, patterns/_typography.scss */
+/* line 156, patterns/_typography.scss */
 .phone {
   font-size: 1.61803rem;
 }
@@ -1612,7 +1689,7 @@ body {
 
 /* line 51, layout/_global.scss */
 hr {
-  background-color: #e0e0e0;
+  background-color: #a3a3a3;
   height: 1px;
   border: none;
 }
@@ -1638,38 +1715,52 @@ hr {
     box-sizing: border-box;
     display: inline;
     float: left;
+    width: 65.5%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 64em) {
+  /* line 57, layout/_global.scss */
+  .primary {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
     width: 74.125%;
     margin-right: 3.5%;
     margin-left: 0;
   }
 }
-/* line 66, layout/_global.scss */
+/* line 70, layout/_global.scss */
 .primary ul, .primary ol {
   margin: 0 0 1em 0;
 }
-/* line 68, layout/_global.scss */
+/* line 72, layout/_global.scss */
 .primary ul li, .primary ol li {
   margin-bottom: 1em;
 }
-/* line 73, layout/_global.scss */
+/* line 77, layout/_global.scss */
 .primary ol {
   list-style: decimal;
 }
+
 @media (min-width: 48em) {
-  /* line 77, layout/_global.scss */
-  .primary .twocolumn {
+  /* line 82, layout/_global.scss */
+  .twocolumn {
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-count: 2;
   }
 }
 
-/* line 84, layout/_global.scss */
+/* line 89, layout/_global.scss */
 .clear-none {
   clear: none;
 }
 
-/* line 88, layout/_global.scss */
+/* line 93, layout/_global.scss */
 .sidebar {
   margin-bottom: 2rem;
   -moz-box-sizing: border-box;
@@ -1682,7 +1773,22 @@ hr {
   margin-left: 0;
 }
 @media (min-width: 48em) {
-  /* line 88, layout/_global.scss */
+  /* line 93, layout/_global.scss */
+  .sidebar {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 31%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-right: 0;
+    float: right;
+  }
+}
+@media (min-width: 64em) {
+  /* line 93, layout/_global.scss */
   .sidebar {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1697,18 +1803,51 @@ hr {
   }
 }
 
-/* line 99, layout/_global.scss */
+/* line 109, layout/_global.scss */
 section {
   margin-top: 2rem;
+}
+
+/* line 113, layout/_global.scss */
+.divider-top {
+  padding-top: 0.5em;
+  border-top: 1px solid;
+  margin-top: 1em;
+  border-color: auto;
+}
+
+/* line 116, layout/_global.scss */
+.divider-bottom {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+  border-color: auto;
+}
+
+/* line 119, layout/_global.scss */
+.divider-left {
+  padding-left: 0.5em;
+  border-left: 1px solid;
+  margin-left: 1em;
+  border-color: auto;
+}
+
+/* line 122, layout/_global.scss */
+.divider-right {
+  padding-right: 0.5em;
+  border-right: 1px solid;
+  margin-right: 1em;
+  border-color: auto;
 }
 
 /* line 1, layout/_header.scss */
 header {
   border-bottom: 1px solid black;
   text-align: center;
+  position: relative;
 }
-@media (min-width: 48em) {
-  /* line 5, layout/_header.scss */
+@media (min-width: 64em) {
+  /* line 6, layout/_header.scss */
   header .contact-info {
     position: absolute;
     top: 1em;
@@ -1716,24 +1855,32 @@ header {
     text-align: left;
   }
 }
-/* line 13, layout/_header.scss */
+/* line 14, layout/_header.scss */
+header .contact-info p {
+  margin-bottom: 0;
+}
+/* line 19, layout/_header.scss */
 header .emergency {
   padding-bottom: 1em;
 }
-@media (min-width: 48em) {
-  /* line 13, layout/_header.scss */
+@media (min-width: 64em) {
+  /* line 19, layout/_header.scss */
   header .emergency {
     position: absolute;
     top: 1em;
     right: 1em;
   }
 }
-/* line 22, layout/_header.scss */
-header p {
+/* line 27, layout/_header.scss */
+header .emergency .button-link {
+  margin-top: 1em;
+}
+/* line 31, layout/_header.scss */
+header .emergency p {
   margin-bottom: 0;
 }
 
-/* line 27, layout/_header.scss */
+/* line 37, layout/_header.scss */
 .header-padding {
   position: relative;
   margin: auto;
@@ -1744,17 +1891,29 @@ header p {
   overflow: hidden;
   *zoom: 1;
   clear: both;
-  padding-top: 1rem;
+  padding: 1rem 0 0;
   overflow: visible;
   /* lets dropdown nav show */
 }
+@media (min-width: 64em) {
+  /* line 37, layout/_header.scss */
+  .header-padding {
+    padding: 1rem 3.5% 0;
+  }
+}
 
-/* line 33, layout/_header.scss */
+/* line 47, layout/_header.scss */
 .main-logo {
   margin-bottom: 20px;
   display: inline-block;
 }
-/* line 37, layout/_header.scss */
+@media (min-width: 64em) {
+  /* line 47, layout/_header.scss */
+  .main-logo {
+    float: none;
+  }
+}
+/* line 55, layout/_header.scss */
 .main-logo a {
   background: url("../img/logo-temp.png") center no-repeat;
   position: relative;
@@ -1766,9 +1925,32 @@ header p {
   background-size: 221px 82px;
 }
 
-/* line 50, layout/_header.scss */
+/* line 68, layout/_header.scss */
 .ie8 header .main-logo a {
   background: url("../img/logo-temp.png") 0 0 no-repeat;
+}
+
+/* line 72, layout/_header.scss */
+.mobilenav-trigger {
+  color: white;
+  padding: 1em;
+  background-color: #848484;
+}
+/* line 77, layout/_header.scss */
+.mobilenav-trigger:before {
+  content: "\f0c9";
+  font-family: "FontAwesome";
+  margin-right: .5em;
+}
+/* line 84, layout/_header.scss */
+.mobilenav-trigger.active:before {
+  content: "\f00d";
+}
+@media (min-width: 64em) {
+  /* line 72, layout/_header.scss */
+  .mobilenav-trigger {
+    display: none;
+  }
 }
 
 /* line 1, layout/_footer.scss */
@@ -1802,7 +1984,7 @@ footer p, footer li {
 .nav-footer li:first-child {
   padding-left: 0;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   /* line 18, layout/_footer.scss */
   .nav-footer {
     float: left;
@@ -1813,7 +1995,7 @@ footer p, footer li {
 .footer-contact {
   margin-bottom: 2rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   /* line 27, layout/_footer.scss */
   .footer-contact {
     float: right;
@@ -1844,11 +2026,184 @@ footer p, footer li {
 .backtotop a i {
   margin-right: 1em;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   /* line 34, layout/_footer.scss */
   .backtotop {
     display: none;
   }
+}
+
+/* line 1, layout/_megamenu.scss */
+.megamenu {
+  background: rgba(224, 224, 224, 0.95);
+  position: absolute;
+  top: 100%;
+  bottom: auto;
+  width: 100%;
+  z-index: 1;
+  text-align: left;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+  display: none;
+}
+@media (min-width: 64em) {
+  /* line 1, layout/_megamenu.scss */
+  .megamenu {
+    display: block;
+  }
+}
+/* line 18, layout/_megamenu.scss */
+.megamenu.active {
+  max-height: 50em;
+}
+/* line 22, layout/_megamenu.scss */
+.megamenu .container {
+  padding: 2rem 1em;
+}
+
+/* line 28, layout/_megamenu.scss */
+#megamenu-about .nav-secondary, #megamenu-about .highlight-box ul, .highlight-box #megamenu-about ul, #megamenu-veterinarians .nav-secondary, #megamenu-veterinarians .highlight-box ul, .highlight-box #megamenu-veterinarians ul, #megamenu-news-events .nav-secondary, #megamenu-news-events .highlight-box ul, .highlight-box #megamenu-news-events ul {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 22.375%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 32, layout/_megamenu.scss */
+#megamenu-about .megamenu-highlights, #megamenu-veterinarians .megamenu-highlights, #megamenu-news-events .megamenu-highlights {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 74.125%;
+  margin-right: 3.5%;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 36, layout/_megamenu.scss */
+#megamenu-about .megamenu-highlights > *, #megamenu-veterinarians .megamenu-highlights > *, #megamenu-news-events .megamenu-highlights > * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 48.25%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 58, lib/_grid-bearded.scss */
+#megamenu-about .megamenu-highlights > *:nth-of-type(1n), #megamenu-veterinarians .megamenu-highlights > *:nth-of-type(1n), #megamenu-news-events .megamenu-highlights > *:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 60, lib/_grid-bearded.scss */
+.lt-ie8 #megamenu-about .megamenu-highlights > *:nth-of-type(1n), .lt-ie8 #megamenu-veterinarians .megamenu-highlights > *:nth-of-type(1n), .lt-ie8 #megamenu-news-events .megamenu-highlights > *:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 66, lib/_grid-bearded.scss */
+#megamenu-about .megamenu-highlights > *:nth-of-type(2n+2), #megamenu-veterinarians .megamenu-highlights > *:nth-of-type(2n+2), #megamenu-news-events .megamenu-highlights > *:nth-of-type(2n+2) {
+  margin-right: 0;
+  float: right;
+}
+/* line 70, lib/_grid-bearded.scss */
+#megamenu-about .megamenu-highlights > *:nth-of-type(2n+3), #megamenu-veterinarians .megamenu-highlights > *:nth-of-type(2n+3), #megamenu-news-events .megamenu-highlights > *:nth-of-type(2n+3) {
+  clear: both;
+}
+
+/* line 45, layout/_megamenu.scss */
+#megamenu-services .container > * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 22.375%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 94, lib/_grid-bearded.scss */
+#megamenu-services .container > *:nth-of-type(1n) {
+  margin-right: 3.5%;
+  float: left;
+  clear: none;
+}
+/* line 96, lib/_grid-bearded.scss */
+.lt-ie8 #megamenu-services .container > *:nth-of-type(1n) {
+  margin-right: 3.25%;
+}
+/* line 102, lib/_grid-bearded.scss */
+#megamenu-services .container > *:nth-of-type(4n+4) {
+  margin-right: 0;
+  float: right;
+}
+/* line 106, lib/_grid-bearded.scss */
+#megamenu-services .container > *:nth-of-type(4n+5) {
+  clear: both;
+}
+
+/* line 53, layout/_megamenu.scss */
+#megamenu-pet-owners .nav-secondary, #megamenu-pet-owners .highlight-box ul, .highlight-box #megamenu-pet-owners ul {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 22.375%;
+  margin-right: 3.5%;
+  margin-left: 0;
+}
+/* line 57, layout/_megamenu.scss */
+#megamenu-pet-owners .megamenu-highlights {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  width: 74.125%;
+  margin-right: 3.5%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 64, layout/_megamenu.scss */
+#megamenu-veterinarians .news-preview, #megamenu-veterinarians .date, #megamenu-news-events .news-preview, #megamenu-news-events .date {
+  margin-bottom: 0;
+}
+/* line 68, layout/_megamenu.scss */
+#megamenu-veterinarians .news-preview-image, #megamenu-veterinarians .tags, #megamenu-news-events .news-preview-image, #megamenu-news-events .tags {
+  display: none;
+}
+/* line 72, layout/_megamenu.scss */
+#megamenu-veterinarians h2, #megamenu-news-events h2 {
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 1em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 /* line 1, layout/_sidebar-articles.scss */

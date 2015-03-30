@@ -21,3 +21,9 @@
 	}
 }
 
+.homepage-carousel {
+	display: none;
+	@include breakpoint($m) {
+		display: block;
+	}
+}

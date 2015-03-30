@@ -7,17 +7,50 @@
 			border: none;
 		}
 
-		@include breakpoint($m) {
+		@include breakpoint($nav-breakpoint) {
 			display: inline-block;
 			@include divider-none;
+			padding: 0 .5em;
+		}
+		@include breakpoint($l2) {
 			padding: 0 1em;
+		}
+		@include breakpoint($xl) {
+			padding: 0 1.5em;
 		}
 	}
 }
 
 .nav-main {
-	margin-top: $section-spacing;
 	clear: both;
+	overflow: hidden;
+	max-height: 0;
+	@include animate;
+	margin: 1em 0;
+
+	&.active {
+		max-height: 40em;
+	}
+
+	@include breakpoint($nav-breakpoint) {
+		max-height: none;
+	}
+
+	form { /* inline search form on mobile */
+		padding: 0 1em;
+
+		@include breakpoint($nav-breakpoint) {
+			display: none;
+		}		
+	}
+
+	a#search {
+		display: none;
+
+		@include breakpoint($nav-breakpoint) {
+			display: inline-block;
+		}		
+	}
 }
 
 .nav-secondary {

@@ -1,0 +1,18 @@
+<div class="megamenu" id="megamenu-veterinarians">
+	<div class="container">
+		{{>molecules-secondary-nav }}
+		<div class="megamenu-highlights">
+			<div>
+				<h3><a href="{{url}}">Upcoming Education Events</a></h3>
+				{{# listItems.two }}
+				    {{>molecules-news-preview}}
+				{{/ listItems.two }}	
+			</div>
+			<div>
+				<h3>Join Mailing List</h3>
+				<p>{{excerpt.short}}</p>
+				{{>molecules-inline-form}}
+			</div>
+		</div>
+	</div>
+</div>

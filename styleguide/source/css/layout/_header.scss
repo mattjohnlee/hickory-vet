@@ -1,38 +1,56 @@
 header {
 	border-bottom: 1px solid black;
 	text-align: center;
+	position: relative;
 
 	.contact-info {
-		@include breakpoint($m) {
+		@include breakpoint($nav-breakpoint) {
 			position: absolute;
 			top: 1em;
 			left: 1em;
 			text-align: left;
 		}
+
+		p {
+			margin-bottom: 0;
+		}
 	}
-		.emergency {
-			padding-bottom: 1em;
-			@include breakpoint($m) {
-				position: absolute;
-				top: 1em;
-				right: 1em;
-			}
+
+	.emergency {
+		padding-bottom: 1em;
+		@include breakpoint($nav-breakpoint) {
+			position: absolute;
+			top: 1em;
+			right: 1em;
 		}
 
-	p {
-		margin-bottom: 0;
+		.button-link {
+			margin-top: 1em;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
 	}
 }
 
 .header-padding {
 	@include container;
-	padding-top: 1rem;
+	padding: 1rem 0 0;
 	overflow: visible; /* lets dropdown nav show */
+
+	@include breakpoint($nav-breakpoint) {
+		padding: 1rem 3.5% 0;
+	}
 }
 
 .main-logo {
 	margin-bottom: 20px;
 	display: inline-block;
+
+	@include breakpoint($nav-breakpoint) {
+		float: none;
+	}
 
 	a {
 		// background: url("../img/logo-temp.svg") 0 0 no-repeat; SVG if possible
@@ -49,4 +67,26 @@ header {
 
 .ie8 header .main-logo a {
 	background: url("../img/logo-temp.png") 0 0 no-repeat;
+}
+
+.mobilenav-trigger {
+	color: white;
+	padding: 1em;
+	background-color: $gray-light-2;
+
+	&:before {
+		content: "\f0c9";
+		font-family: "FontAwesome";
+		margin-right: .5em;
+	}
+
+	&.active {
+		&:before {
+			content: "\f00d";
+		}
+	}
+
+	@include breakpoint($nav-breakpoint) {
+		display: none;
+	}
 }

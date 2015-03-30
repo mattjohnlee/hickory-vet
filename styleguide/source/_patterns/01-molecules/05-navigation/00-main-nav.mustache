@@ -1,14 +1,15 @@
 <nav class="nav-main" role="navigation">
     <ul>
         <li><a href="{{ url }}">Home</a></li>
-        <li><a href="{{ url }}">About</a></li>
-        <li><a href="{{ url }}">Service</a></li>
-        <li><a href="{{ url }}">Our Doctors</a></li>
-        <li><a href="{{ url }}">Pet Owners</a></li>
-        <li><a href="{{ url }}">Veterinarians</a></li>
-        <li><a href="{{ url }}">News &amp; Events</a></li>
-        <li><a href="{{ url }}">Online Pharmacy</a></li>
-        <li><a href="{{ url }}">Contact Us</a></li>
-        <li><a href="{{ url }}">Search</a></li>
+        <li><a href="{{ url }}" id="about">About</a></li>
+        <li><a href="{{ url }}" id="services">Services</a></li>
+        <li><a href="{{ url }}" id="our-doctors">Our Doctors</a></li>
+        <li><a href="{{ url }}" id="pet-owners">Pet Owners</a></li>
+        <li><a href="{{ url }}" id="veterinarians">Veterinarians</a></li>
+        <li><a href="{{ url }}" id="news-events">News &amp; Events</a></li>
+        <li><a href="{{ url }}" id="online-pharmacy">Online Pharmacy</a></li>
+        <li><a href="{{ url }}" id="contact-us">Contact Us</a></li>
+        <li><a href="{{ url }}" id="search" class="fa fa-search"></a></li>
     </ul>
+    {{>molecules-inline-form}}
 </nav>

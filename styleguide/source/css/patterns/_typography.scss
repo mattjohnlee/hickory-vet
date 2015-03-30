@@ -57,8 +57,16 @@ li {
 }
 
 ul.bullets {
-  list-style: disc;
-  margin: 0 0 1em 1em;
+  //list-style: disc;
+  margin: 0 0 1em 0;
+
+  li {
+    margin-left: .625em;
+    text-indent: -.625em;
+    &:before {
+      content: "• ";
+    }
+  }
 }
 
 ol.numbers {

@@ -19,14 +19,14 @@ footer {
 	li:first-child {
 		padding-left: 0;
 	}
-	@include breakpoint($m) {
+	@include breakpoint($nav-breakpoint) {
 		float: left;
 	}	
 }
 
 .footer-contact {
 	margin-bottom: $section-spacing;
-	@include breakpoint($m) {
+	@include breakpoint($nav-breakpoint) {
 		float: right;
 	}	
 }
@@ -54,7 +54,7 @@ footer {
 		}
 	}
 
-	@include breakpoint($m) {
+	@include breakpoint($nav-breakpoint) {
 		display: none;
 	}
 }
