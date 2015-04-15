@@ -4,6 +4,11 @@
   border: none;
 
   p {
+    @extend .pullquote;
+    padding: 0;
+    margin: 0 0 .5em;
+    border: none;
+
     &:before {
       content: "“";
     }
@@ -13,13 +18,16 @@
   }
 
   cite {
-    font-style: italic;
+    color: $gray;
+      &:before {
+        content: "– ";
+      }
   }
 }
 
 .thankyou-carousel {
   background: $gray-light-9;
-  padding: $section-spacing 0;
+  padding: $section-spacing*2 0;
   text-align: center;
 }
 
