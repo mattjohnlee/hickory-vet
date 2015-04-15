@@ -4,7 +4,10 @@ Color values
 ////////////////////////////////////////////////////////////////////////////
 */
 
-
+$red: rgb(186,37,71);
+$blue: rgb(33,88,155);
+$tan: rgb(178,135,84);
+$gold: rgb(214,166,99);
 
 /* 
 ////////////////////////////////////////////////////////////////////////////
@@ -12,7 +15,7 @@ Gray values
 ////////////////////////////////////////////////////////////////////////////
 */
 
-$gray: #666666;
+$gray: rgb(160,153,145);
 $gray-light-1: tint($gray, 10%);
 $gray-light-2: tint($gray, 20%);
 $gray-light-3: tint($gray, 30%);
@@ -31,13 +34,15 @@ Standard applications of color variables
 ////////////////////////////////////////////////////////////////////////////
 */
 
-$text-color: black; 
-$text-color-subtle: lighten($text-color, 75%); 
-$heading-color: black;
+$text-color: rgb(65,55,50); 
+$text-color-subtle: lighten($text-color, 60%); 
+$heading-color: $blue;
 $caption-color: $gray-light-4;
 
-$link-color: blue;
-$link-color-hover: green;
+$link-color: $gold;
+$link-color-hover: darken($link-color,15%);
+
+$mainnav-active: tint($gold, 75%);
 
 $selection-bg-color: transparentize($link-color, .75);
 $selection-text-color: $text-color;
@@ -45,14 +50,14 @@ $selection-text-color: $text-color;
 $error: red;
 $valid: green;
 
-$border-color: $gray-light-8;
-$grid-border: 1px solid $gray-light-6;
+$border-color: $gray-light-6;
+$dotted-border: 2px dotted $border-color;
 
-$background-color: #fff;
+$background-color: rgb(252,252,252);
 $background-color-subtle: #eee;
 
-$footer-background-color: $gray-light-9;
-$footer-text-color: $text-color;
+$footer-background-color: rgb(219,213,201);
+$footer-text-color: $gray;
 
 
 
@@ -65,7 +70,7 @@ Layout/spacing variables
 $section-spacing: 2rem;
 $header-tall: 140px;
 $header-short: 70px;
-$form-padding: .75rem;
+$form-padding: .5rem;
 
 
 
@@ -77,9 +82,9 @@ Typographic variables
 ////////////////////////////////////////////////////////////////////////////
 */
 
-$sans: Helvetica, Arial, sans-serif;
-$serif: Georgia, 'Times New Roman', serif;
-$display: $sans;
+$sans: 'Montserrat', Helvetica, Arial, sans-serif;
+$serif: 'Noto Serif', Georgia, serif;
+$display: $serif;
 
 
 @mixin font-regular { 
@@ -111,15 +116,15 @@ $display: $sans;
 }
 
 @mixin font-display { 
-  font-family: 'CustomFont', $sans;
-  font-weight:  300;
+  font-family: $display;
+  font-weight:  400;
   font-style:   normal;
   font-stretch: normal;
 }
 
 @mixin font-displayitalic { 
-  font-family: 'CustomFont', $sans;
-  font-weight:  300;
+  font-family: $display;
+  font-weight:  400;
   font-style:   italic;
   font-stretch: normal;
 }

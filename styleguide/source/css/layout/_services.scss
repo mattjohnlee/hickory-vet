@@ -6,6 +6,8 @@
 	.service-unit-text {
 		@include center-vertical;
 		color: white;
+		padding: .25em;
+		@include button;
 	}
 }
 

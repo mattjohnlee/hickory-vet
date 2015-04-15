@@ -3,6 +3,8 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 /* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -258,7 +260,7 @@ Animate specific properties
 }
 /* line 9, patterns/_breadcrumbs.scss */
 .breadcrumbs li {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -269,12 +271,12 @@ Animate specific properties
 /* line 15, patterns/_breadcrumbs.scss */
 .breadcrumbs li:after {
   content: '>';
-  color: #a3a3a3;
+  color: #c6c1bd;
   padding: 0 .125rem 0 0.5em;
 }
 /* line 25, patterns/_breadcrumbs.scss */
 .breadcrumbs li:last-child a {
-  color: #a3a3a3;
+  color: #c6c1bd;
 }
 /* line 29, patterns/_breadcrumbs.scss */
 .breadcrumbs li:last-child:after {
@@ -440,42 +442,47 @@ input[type=submit] {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  background: blue;
-  color: white !important;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: .8em;
+  color: #d6a663;
+  background-color: #fcfcfc;
   width: auto;
   cursor: pointer;
   display: block;
-  padding: 0.75rem;
-  border: none;
-  border: 0 none;
+  padding: 0.5rem 1rem;
+  border: 2px solid #d6a663;
+  text-decoration: none;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 1em;
+  /* for browsers not supporting rem-based scale */
+  font-size: 1rem;
+  line-height: 1.7;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
 }
-/* line 65, lib/_general-mixins.scss */
+/* line 111, lib/_general-mixins.scss */
 *[type="submit"]:hover, *[type="submit"]:focus, *.submit:hover, *.submit:focus {
-  background: green;
-  border: none;
+  background-color: #d6a663;
+  color: white;
   text-decoration: none;
 }
-/* line 75, lib/_general-mixins.scss */
+/* line 120, lib/_general-mixins.scss */
 *[type="submit"]:hover, *[type="submit"]:focus, *.submit:hover, *.submit:focus {
   cursor: pointer;
 }
-/* line 20, patterns/_forms.scss */
+/* line 21, patterns/_forms.scss */
 *[type="submit"] + *[type="submit"], *[type="submit"] + *.submit, *.submit + *[type="submit"], *.submit + *.submit {
   margin-left: 1em;
 }
 
-/* line 25, patterns/_forms.scss */
+/* line 26, patterns/_forms.scss */
 input[type="email"],
 input[type="password"],
 input[type="text"],
@@ -485,18 +492,18 @@ input[type="search"],
 input[type="url"],
 input[type="date"],
 textarea {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: .875em;
-  padding: 0.75rem;
+  padding: 0.5rem;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #bfbfbf;
+  color: #d8d1cd;
   margin-left: 0;
   margin-right: 0;
   margin: 0;
   width: 100%;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #d9d6d3;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -515,7 +522,7 @@ textarea {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-/* line 49, patterns/_forms.scss */
+/* line 50, patterns/_forms.scss */
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="text"]:focus,
@@ -525,39 +532,39 @@ input[type="search"]:focus,
 input[type="url"]:focus,
 input[type="date"]:focus,
 textarea:focus {
-  border: 1px solid #949494;
+  border: 1px solid #928a81;
 }
 
-/* line 53, patterns/_forms.scss */
+/* line 54, patterns/_forms.scss */
 textarea {
   min-height: 100px;
 }
 
-/* line 57, patterns/_forms.scss */
+/* line 58, patterns/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   float: left;
-  margin-right: 0.75rem;
+  margin-right: 0.5rem;
 }
 
-/* line 63, patterns/_forms.scss */
+/* line 64, patterns/_forms.scss */
 form {
   position: relative;
 }
 
-/* line 67, patterns/_forms.scss */
+/* line 68, patterns/_forms.scss */
 label {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   font-size: 1em;
   /* for browsers not supporting rem-based scale */
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
   font-size: .875em;
   display: block;
-  color: #bfbfbf;
+  color: #d8d1cd;
   margin: 0 0 .25rem;
   /* if you want to hide labels semantically 
   position: absolute;
@@ -566,7 +573,7 @@ label {
 */
 }
 
-/* line 81, patterns/_forms.scss */
+/* line 82, patterns/_forms.scss */
 select, input[type="select"] {
   /*
   @include appearance(none);
@@ -583,91 +590,117 @@ select, input[type="select"] {
   */
 }
 
-/* line 98, patterns/_forms.scss */
+/* line 99, patterns/_forms.scss */
 .field-container {
   margin-bottom: 1.5rem;
 }
 
-/* line 104, patterns/_forms.scss */
+/* line 105, patterns/_forms.scss */
 fieldset.checkboxes li {
   display: inline-block;
   margin-right: 1em;
 }
 
 /* set input placeholder color to text color */
-/* line 114, patterns/_forms.scss */
+/* line 115, patterns/_forms.scss */
 ::-webkit-input-placeholder {
-  color: #bfbfbf;
+  color: #d8d1cd;
   vertical-align: top;
 }
 
-/* line 118, patterns/_forms.scss */
+/* line 119, patterns/_forms.scss */
 ::-moz-placeholder {
-  color: #bfbfbf;
+  color: #d8d1cd;
   vertical-align: top;
 }
 
-/* line 122, patterns/_forms.scss */
+/* line 123, patterns/_forms.scss */
 :-ms-input-placeholder {
-  color: #bfbfbf;
+  color: #d8d1cd;
   vertical-align: top;
 }
 
-/* line 126, patterns/_forms.scss */
+/* line 127, patterns/_forms.scss */
 :-moz-placeholder {
-  color: #bfbfbf;
+  color: #d8d1cd;
   vertical-align: top;
 }
 
 /* line 1, patterns/_links.scss */
 a {
-  color: blue;
+  color: #d6a663;
   text-decoration: none;
 }
-/* line 19, lib/_typographic-mixins.scss */
+/* line 20, lib/_typographic-mixins.scss */
 a:hover, a:focus {
-  color: green;
+  color: #bb8231;
   text-decoration: underline;
 }
-/* line 4, patterns/_links.scss */
-a.button-link {
+
+/* line 5, patterns/_links.scss */
+.button-link, .button-link-arrow {
   -moz-appearance: none;
   -webkit-appearance: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  background: blue;
-  color: white !important;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: .8em;
+  color: #d6a663;
+  background-color: #fcfcfc;
   width: auto;
   cursor: pointer;
   display: block;
-  padding: 0.75rem;
-  border: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid #d6a663;
+  text-decoration: none;
   display: inline-block;
   margin: 0;
 }
-/* line 65, lib/_general-mixins.scss */
-a.button-link:hover, a.button-link:focus {
-  background: green;
-  border: none;
+/* line 111, lib/_general-mixins.scss */
+.button-link:hover, .button-link-arrow:hover, .button-link:focus, .button-link-arrow:focus {
+  background-color: #d6a663;
+  color: white;
   text-decoration: none;
 }
 
-/* line 12, patterns/_links.scss */
+/* line 11, patterns/_links.scss */
+.button-link-arrow {
+  position: relative;
+  padding-left: 3rem;
+}
+/* line 16, patterns/_links.scss */
+.button-link-arrow:before {
+  content: "\f178";
+  font-family: "FontAwesome";
+  background-color: #d6a663;
+  color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem 0.75rem;
+}
+/* line 29, patterns/_links.scss */
+.button-link-arrow:hover:before, .button-link-arrow:focus:before {
+  background-color: #bb8231;
+}
+
+/* line 37, patterns/_links.scss */
+p a {
+  text-decoration: underline;
+}
+
+/* line 43, patterns/_links.scss */
 a[href$=".pdf"]:before {
   content: "\f1c1";
   font-family: FontAwesome;
   padding-right: 0.5em;
 }
 
-/* line 20, patterns/_links.scss */
+/* line 51, patterns/_links.scss */
 a[href$=".doc"]:before {
   content: "\f1c2";
   font-family: FontAwesome;
@@ -692,20 +725,20 @@ figure {
 }
 /* line 17, patterns/_media.scss */
 figure figcaption {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   font-size: 1em;
   /* for browsers not supporting rem-based scale */
   font-size: 1rem;
-  line-height: 1.5;
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   font-size: .875em;
-  color: #a3a3a3;
+  color: #c6c1bd;
   margin-top: .5em;
 }
 
@@ -735,13 +768,13 @@ figure figcaption {
   /* line 41, patterns/_media.scss */
   .hero .hero-text {
     position: absolute;
-    width: 100%;
-    left: 0;
+    display: inline-block;
+    left: 50%;
     top: 50%;
-    -moz-transform: translateX(0) translateY(-50%) translateZ(0);
-    -ms-transform: translateX(0) translateY(-50%) translateZ(0);
-    -webkit-transform: translateX(0) translateY(-50%) translateZ(0);
-    transform: translateX(0) translateY(-50%) translateZ(0);
+    -moz-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    -ms-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    transform: translateX(-50%) translateY(-50%) translateZ(0);
   }
 }
 
@@ -763,42 +796,7 @@ figure figcaption {
   height: 100%;
 }
 
-/* line 2, patterns/_navigation.scss */
-.nav-main li, .nav-footer li {
-  display: block;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid;
-  margin-bottom: 1em;
-  border-color: auto;
-}
-/* line 6, patterns/_navigation.scss */
-.nav-main li:last-child, .nav-footer li:last-child {
-  border: none;
-}
-@media (min-width: 64em) {
-  /* line 2, patterns/_navigation.scss */
-  .nav-main li, .nav-footer li {
-    display: inline-block;
-    padding: 0;
-    border: 0 none;
-    margin: 0;
-    padding: 0 .5em;
-  }
-}
-@media (min-width: 75em) {
-  /* line 2, patterns/_navigation.scss */
-  .nav-main li, .nav-footer li {
-    padding: 0 1em;
-  }
-}
-@media (min-width: 87.5em) {
-  /* line 2, patterns/_navigation.scss */
-  .nav-main li, .nav-footer li {
-    padding: 0 1.5em;
-  }
-}
-
-/* line 24, patterns/_navigation.scss */
+/* line 1, patterns/_navigation.scss */
 .nav-main {
   clear: both;
   overflow: hidden;
@@ -815,52 +813,140 @@ figure figcaption {
   -o-transition-timing-function: ease-in-out;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-  margin: 1em 0;
+  background-color: #f7f3ed;
 }
-/* line 31, patterns/_navigation.scss */
+/* line 8, patterns/_navigation.scss */
 .nav-main.active {
   max-height: 40em;
+  padding: 1.5em 0;
+}
+@media (min-width: 64em) {
+  /* line 1, patterns/_navigation.scss */
+  .nav-main {
+    max-height: none;
+    padding: 0;
+  }
+}
+/* line 18, patterns/_navigation.scss */
+.nav-main li {
+  display: block;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+  border-color: #d9d6d3;
+  padding-bottom: 1em;
+  border-color: #d6a663;
+}
+/* line 24, patterns/_navigation.scss */
+.nav-main li#search {
+  display: none;
 }
 @media (min-width: 64em) {
   /* line 24, patterns/_navigation.scss */
-  .nav-main {
-    max-height: none;
+  .nav-main li#search {
+    display: inline-block;
   }
 }
-/* line 39, patterns/_navigation.scss */
+/* line 33, patterns/_navigation.scss */
+.nav-main li:last-child a {
+  border: none;
+}
+@media (min-width: 64em) {
+  /* line 18, patterns/_navigation.scss */
+  .nav-main li {
+    display: inline-block;
+    padding: 0;
+    border: 0 none;
+    margin: 0;
+    margin-right: -.3em;
+  }
+}
+@media (min-width: 64em) {
+  /* line 44, patterns/_navigation.scss */
+  .nav-main li a {
+    padding: 1em .5em;
+    border-right: 2px dotted #d9d6d3;
+    border-color: #ebe1d4;
+  }
+}
+@media (min-width: 75em) {
+  /* line 44, patterns/_navigation.scss */
+  .nav-main li a {
+    padding: 1em;
+  }
+}
+@media (min-width: 87.5em) {
+  /* line 44, patterns/_navigation.scss */
+  .nav-main li a {
+    padding: 1em 1.5em;
+  }
+}
+/* line 61, patterns/_navigation.scss */
+.nav-main a {
+  color: #413732;
+}
+/* line 65, patterns/_navigation.scss */
+.nav-main a.active {
+  background: #f4e8d8;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 71, patterns/_navigation.scss */
 .nav-main form {
   /* inline search form on mobile */
   padding: 0 1em;
 }
 @media (min-width: 64em) {
-  /* line 39, patterns/_navigation.scss */
+  /* line 71, patterns/_navigation.scss */
   .nav-main form {
     display: none;
   }
 }
-/* line 47, patterns/_navigation.scss */
-.nav-main a#search {
-  display: none;
+
+/* line 81, patterns/_navigation.scss */
+.nav-footer li {
+  display: block;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+  border-color: #d9d6d3;
+  padding-bottom: 1em;
+  border-color: #d6a663;
+}
+/* line 88, patterns/_navigation.scss */
+.nav-footer li:last-child a {
+  border: none;
 }
 @media (min-width: 64em) {
-  /* line 47, patterns/_navigation.scss */
-  .nav-main a#search {
+  /* line 81, patterns/_navigation.scss */
+  .nav-footer li {
     display: inline-block;
+    padding: 0;
+    border: 0 none;
+    margin: 0;
+    margin-right: -.3em;
+  }
+}
+@media (min-width: 64em) {
+  /* line 99, patterns/_navigation.scss */
+  .nav-footer li a {
+    padding: 1em;
   }
 }
 
-/* line 57, patterns/_navigation.scss */
+/* line 109, patterns/_navigation.scss */
 .nav-secondary li, .highlight-box ul li {
   padding-bottom: 0.5em;
   border-bottom: 1px solid;
   margin-bottom: 1em;
-  border-color: auto;
+  border-color: #d9d6d3;
 }
-/* line 62, patterns/_navigation.scss */
-.nav-secondary a:before, .highlight-box ul a:before {
+/* line 112, patterns/_navigation.scss */
+.nav-secondary li:before, .highlight-box ul li:before {
   content: "\f178";
   font-family: "FontAwesome";
   margin-right: .5em;
+  color: #d6a663;
 }
 
 /* 
@@ -870,7 +956,7 @@ Error/Valid Messages (defaults are kinda messy...need to tidy up)
 */
 /* line 9, patterns/_notifications.scss */
 .messages li {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -891,7 +977,7 @@ Error/Valid Messages (defaults are kinda messy...need to tidy up)
 
 /* line 24, patterns/_notifications.scss */
 .errorlist li {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -920,14 +1006,14 @@ Error/Valid Messages (defaults are kinda messy...need to tidy up)
   margin: -.75em 0 1.75em 0;
   font-size: 0.78615rem;
   clear: both;
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
 }
 /* line 51, patterns/_notifications.scss */
 .error-message a, .valid-message a, .message a {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -1002,7 +1088,7 @@ input.is-error {
 }
 /* line 4, patterns/_pagination.scss */
 .pagination li {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -1022,42 +1108,21 @@ input.is-error {
   border-bottom: 1px solid;
 }
 
-/* line 90, lib/_general-mixins.scss */
+/* line 2, patterns/_social-media.scss */
 .social-media li {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.75em;
   margin: 1em 1em 1em 0;
 }
-@media (min-width: 48em) {
-  /* line 90, lib/_general-mixins.scss */
-  .social-media li {
-    margin: 0 1em 1em 0;
-    font-size: 1.15em;
-  }
-}
 @media (min-width: 64em) {
-  /* line 90, lib/_general-mixins.scss */
+  /* line 2, patterns/_social-media.scss */
   .social-media li {
     margin: 0 .75em .75em 0;
-    font-size: 1.15em;
+    font-size: 1.25em;
   }
 }
-/* line 105, lib/_general-mixins.scss */
-.social-media li a {
-  border: 1px solid;
-  text-align: center;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  padding: .375em;
-  line-height: 1.25;
-  /* keeps the FontAwesome icon centered */
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
 
-/* line 5, patterns/_social-media.scss */
+/* line 14, patterns/_social-media.scss */
 .icon-label {
   position: absolute;
   height: 0;
@@ -1075,7 +1140,7 @@ table.responsive {
 }
 /* line 11, patterns/_tables.scss */
 table.responsive td, table.responsive th {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #d9d6d3;
   padding: 1em 2em;
   line-height: 1.5;
   vertical-align: top;
@@ -1094,11 +1159,15 @@ table.responsive td:last-child, table.responsive th:last-child {
 /* line 28, patterns/_tables.scss */
 table.responsive th {
   border-top: none;
-  color: black;
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  color: #21589b;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
+}
+/* line 34, patterns/_tables.scss */
+table.responsive i {
+  color: #ba2547;
 }
 
 /* 
@@ -1106,45 +1175,45 @@ This query will take effect for any screen smaller than 1024px
 */
 @media only screen and (max-width: 1023px) {
   /* Force table to not be like tables anymore */
-  /* line 44, patterns/_tables.scss */
+  /* line 48, patterns/_tables.scss */
   table.responsive {
     display: block;
   }
-  /* line 47, patterns/_tables.scss */
+  /* line 51, patterns/_tables.scss */
   table.responsive thead, table.responsive tbody, table.responsive th, table.responsive td, table.responsive tr {
     display: block;
   }
-  /* line 51, patterns/_tables.scss */
+  /* line 55, patterns/_tables.scss */
   table.responsive thead {
     display: none;
   }
-  /* line 55, patterns/_tables.scss */
+  /* line 59, patterns/_tables.scss */
   table.responsive tfoot {
     clear: both;
     width: 100%;
   }
-  /* line 60, patterns/_tables.scss */
+  /* line 64, patterns/_tables.scss */
   table.responsive tr {
-    border-top: 2px solid blue;
+    border-top: 2px solid #d6a663;
     clear: both;
   }
-  /* line 64, patterns/_tables.scss */
+  /* line 68, patterns/_tables.scss */
   table.responsive tr:first-child {
     border: none;
   }
-  /* line 69, patterns/_tables.scss */
+  /* line 73, patterns/_tables.scss */
   table.responsive td {
     /* Behave  like a "row" */
     border: none;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #d9d6d3;
     position: relative;
     padding-left: 50%;
   }
-  /* line 76, patterns/_tables.scss */
+  /* line 80, patterns/_tables.scss */
   table.responsive td:last-child {
     border-bottom: none;
   }
-  /* line 81, patterns/_tables.scss */
+  /* line 85, patterns/_tables.scss */
   table.responsive td:before {
     /* Now like a table header */
     position: absolute;
@@ -1153,7 +1222,7 @@ This query will take effect for any screen smaller than 1024px
     /* compensates for smallcaps styling; if no smallcaps, reset this to .8em so it matches the td padding */
     left: .7em;
     width: 45%;
-    font-family: "CustomFont", Helvetica, Arial, sans-serif;
+    font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -1162,35 +1231,35 @@ This query will take effect for any screen smaller than 1024px
   }
 
   /* Label for data on specific tables */
-  /* line 96, patterns/_tables.scss */
+  /* line 100, patterns/_tables.scss */
   #investment-list td:nth-of-type(1):before {
     content: "";
   }
-  /* line 97, patterns/_tables.scss */
+  /* line 101, patterns/_tables.scss */
   #investment-list td:nth-of-type(2):before {
     content: "Sun";
   }
-  /* line 98, patterns/_tables.scss */
+  /* line 102, patterns/_tables.scss */
   #investment-list td:nth-of-type(3):before {
     content: "Mon";
   }
-  /* line 99, patterns/_tables.scss */
+  /* line 103, patterns/_tables.scss */
   #investment-list td:nth-of-type(4):before {
     content: "Tues";
   }
-  /* line 100, patterns/_tables.scss */
+  /* line 104, patterns/_tables.scss */
   #investment-list td:nth-of-type(5):before {
     content: "Wed";
   }
-  /* line 101, patterns/_tables.scss */
+  /* line 105, patterns/_tables.scss */
   #investment-list td:nth-of-type(6):before {
     content: "Thu";
   }
-  /* line 102, patterns/_tables.scss */
+  /* line 106, patterns/_tables.scss */
   #investment-list td:nth-of-type(7):before {
     content: "Fri";
   }
-  /* line 103, patterns/_tables.scss */
+  /* line 107, patterns/_tables.scss */
   #investment-list td:nth-of-type(8):before {
     content: "Sat";
   }
@@ -1244,7 +1313,7 @@ This query will take effect for any screen smaller than 1024px
 }
 /* line 22, patterns/_toggle.scss */
 .toggle-trigger:hover > * {
-  color: green;
+  color: #bb8231;
 }
 /* line 27, patterns/_toggle.scss */
 .toggle-trigger.active:before {
@@ -1285,7 +1354,11 @@ Headings
 */
 /* line 8, patterns/_typography.scss */
 h1 {
-  color: black;
+  color: #21589b;
+  font-family: "Noto Serif", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
@@ -1293,25 +1366,29 @@ h1 {
   /* for browsers not supporting rem-based scale */
   font-size: 2.61803rem;
 }
-/* line 43, lib/_typographic-mixins.scss */
+/* line 44, lib/_typographic-mixins.scss */
 h1:first-of-type {
   margin-top: 0;
   /* so the first heading in any given container lines up flush */
 }
-/* line 46, lib/_typographic-mixins.scss */
+/* line 47, lib/_typographic-mixins.scss */
 h1 a {
-  color: blue;
+  color: #d6a663;
   text-decoration: none;
 }
-/* line 19, lib/_typographic-mixins.scss */
+/* line 20, lib/_typographic-mixins.scss */
 h1 a:hover, h1 a:focus {
-  color: green;
+  color: #bb8231;
   text-decoration: underline;
 }
 
 /* line 12, patterns/_typography.scss */
 h2 {
-  color: black;
+  color: #21589b;
+  font-family: "Noto Serif", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
@@ -1319,25 +1396,29 @@ h2 {
   /* for browsers not supporting rem-based scale */
   font-size: 2.32128rem;
 }
-/* line 43, lib/_typographic-mixins.scss */
+/* line 44, lib/_typographic-mixins.scss */
 h2:first-of-type {
   margin-top: 0;
   /* so the first heading in any given container lines up flush */
 }
-/* line 46, lib/_typographic-mixins.scss */
+/* line 47, lib/_typographic-mixins.scss */
 h2 a {
-  color: blue;
+  color: #d6a663;
   text-decoration: none;
 }
-/* line 19, lib/_typographic-mixins.scss */
+/* line 20, lib/_typographic-mixins.scss */
 h2 a:hover, h2 a:focus {
-  color: green;
+  color: #bb8231;
   text-decoration: underline;
 }
 
 /* line 16, patterns/_typography.scss */
 h3 {
-  color: black;
+  color: #21589b;
+  font-family: "Noto Serif", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
@@ -1345,25 +1426,29 @@ h3 {
   /* for browsers not supporting rem-based scale */
   font-size: 1.61803rem;
 }
-/* line 43, lib/_typographic-mixins.scss */
+/* line 44, lib/_typographic-mixins.scss */
 h3:first-of-type {
   margin-top: 0;
   /* so the first heading in any given container lines up flush */
 }
-/* line 46, lib/_typographic-mixins.scss */
+/* line 47, lib/_typographic-mixins.scss */
 h3 a {
-  color: blue;
+  color: #d6a663;
   text-decoration: none;
 }
-/* line 19, lib/_typographic-mixins.scss */
+/* line 20, lib/_typographic-mixins.scss */
 h3 a:hover, h3 a:focus {
-  color: green;
+  color: #bb8231;
   text-decoration: underline;
 }
 
 /* line 20, patterns/_typography.scss */
 h4 {
-  color: black;
+  color: #21589b;
+  font-family: "Noto Serif", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
@@ -1371,25 +1456,29 @@ h4 {
   /* for browsers not supporting rem-based scale */
   font-size: 1.27202rem;
 }
-/* line 43, lib/_typographic-mixins.scss */
+/* line 44, lib/_typographic-mixins.scss */
 h4:first-of-type {
   margin-top: 0;
   /* so the first heading in any given container lines up flush */
 }
-/* line 46, lib/_typographic-mixins.scss */
+/* line 47, lib/_typographic-mixins.scss */
 h4 a {
-  color: blue;
+  color: #d6a663;
   text-decoration: none;
 }
-/* line 19, lib/_typographic-mixins.scss */
+/* line 20, lib/_typographic-mixins.scss */
 h4 a:hover, h4 a:focus {
-  color: green;
+  color: #bb8231;
   text-decoration: underline;
 }
 
 /* line 24, patterns/_typography.scss */
 h5 {
-  color: black;
+  color: #21589b;
+  font-family: "Noto Serif", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
@@ -1397,25 +1486,29 @@ h5 {
   /* for browsers not supporting rem-based scale */
   font-size: 1rem;
 }
-/* line 43, lib/_typographic-mixins.scss */
+/* line 44, lib/_typographic-mixins.scss */
 h5:first-of-type {
   margin-top: 0;
   /* so the first heading in any given container lines up flush */
 }
-/* line 46, lib/_typographic-mixins.scss */
+/* line 47, lib/_typographic-mixins.scss */
 h5 a {
-  color: blue;
+  color: #d6a663;
   text-decoration: none;
 }
-/* line 19, lib/_typographic-mixins.scss */
+/* line 20, lib/_typographic-mixins.scss */
 h5 a:hover, h5 a:focus {
-  color: green;
+  color: #bb8231;
   text-decoration: underline;
 }
 
 /* line 28, patterns/_typography.scss */
 h6 {
-  color: black;
+  color: #21589b;
+  font-family: "Noto Serif", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
@@ -1423,19 +1516,19 @@ h6 {
   /* for browsers not supporting rem-based scale */
   font-size: 0.78615rem;
 }
-/* line 43, lib/_typographic-mixins.scss */
+/* line 44, lib/_typographic-mixins.scss */
 h6:first-of-type {
   margin-top: 0;
   /* so the first heading in any given container lines up flush */
 }
-/* line 46, lib/_typographic-mixins.scss */
+/* line 47, lib/_typographic-mixins.scss */
 h6 a {
-  color: blue;
+  color: #d6a663;
   text-decoration: none;
 }
-/* line 19, lib/_typographic-mixins.scss */
+/* line 20, lib/_typographic-mixins.scss */
 h6 a:hover, h6 a:focus {
-  color: green;
+  color: #bb8231;
   text-decoration: underline;
 }
 
@@ -1444,7 +1537,7 @@ h6 a:hover, h6 a:focus {
   padding-bottom: 0.5em;
   border-bottom: 1px solid;
   margin-bottom: 1em;
-  border-color: auto;
+  border-color: #d9d6d3;
 }
 
 /* 
@@ -1454,14 +1547,14 @@ Block-level Elements
 */
 /* line 44, patterns/_typography.scss */
 p {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   font-size: 1em;
   /* for browsers not supporting rem-based scale */
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
   margin-bottom: 1em;
 }
 
@@ -1472,14 +1565,14 @@ ul li, ol li {
 
 /* line 55, patterns/_typography.scss */
 li {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   font-size: 1em;
   /* for browsers not supporting rem-based scale */
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 /* line 59, patterns/_typography.scss */
@@ -1509,14 +1602,14 @@ dl {
 }
 /* line 80, patterns/_typography.scss */
 dl dt {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   font-size: 1em;
   /* for browsers not supporting rem-based scale */
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
   float: left;
   clear: left;
 }
@@ -1527,26 +1620,31 @@ dl dt:after {
 }
 /* line 89, patterns/_typography.scss */
 dl dd {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   font-size: 1em;
   /* for browsers not supporting rem-based scale */
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
   float: left;
   margin-bottom: 1em;
 }
 
 /* line 96, patterns/_typography.scss */
 .pullquote {
-  font-size: 1.43463rem;
+  font-family: "Noto Serif", Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  font-size: 1.52358rem;
+  color: #a09991;
   font-weight: 200;
   font-style: italic;
-  margin: 1em 2em;
+  margin: 1.5em 2em;
   padding: 0 2em;
-  border-left: 2px solid #e0e0e0;
+  border-left: 3px solid #d9d6d3;
 }
 
 /* 
@@ -1554,46 +1652,46 @@ dl dd {
 Inline Elements
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 113, patterns/_typography.scss */
+/* line 115, patterns/_typography.scss */
 strong, b {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
 }
 
-/* line 117, patterns/_typography.scss */
+/* line 119, patterns/_typography.scss */
 em, i {
   font-style: italic;
 }
 
-/* line 121, patterns/_typography.scss */
+/* line 123, patterns/_typography.scss */
 .font-bolditalic {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: italic;
   font-stretch: normal;
 }
 
-/* line 125, patterns/_typography.scss */
+/* line 127, patterns/_typography.scss */
 .font-display {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: "Noto Serif", Georgia, serif;
+  font-weight: 400;
   font-style: normal;
   font-stretch: normal;
 }
 
-/* line 129, patterns/_typography.scss */
+/* line 131, patterns/_typography.scss */
 .font-displayitalic {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: "Noto Serif", Georgia, serif;
+  font-weight: 400;
   font-style: italic;
   font-stretch: normal;
 }
 
-/* line 133, patterns/_typography.scss */
+/* line 135, patterns/_typography.scss */
 .font-fallback {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 /* 
@@ -1601,27 +1699,22 @@ em, i {
 Special Formatting
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 144, patterns/_typography.scss */
+/* line 146, patterns/_typography.scss */
 .small {
   font-size: .875em;
 }
 
-/* line 148, patterns/_typography.scss */
+/* line 150, patterns/_typography.scss */
 .smallcaps {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .8em;
 }
 
-/* line 152, patterns/_typography.scss */
+/* line 154, patterns/_typography.scss */
 .caps {
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-/* line 156, patterns/_typography.scss */
-.phone {
-  font-size: 1.61803rem;
 }
 
 /* page layouts */
@@ -1653,28 +1746,29 @@ html {
 
 /* line 28, layout/_global.scss */
 body {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  color: black;
+  color: #413732;
+  background-color: #fcfcfc;
   position: relative;
 }
 
-/* line 34, layout/_global.scss */
+/* line 35, layout/_global.scss */
 ::selection {
-  background: rgba(0, 0, 255, 0.25);
-  color: black;
+  background: rgba(214, 166, 99, 0.25);
+  color: #413732;
 }
 
-/* line 39, layout/_global.scss */
+/* line 40, layout/_global.scss */
 ::-moz-selection {
   /* Firefox */
-  background: rgba(0, 0, 255, 0.25);
-  color: black;
+  background: rgba(214, 166, 99, 0.25);
+  color: #413732;
 }
 
-/* line 47, layout/_global.scss */
+/* line 48, layout/_global.scss */
 .container {
   position: relative;
   margin: auto;
@@ -1687,14 +1781,14 @@ body {
   clear: both;
 }
 
-/* line 51, layout/_global.scss */
+/* line 52, layout/_global.scss */
 hr {
-  background-color: #a3a3a3;
+  background-color: #c6c1bd;
   height: 1px;
   border: none;
 }
 
-/* line 57, layout/_global.scss */
+/* line 58, layout/_global.scss */
 .primary {
   margin-bottom: 2rem;
   clear: both;
@@ -1708,7 +1802,7 @@ hr {
   margin-left: 0;
 }
 @media (min-width: 48em) {
-  /* line 57, layout/_global.scss */
+  /* line 58, layout/_global.scss */
   .primary {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1721,7 +1815,7 @@ hr {
   }
 }
 @media (min-width: 64em) {
-  /* line 57, layout/_global.scss */
+  /* line 58, layout/_global.scss */
   .primary {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1733,21 +1827,21 @@ hr {
     margin-left: 0;
   }
 }
-/* line 70, layout/_global.scss */
+/* line 71, layout/_global.scss */
 .primary ul, .primary ol {
   margin: 0 0 1em 0;
 }
-/* line 72, layout/_global.scss */
+/* line 73, layout/_global.scss */
 .primary ul li, .primary ol li {
   margin-bottom: 1em;
 }
-/* line 77, layout/_global.scss */
+/* line 78, layout/_global.scss */
 .primary ol {
   list-style: decimal;
 }
 
 @media (min-width: 48em) {
-  /* line 82, layout/_global.scss */
+  /* line 83, layout/_global.scss */
   .twocolumn {
     -moz-column-count: 2;
     -webkit-column-count: 2;
@@ -1755,12 +1849,12 @@ hr {
   }
 }
 
-/* line 89, layout/_global.scss */
+/* line 90, layout/_global.scss */
 .clear-none {
   clear: none;
 }
 
-/* line 93, layout/_global.scss */
+/* line 94, layout/_global.scss */
 .sidebar {
   margin-bottom: 2rem;
   -moz-box-sizing: border-box;
@@ -1773,7 +1867,7 @@ hr {
   margin-left: 0;
 }
 @media (min-width: 48em) {
-  /* line 93, layout/_global.scss */
+  /* line 94, layout/_global.scss */
   .sidebar {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1788,7 +1882,7 @@ hr {
   }
 }
 @media (min-width: 64em) {
-  /* line 93, layout/_global.scss */
+  /* line 94, layout/_global.scss */
   .sidebar {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1803,51 +1897,50 @@ hr {
   }
 }
 
-/* line 109, layout/_global.scss */
+/* line 110, layout/_global.scss */
 section {
   margin-top: 2rem;
 }
 
-/* line 113, layout/_global.scss */
+/* line 114, layout/_global.scss */
 .divider-top {
   padding-top: 0.5em;
   border-top: 1px solid;
   margin-top: 1em;
-  border-color: auto;
+  border-color: #d9d6d3;
 }
 
-/* line 116, layout/_global.scss */
+/* line 117, layout/_global.scss */
 .divider-bottom {
   padding-bottom: 0.5em;
   border-bottom: 1px solid;
   margin-bottom: 1em;
-  border-color: auto;
+  border-color: #d9d6d3;
 }
 
-/* line 119, layout/_global.scss */
+/* line 120, layout/_global.scss */
 .divider-left {
   padding-left: 0.5em;
   border-left: 1px solid;
   margin-left: 1em;
-  border-color: auto;
+  border-color: #d9d6d3;
 }
 
-/* line 122, layout/_global.scss */
+/* line 123, layout/_global.scss */
 .divider-right {
   padding-right: 0.5em;
   border-right: 1px solid;
   margin-right: 1em;
-  border-color: auto;
+  border-color: #d9d6d3;
 }
 
 /* line 1, layout/_header.scss */
 header {
-  border-bottom: 1px solid black;
   text-align: center;
   position: relative;
 }
 @media (min-width: 64em) {
-  /* line 6, layout/_header.scss */
+  /* line 5, layout/_header.scss */
   header .contact-info {
     position: absolute;
     top: 1em;
@@ -1855,32 +1948,57 @@ header {
     text-align: left;
   }
 }
-/* line 14, layout/_header.scss */
+/* line 13, layout/_header.scss */
 header .contact-info p {
   margin-bottom: 0;
 }
-/* line 19, layout/_header.scss */
+/* line 18, layout/_header.scss */
+header .phone {
+  font-size: 1.61803rem;
+  color: #ba2547;
+}
+/* line 23, layout/_header.scss */
 header .emergency {
   padding-bottom: 1em;
 }
 @media (min-width: 64em) {
-  /* line 19, layout/_header.scss */
+  /* line 23, layout/_header.scss */
   header .emergency {
     position: absolute;
     top: 1em;
     right: 1em;
   }
 }
-/* line 27, layout/_header.scss */
-header .emergency .button-link {
-  margin-top: 1em;
-}
 /* line 31, layout/_header.scss */
+header .emergency .button-link, header .emergency .button-link-arrow {
+  margin-top: 1em;
+  color: #ba2547;
+  border-color: #ba2547;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 38, layout/_header.scss */
+header .emergency .button-link:hover, header .emergency .button-link-arrow:hover, header .emergency .button-link:target, header .emergency .button-link-arrow:target, header .emergency .button-link:active, header .emergency .button-link-arrow:active {
+  color: white;
+  background-color: #ba2547;
+}
+@media (min-width: 64em) {
+  /* line 44, layout/_header.scss */
+  header .emergency .button-link:before, header .emergency .button-link-arrow:before {
+    content: "Click here for ";
+    display: block;
+    font-size: .875em;
+    text-transform: none;
+    font-weight: normal;
+    margin-bottom: .25em;
+  }
+}
+/* line 55, layout/_header.scss */
 header .emergency p {
   margin-bottom: 0;
 }
 
-/* line 37, layout/_header.scss */
+/* line 61, layout/_header.scss */
 .header-padding {
   position: relative;
   margin: auto;
@@ -1896,58 +2014,60 @@ header .emergency p {
   /* lets dropdown nav show */
 }
 @media (min-width: 64em) {
-  /* line 37, layout/_header.scss */
+  /* line 61, layout/_header.scss */
   .header-padding {
     padding: 1rem 3.5% 0;
   }
 }
 
-/* line 47, layout/_header.scss */
+/* line 71, layout/_header.scss */
 .main-logo {
   margin-bottom: 20px;
   display: inline-block;
 }
 @media (min-width: 64em) {
-  /* line 47, layout/_header.scss */
+  /* line 71, layout/_header.scss */
   .main-logo {
     float: none;
   }
 }
-/* line 55, layout/_header.scss */
+/* line 79, layout/_header.scss */
 .main-logo a {
-  background: url("../img/logo-temp.png") center no-repeat;
+  background: url("../img/hickory-logo.png") center no-repeat;
+  background: url("../img/hickory-logo.svg") 0 0 no-repeat;
   position: relative;
   display: block;
   text-indent: -9999px;
   text-decoration: none;
-  width: 221px;
-  height: 82px;
-  background-size: 221px 82px;
+  width: 296px;
+  height: 110px;
+  background-size: 296px 110px;
 }
 
-/* line 68, layout/_header.scss */
+/* line 92, layout/_header.scss */
 .ie8 header .main-logo a {
   background: url("../img/logo-temp.png") 0 0 no-repeat;
 }
 
-/* line 72, layout/_header.scss */
+/* line 96, layout/_header.scss */
 .mobilenav-trigger {
   color: white;
   padding: 1em;
-  background-color: #848484;
+  margin-bottom: 1em;
+  background-color: #d6a663;
 }
-/* line 77, layout/_header.scss */
+/* line 102, layout/_header.scss */
 .mobilenav-trigger:before {
   content: "\f0c9";
   font-family: "FontAwesome";
   margin-right: .5em;
 }
-/* line 84, layout/_header.scss */
+/* line 109, layout/_header.scss */
 .mobilenav-trigger.active:before {
   content: "\f00d";
 }
 @media (min-width: 64em) {
-  /* line 72, layout/_header.scss */
+  /* line 96, layout/_header.scss */
   .mobilenav-trigger {
     display: none;
   }
@@ -1958,9 +2078,9 @@ footer {
   overflow: hidden;
   *zoom: 1;
   clear: both;
-  padding: 2rem 0 0 0;
-  background-color: #efefef;
-  color: black;
+  padding: 1.5rem 0 0 0;
+  background-color: #dbd5c9;
+  color: #a09991;
 }
 /* line 8, layout/_footer.scss */
 footer .footer-padding {
@@ -1979,30 +2099,45 @@ footer p, footer li {
   margin-bottom: 0;
   font-size: .875em;
 }
+/* line 17, layout/_footer.scss */
+footer a {
+  color: #a09991;
+}
 
-/* line 19, layout/_footer.scss */
+/* line 23, layout/_footer.scss */
 .nav-footer li:first-child {
   padding-left: 0;
 }
 @media (min-width: 64em) {
-  /* line 18, layout/_footer.scss */
+  /* line 22, layout/_footer.scss */
   .nav-footer {
     float: left;
   }
 }
 
-/* line 27, layout/_footer.scss */
+/* line 31, layout/_footer.scss */
 .footer-contact {
   margin-bottom: 2rem;
 }
 @media (min-width: 64em) {
-  /* line 27, layout/_footer.scss */
+  /* line 31, layout/_footer.scss */
   .footer-contact {
     float: right;
+    margin-bottom: 0;
   }
 }
+/* line 38, layout/_footer.scss */
+.footer-contact > * {
+  display: inline-block;
+}
+/* line 42, layout/_footer.scss */
+.footer-contact .phone {
+  border-right: 1px solid;
+  border-left: 1px solid;
+  padding: 0 1em;
+}
 
-/* line 34, layout/_footer.scss */
+/* line 49, layout/_footer.scss */
 .backtotop {
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -2010,24 +2145,24 @@ footer p, footer li {
   clear: both;
   text-align: center;
 }
-/* line 41, layout/_footer.scss */
+/* line 56, layout/_footer.scss */
 .backtotop a {
-  color: #efefef;
+  color: #dbd5c9;
   padding: 1.5em;
-  background-color: #666666;
+  background-color: #a09991;
   display: block;
   text-decoration: none;
 }
-/* line 48, layout/_footer.scss */
+/* line 63, layout/_footer.scss */
 .backtotop a:hover, .backtotop a:active {
-  background-color: #848484;
+  background-color: #b3ada7;
 }
-/* line 52, layout/_footer.scss */
+/* line 67, layout/_footer.scss */
 .backtotop a i {
   margin-right: 1em;
 }
 @media (min-width: 64em) {
-  /* line 34, layout/_footer.scss */
+  /* line 49, layout/_footer.scss */
   .backtotop {
     display: none;
   }
@@ -2035,7 +2170,12 @@ footer p, footer li {
 
 /* line 1, layout/_megamenu.scss */
 .megamenu {
-  background: rgba(224, 224, 224, 0.95);
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZThkOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjkiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4e8d8), color-stop(100%, rgba(255, 255, 255, 0.9)));
+  background-image: -moz-linear-gradient(top, #f4e8d8, rgba(255, 255, 255, 0.9));
+  background-image: -webkit-linear-gradient(top, #f4e8d8, rgba(255, 255, 255, 0.9));
+  background-image: linear-gradient(to bottom, #f4e8d8, rgba(255, 255, 255, 0.9));
   position: absolute;
   top: 100%;
   bottom: auto;
@@ -2057,6 +2197,11 @@ footer p, footer li {
   overflow: hidden;
   max-height: 0;
   display: none;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  border-bottom: 0rem solid rgba(238, 219, 192, 0.5);
 }
 @media (min-width: 64em) {
   /* line 1, layout/_megamenu.scss */
@@ -2064,16 +2209,17 @@ footer p, footer li {
     display: block;
   }
 }
-/* line 18, layout/_megamenu.scss */
+/* line 21, layout/_megamenu.scss */
 .megamenu.active {
   max-height: 50em;
+  border-width: .5rem;
 }
-/* line 22, layout/_megamenu.scss */
+/* line 26, layout/_megamenu.scss */
 .megamenu .container {
   padding: 2rem 1em;
 }
 
-/* line 28, layout/_megamenu.scss */
+/* line 32, layout/_megamenu.scss */
 #megamenu-about .nav-secondary, #megamenu-about .highlight-box ul, .highlight-box #megamenu-about ul, #megamenu-veterinarians .nav-secondary, #megamenu-veterinarians .highlight-box ul, .highlight-box #megamenu-veterinarians ul, #megamenu-news-events .nav-secondary, #megamenu-news-events .highlight-box ul, .highlight-box #megamenu-news-events ul {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2084,7 +2230,7 @@ footer p, footer li {
   margin-right: 3.5%;
   margin-left: 0;
 }
-/* line 32, layout/_megamenu.scss */
+/* line 36, layout/_megamenu.scss */
 #megamenu-about .megamenu-highlights, #megamenu-veterinarians .megamenu-highlights, #megamenu-news-events .megamenu-highlights {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2096,7 +2242,7 @@ footer p, footer li {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 36, layout/_megamenu.scss */
+/* line 40, layout/_megamenu.scss */
 #megamenu-about .megamenu-highlights > *, #megamenu-veterinarians .megamenu-highlights > *, #megamenu-news-events .megamenu-highlights > * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2127,7 +2273,7 @@ footer p, footer li {
   clear: both;
 }
 
-/* line 45, layout/_megamenu.scss */
+/* line 49, layout/_megamenu.scss */
 #megamenu-services .container > * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2158,7 +2304,7 @@ footer p, footer li {
   clear: both;
 }
 
-/* line 53, layout/_megamenu.scss */
+/* line 57, layout/_megamenu.scss */
 #megamenu-pet-owners .nav-secondary, #megamenu-pet-owners .highlight-box ul, .highlight-box #megamenu-pet-owners ul {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2169,7 +2315,7 @@ footer p, footer li {
   margin-right: 3.5%;
   margin-left: 0;
 }
-/* line 57, layout/_megamenu.scss */
+/* line 61, layout/_megamenu.scss */
 #megamenu-pet-owners .megamenu-highlights {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2182,25 +2328,25 @@ footer p, footer li {
   margin-right: 0;
 }
 
-/* line 64, layout/_megamenu.scss */
+/* line 68, layout/_megamenu.scss */
 #megamenu-veterinarians .news-preview, #megamenu-veterinarians .date, #megamenu-news-events .news-preview, #megamenu-news-events .date {
   margin-bottom: 0;
 }
-/* line 68, layout/_megamenu.scss */
+/* line 72, layout/_megamenu.scss */
 #megamenu-veterinarians .news-preview-image, #megamenu-veterinarians .tags, #megamenu-news-events .news-preview-image, #megamenu-news-events .tags {
   display: none;
 }
-/* line 72, layout/_megamenu.scss */
+/* line 76, layout/_megamenu.scss */
 #megamenu-veterinarians h2, #megamenu-news-events h2 {
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   font-size: 1em;
   /* for browsers not supporting rem-based scale */
   font-size: 1rem;
-  line-height: 1.5;
-  font-family: "CustomFont", Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -2212,12 +2358,33 @@ footer p, footer li {
   position: relative;
   overflow: hidden;
 }
-/* line 6, layout/_sidebar-articles.scss */
-.sidebar-article h3 {
-  padding-bottom: 0.5em;
-  border-bottom: 5px solid;
+
+/* line 7, layout/_sidebar-articles.scss */
+.sidebar-article-title {
+  position: relative;
   margin-bottom: 1em;
-  border-color: auto;
+}
+/* line 76, lib/_general-mixins.scss */
+.sidebar-article-title > * {
+  color: #21589b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  background-color: #fcfcfc;
+  padding: 0 .5em 0 0;
+  line-height: 1;
+  position: relative;
+}
+/* line 86, lib/_general-mixins.scss */
+.sidebar-article-title:after {
+  content: "";
+  display: block;
+  border-top: 3px solid #21589b;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: .65em;
+  z-index: -1;
 }
 
 /* line 11, layout/_sidebar-articles.scss */
@@ -2225,53 +2392,61 @@ footer p, footer li {
   padding-top: 0.5em;
   border-top: 1px solid;
   margin-top: 1em;
-  border-color: auto;
+  border-color: #d9d6d3;
   padding-bottom: 0.5em;
   border-bottom: 1px solid;
   margin-bottom: 1em;
-  border-color: auto;
+  border-color: #d9d6d3;
+  padding: 1em 0;
+  color: #ba2547;
 }
-/* line 14, layout/_sidebar-articles.scss */
+/* line 17, layout/_sidebar-articles.scss */
 .doctor-quote p {
-  font-style: italic;
   margin-left: 3em;
+  font-family: "Noto Serif", Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  position: relative;
 }
-/* line 18, layout/_sidebar-articles.scss */
+/* line 22, layout/_sidebar-articles.scss */
 .doctor-quote p:before {
   content: "“";
   font-size: 5em;
   position: absolute;
-  left: 0;
-  top: .5rem;
+  left: -.6em;
+  top: -.1em;
   line-height: 1;
 }
-/* line 28, layout/_sidebar-articles.scss */
+/* line 32, layout/_sidebar-articles.scss */
 .doctor-quote cite {
   margin-left: 3em;
+  font-family: "Noto Serif", Georgia, serif;
 }
 
-/* line 1, layout/_highlight-boxes.scss */
+/* line 35, layout/_highlight-boxes.scss */
 .highlight-box {
-  border: 1px solid #e0e0e0;
-  padding: 1em;
+  border: 1px solid #d9d6d3;
+  padding: 1em 2em;
+  position: relative;
 }
-/* line 5, layout/_highlight-boxes.scss */
+/* line 40, layout/_highlight-boxes.scss */
 .highlight-box ul {
   margin-bottom: 1em;
 }
-/* line 8, layout/_highlight-boxes.scss */
+/* line 43, layout/_highlight-boxes.scss */
 .highlight-box ul li {
   padding: 0;
   border: 0 none;
   margin: 0;
 }
 
-/* line 14, layout/_highlight-boxes.scss */
+/* line 49, layout/_highlight-boxes.scss */
 .highlight-boxes {
   overflow: hidden;
 }
 @media (min-width: 37.5em) {
-  /* line 18, layout/_highlight-boxes.scss */
+  /* line 53, layout/_highlight-boxes.scss */
   .highlight-boxes.two .highlight-box {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2302,12 +2477,16 @@ footer p, footer li {
     clear: both;
   }
 }
-/* line 26, layout/_highlight-boxes.scss */
+/* line 61, layout/_highlight-boxes.scss */
 .highlight-boxes.homepage {
   margin-bottom: -2rem;
 }
+/* line 64, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box {
+  border: none;
+}
 @media (min-width: 48em) {
-  /* line 29, layout/_highlight-boxes.scss */
+  /* line 64, layout/_highlight-boxes.scss */
   .highlight-boxes.homepage .highlight-box {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2339,44 +2518,193 @@ footer p, footer li {
   .highlight-boxes.homepage .highlight-box:nth-of-type(3n+4) {
     clear: both;
   }
+  /* line 72, layout/_highlight-boxes.scss */
+  .highlight-boxes.homepage .highlight-box:after {
+    content: "";
+    border-right: 2px dotted #d9d6d3;
+    position: absolute;
+    top: 6rem;
+    bottom: 2rem;
+    right: 0;
+  }
+}
+/* line 4, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(1) ul li:before {
+  color: #ba2547;
+}
+/* line 10, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(1) h3 {
+  background-color: #ba2547;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q4M2E1ZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JhMjU0NyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #d83a5e), color-stop(100%, #ba2547));
+  background-image: -moz-linear-gradient(left, #d83a5e, #ba2547);
+  background-image: -webkit-linear-gradient(left, #d83a5e, #ba2547);
+  background-image: linear-gradient(to right, #d83a5e, #ba2547);
+  border-color: #dc92a3;
+}
+/* line 16, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(1) em {
+  color: #ba2547;
+}
+/* line 20, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(1) .button-link-arrow {
+  color: #ba2547;
+  border-color: #ba2547;
+}
+/* line 24, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(1) .button-link-arrow:before {
+  background-color: #ba2547;
+}
+/* line 28, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(1) .button-link-arrow:hover {
+  color: white;
+  background-color: #cb5b75;
+}
+/* line 4, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(2) ul li:before {
+  color: #b28754;
+}
+/* line 10, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(2) h3 {
+  background-color: #b28754;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2MyYTA3NyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IyODc1NCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #c2a077), color-stop(100%, #b28754));
+  background-image: -moz-linear-gradient(left, #c2a077, #b28754);
+  background-image: -webkit-linear-gradient(left, #c2a077, #b28754);
+  background-image: linear-gradient(to right, #c2a077, #b28754);
+  border-color: #d8c3a9;
+}
+/* line 16, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(2) em {
+  color: #b28754;
+}
+/* line 20, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(2) .button-link-arrow {
+  color: #b28754;
+  border-color: #b28754;
+}
+/* line 24, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(2) .button-link-arrow:before {
+  background-color: #b28754;
+}
+/* line 28, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(2) .button-link-arrow:hover {
+  color: white;
+  background-color: #c5a57e;
+}
+/* line 4, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(3) ul li:before {
+  color: #21589b;
+}
+/* line 10, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(3) h3 {
+  background-color: #21589b;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJhNzBjNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIxNTg5YiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #2a70c5), color-stop(100%, #21589b));
+  background-image: -moz-linear-gradient(left, #2a70c5, #21589b);
+  background-image: -webkit-linear-gradient(left, #2a70c5, #21589b);
+  background-image: linear-gradient(to right, #2a70c5, #21589b);
+  border-color: #90abcd;
+}
+/* line 16, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(3) em {
+  color: #21589b;
+}
+/* line 20, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(3) .button-link-arrow {
+  color: #21589b;
+  border-color: #21589b;
+}
+/* line 24, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(3) .button-link-arrow:before {
+  background-color: #21589b;
+}
+/* line 28, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(3) .button-link-arrow:hover {
+  color: white;
+  background-color: #5881b4;
+}
+/* line 91, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage .highlight-box:nth-child(3):after {
+  content: none;
+}
+/* line 97, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage ul {
+  padding-left: 2em;
+}
+/* line 100, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage ul a {
+  color: #413732;
+}
+/* line 105, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage h3 {
+  margin: -1rem -2rem 1em;
+  padding: .6rem 2rem .4rem;
+  border-top: .333rem solid;
+  border-bottom: .333rem solid;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* line 112, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage h3 a {
+  color: white;
+  text-decoration: none;
+}
+/* line 117, layout/_highlight-boxes.scss */
+.highlight-boxes.homepage h3:after {
+  content: "\f178";
+  font-family: "FontAwesome";
+  margin-left: .5em;
+  color: white;
 }
 
-/* line 2, layout/_footer-features.scss */
-.spotlight .box {
-  border: 1px solid #e0e0e0;
+/* line 1, layout/_footer-features.scss */
+.footer-feature {
   overflow: hidden;
+  margin-bottom: 2rem;
 }
-/* line 7, layout/_footer-features.scss */
-.spotlight img {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: inline;
-  float: left;
-  width: 22.375%;
-  margin-right: 3.5%;
-  margin-left: 0;
+@media (min-width: 48em) {
+  /* line 1, layout/_footer-features.scss */
+  .footer-feature {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 48.25%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+  /* line 58, lib/_grid-bearded.scss */
+  .footer-feature:nth-of-type(1n) {
+    margin-right: 3.5%;
+    float: left;
+    clear: none;
+  }
+  /* line 60, lib/_grid-bearded.scss */
+  .lt-ie8 .footer-feature:nth-of-type(1n) {
+    margin-right: 3.25%;
+  }
+  /* line 66, lib/_grid-bearded.scss */
+  .footer-feature:nth-of-type(2n+2) {
+    margin-right: 0;
+    float: right;
+  }
+  /* line 70, lib/_grid-bearded.scss */
+  .footer-feature:nth-of-type(2n+3) {
+    clear: both;
+  }
 }
-/* line 10, layout/_footer-features.scss */
-.spotlight .spotlight-text {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: inline;
-  float: left;
-  width: 74.125%;
-  margin-right: 3.5%;
-  margin-left: 0;
-  padding: 3.5% 3.5% 3.5% 0;
-  margin-right: 0;
+/* line 11, layout/_footer-features.scss */
+.footer-feature .footer-feature-title h3 {
+  padding-left: .5em;
+  margin-left: 1em;
 }
-
 /* line 17, layout/_footer-features.scss */
-.featured-pet {
-  overflow: hidden;
-}
-/* line 19, layout/_footer-features.scss */
-.featured-pet img {
+.footer-feature .footer-feature-photo {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2385,9 +2713,35 @@ footer p, footer li {
   width: 48.25%;
   margin-right: 3.5%;
   margin-left: 0;
+  position: relative;
+  border: 5px solid #5881b4;
 }
-/* line 22, layout/_footer-features.scss */
-.featured-pet .spotlight-text {
+/* line 60, lib/_general-mixins.scss */
+.footer-feature .footer-feature-photo:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 5px solid #21589b;
+}
+@media (min-width: 64em) {
+  /* line 17, layout/_footer-features.scss */
+  .footer-feature .footer-feature-photo {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 22.375%;
+    margin-right: 3.5%;
+    margin-left: 0;
+  }
+}
+/* line 25, layout/_footer-features.scss */
+.footer-feature .footer-feature-text {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2399,8 +2753,135 @@ footer p, footer li {
   padding: 3.5% 3.5% 3.5% 0;
   margin-right: 0;
 }
+@media (min-width: 64em) {
+  /* line 25, layout/_footer-features.scss */
+  .footer-feature .footer-feature-text {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 74.125%;
+    margin-right: 3.5%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
-/* line 30, layout/_footer-features.scss */
+/* line 38, layout/_footer-features.scss */
+.specialty .footer-feature-title, .did-you-know .footer-feature-title {
+  position: relative;
+  margin-bottom: 1em;
+}
+/* line 76, lib/_general-mixins.scss */
+.specialty .footer-feature-title > *, .did-you-know .footer-feature-title > * {
+  color: #21589b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  background-color: #fcfcfc;
+  padding: 0 .5em 0 0;
+  line-height: 1;
+  position: relative;
+}
+/* line 86, lib/_general-mixins.scss */
+.specialty .footer-feature-title:after, .did-you-know .footer-feature-title:after {
+  content: "";
+  display: block;
+  border-top: 3px solid #21589b;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: .65em;
+  z-index: -1;
+}
+/* line 42, layout/_footer-features.scss */
+.specialty .footer-feature-photo, .did-you-know .footer-feature-photo {
+  position: relative;
+  border: 5px solid #5881b4;
+}
+/* line 60, lib/_general-mixins.scss */
+.specialty .footer-feature-photo:before, .did-you-know .footer-feature-photo:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 5px solid #21589b;
+}
+/* line 46, layout/_footer-features.scss */
+.specialty h4, .did-you-know h4 {
+  color: #21589b;
+}
+@media (min-width: 48em) {
+  /* line 37, layout/_footer-features.scss */
+  .specialty, .did-you-know {
+    border-right: 2px dotted #d9d6d3;
+    margin-right: 0;
+    padding-right: 3.5%;
+  }
+}
+
+/* line 58, layout/_footer-features.scss */
+.featured-pet .footer-feature-title {
+  position: relative;
+  margin-bottom: 1em;
+}
+/* line 76, lib/_general-mixins.scss */
+.featured-pet .footer-feature-title > * {
+  color: #ba2547;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  background-color: #fcfcfc;
+  padding: 0 .5em 0 0;
+  line-height: 1;
+  position: relative;
+}
+/* line 86, lib/_general-mixins.scss */
+.featured-pet .footer-feature-title:after {
+  content: "";
+  display: block;
+  border-top: 3px solid #ba2547;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: .65em;
+  z-index: -1;
+}
+/* line 62, layout/_footer-features.scss */
+.featured-pet .footer-feature-photo {
+  position: relative;
+  border: 5px solid #cb5b75;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 60, lib/_general-mixins.scss */
+.featured-pet .footer-feature-photo:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 5px solid #ba2547;
+}
+/* line 65, layout/_footer-features.scss */
+.featured-pet .footer-feature-photo:before {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 70, layout/_footer-features.scss */
+.featured-pet h4 {
+  color: #ba2547;
+}
+
+/* line 77, layout/_footer-features.scss */
 .previously-featured-pets a {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2432,78 +2913,18 @@ footer p, footer li {
   clear: both;
 }
 
-/* line 38, layout/_footer-features.scss */
-.footer-features .container > * {
-  margin: 0 0 2rem 0;
+/*
+.previously-featured-pets {
+	@include breakpoint($m) {
+		@include column(6);
+		@include last;
+	}
+	@include breakpoint($l) {
+		@include column(3);
+		@include last;
+	}
 }
-@media (min-width: 64em) {
-  /* line 41, layout/_footer-features.scss */
-  .footer-features .spotlight {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline;
-    float: left;
-    width: 48.25%;
-    margin-right: 3.5%;
-    margin-left: 0;
-  }
-}
-@media (min-width: 48em) {
-  /* line 47, layout/_footer-features.scss */
-  .footer-features .featured-pet {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline;
-    float: left;
-    width: 48.25%;
-    margin-right: 3.5%;
-    margin-left: 0;
-  }
-}
-@media (min-width: 64em) {
-  /* line 47, layout/_footer-features.scss */
-  .footer-features .featured-pet {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline;
-    float: left;
-    width: 22.375%;
-    margin-right: 3.5%;
-    margin-left: 0;
-  }
-}
-@media (min-width: 48em) {
-  /* line 56, layout/_footer-features.scss */
-  .footer-features .previously-featured-pets {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline;
-    float: left;
-    width: 48.25%;
-    margin-right: 3.5%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media (min-width: 64em) {
-  /* line 56, layout/_footer-features.scss */
-  .footer-features .previously-featured-pets {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline;
-    float: left;
-    width: 22.375%;
-    margin-right: 3.5%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
+*/
 /* line 1, layout/_thankyou.scss */
 .thankyou-quote {
   margin: 0 0 1em;
@@ -2525,7 +2946,7 @@ footer p, footer li {
 
 /* line 20, layout/_thankyou.scss */
 .thankyou-carousel {
-  background: #efefef;
+  background: #f5f4f4;
   padding: 2rem 0;
   text-align: center;
 }
@@ -2533,7 +2954,7 @@ footer p, footer li {
 /* line 26, layout/_thankyou.scss */
 .thankyou-unit {
   padding: 2rem;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #d9d6d3;
   margin-bottom: 3.5%;
 }
 
@@ -2648,18 +3069,42 @@ footer p, footer li {
 /* line 6, layout/_services.scss */
 .service-unit .service-unit-text {
   position: absolute;
-  width: 100%;
-  left: 0;
+  display: inline-block;
+  left: 50%;
   top: 50%;
-  -moz-transform: translateX(0) translateY(-50%) translateZ(0);
-  -ms-transform: translateX(0) translateY(-50%) translateZ(0);
-  -webkit-transform: translateX(0) translateY(-50%) translateZ(0);
-  transform: translateX(0) translateY(-50%) translateZ(0);
+  -moz-transform: translateX(-50%) translateY(-50%) translateZ(0);
+  -ms-transform: translateX(-50%) translateY(-50%) translateZ(0);
+  -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
+  transform: translateX(-50%) translateY(-50%) translateZ(0);
   color: white;
+  padding: .25em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  color: #d6a663;
+  background-color: #fcfcfc;
+  width: auto;
+  cursor: pointer;
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 2px solid #d6a663;
+  text-decoration: none;
+}
+/* line 111, lib/_general-mixins.scss */
+.service-unit .service-unit-text:hover, .service-unit .service-unit-text:focus {
+  background-color: #d6a663;
+  color: white;
+  text-decoration: none;
 }
 
 @media (min-width: 48em) {
-  /* line 12, layout/_services.scss */
+  /* line 14, layout/_services.scss */
   .service-intro {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2672,7 +3117,7 @@ footer p, footer li {
   }
 }
 @media (min-width: 64em) {
-  /* line 12, layout/_services.scss */
+  /* line 14, layout/_services.scss */
   .service-intro {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2686,7 +3131,7 @@ footer p, footer li {
 }
 
 @media (min-width: 48em) {
-  /* line 21, layout/_services.scss */
+  /* line 23, layout/_services.scss */
   .service-list {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2700,7 +3145,7 @@ footer p, footer li {
   }
 }
 @media (min-width: 64em) {
-  /* line 21, layout/_services.scss */
+  /* line 23, layout/_services.scss */
   .service-list {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2713,7 +3158,7 @@ footer p, footer li {
     margin-right: 0;
   }
 }
-/* line 31, layout/_services.scss */
+/* line 33, layout/_services.scss */
 .service-list .service-unit {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2745,7 +3190,7 @@ footer p, footer li {
   clear: both;
 }
 @media (min-width: 64em) {
-  /* line 31, layout/_services.scss */
+  /* line 33, layout/_services.scss */
   .service-list .service-unit {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2778,15 +3223,15 @@ footer p, footer li {
   }
 }
 
-/* line 44, layout/_services.scss */
+/* line 46, layout/_services.scss */
 .service-group {
   overflow: hidden;
   padding-bottom: 0.5em;
   border-bottom: 1px solid;
   margin-bottom: 1em;
-  border-color: auto;
+  border-color: #d9d6d3;
 }
-/* line 48, layout/_services.scss */
+/* line 50, layout/_services.scss */
 .service-group:last-child {
   border: none;
 }
@@ -2969,13 +3414,13 @@ footer p, footer li {
 /* line 6, layout/_pets.scss */
 .pet-unit .pet-name, .pet-unit .pet-ailment {
   position: absolute;
-  width: 100%;
-  left: 0;
+  display: inline-block;
+  left: 50%;
   top: 50%;
-  -moz-transform: translateX(0) translateY(-50%) translateZ(0);
-  -ms-transform: translateX(0) translateY(-50%) translateZ(0);
-  -webkit-transform: translateX(0) translateY(-50%) translateZ(0);
-  transform: translateX(0) translateY(-50%) translateZ(0);
+  -moz-transform: translateX(-50%) translateY(-50%) translateZ(0);
+  -ms-transform: translateX(-50%) translateY(-50%) translateZ(0);
+  -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
+  transform: translateX(-50%) translateY(-50%) translateZ(0);
   color: white;
 }
 /* line 11, layout/_pets.scss */
@@ -3062,7 +3507,7 @@ footer p, footer li {
   padding-bottom: 1em;
   border-bottom: 1px solid;
   margin-bottom: 2em;
-  border-color: #e0e0e0;
+  border-color: #d9d6d3;
 }
 
 /* line 6, layout/_news.scss */

@@ -1,5 +1,14 @@
 .social-media {
-  @include social-media-icons;
+	li {
+		display: inline-block;
+		font-size: 1.75em;
+		margin: 1em 1em 1em 0;
+
+		@include breakpoint($l) {
+			margin: 0 .75em .75em 0;
+			font-size: 1.25em;
+		}
+	}
 }
 
 .icon-label {

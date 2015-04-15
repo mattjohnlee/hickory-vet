@@ -1,5 +1,6 @@
 .megamenu {
-	background: transparentize($gray-light-8, .05);
+	//background: transparentize($gray-light-8, .05);
+	@include background-gradient-v($mainnav-active, rgba(255,255,255,.9));
 	position: absolute;
 	top: 100%;
 	bottom: auto;
@@ -10,6 +11,8 @@
 	overflow: hidden;
 	max-height: 0;
 	display: none;
+	@include background-clip(padding-box);
+	border-bottom: 0rem solid transparentize(tint($gold, 60%), .5);
 
 	@include breakpoint($nav-breakpoint) {
 		display: block;
@@ -17,6 +20,7 @@
 
 	&.active {
 		max-height: 50em;
+		border-width: .5rem;
 	}
 
 	.container {

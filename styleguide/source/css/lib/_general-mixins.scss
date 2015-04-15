@@ -9,38 +9,33 @@
 }
 
 
-
-
-
-
-@mixin divider-top($border-weight:1px, $spacing:1em, $border-color:auto) {
+@mixin divider-top($border-weight:1px, $spacing:1em, $border-color:$border-color) {
   padding-top: $spacing/2;
   border-top: $border-weight solid;
   margin-top: $spacing;
   border-color: $border-color;
 }
 
-@mixin divider-right($border-weight:1px, $spacing:1em, $border-color:auto) {
+@mixin divider-right($border-weight:1px, $spacing:1em, $border-color:$border-color) {
   padding-right: $spacing/2;
   border-right: $border-weight solid;
   margin-right: $spacing;
   border-color: $border-color;
 }
 
-@mixin divider-bottom($border-weight:1px, $spacing:1em, $border-color:auto) {
+@mixin divider-bottom($border-weight:1px, $spacing:1em, $border-color:$border-color) {
   padding-bottom: $spacing/2;
   border-bottom: $border-weight solid;
   margin-bottom: $spacing;
   border-color: $border-color;
 }
 
-@mixin divider-left($border-weight:1px, $spacing:1em, $border-color:auto) {
+@mixin divider-left($border-weight:1px, $spacing:1em, $border-color:$border-color) {
   padding-left: $spacing/2;
   border-left: $border-weight solid;
   margin-left: $spacing;
   border-color: $border-color;
 }
-
 
 @mixin divider-none {
   padding: 0;
@@ -49,68 +44,88 @@
 }
 
 
+@mixin background-gradient-h($color1, $color2) {
+  @include background-image(linear-gradient(to right, $color1, $color2));
+}
+
+@mixin background-gradient-v($color1, $color2) {
+  @include background-image(linear-gradient(to bottom, $color1, $color2));
+}
+
+
+@mixin border-double($color, $width) {
+  position: relative;
+  border: $width solid tint($color,25%);
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: $width solid $color;
+  }
+}
+
+@mixin title-strikethrough($color) {
+  position: relative;
+  margin-bottom: 1em;
+
+  > * {
+    color: $color;
+    @include caps;
+    display: inline-block;
+    background-color: $background-color;
+    padding: 0 .5em 0 0;
+    line-height: 1;
+    position: relative;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    border-top: 3px solid $color;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: .65em;
+    z-index: -1;
+  }
+}
+
 @mixin button {
     @include appearance(none);
     @include border-radius(0);
     @include font-regular;
-    background: $link-color;
-    color: white !important;
-    @include smallcaps;
+    color: $link-color;
+    background-color: $background-color;
     width: auto;
     cursor: pointer;
     display: block;
-    padding: $form-padding;
-    border: none;
+    padding: $form-padding $form-padding*2;
+    border: 2px solid $link-color;
+    text-decoration: none;
 
     &:hover, &:focus {
-      background: $link-color-hover;
-      border: none;
+      background-color: $link-color;
+      color: white;
       text-decoration: none;
     }
 }
 
 @mixin button-form {
   @include button;
-  border: 0 none;
-  &:hover,
-  &:focus {
+  &:hover, &:focus {
     cursor: pointer;
   }
 }
 
 @mixin center-vertical {
   position: absolute;
-  width: 100%;
-  left: 0;
+  display: inline-block;
+  left: 50%;
   top: 50%;
-  @include transform(translateX(0) translateY(-50%) translateZ(0));
-}
-
-@mixin social-media-icons {
-  li {
-    display: inline-block;
-    font-size: 1.5em;
-    margin: 1em 1em 1em 0;
-
-    @include breakpoint($m) {
-      margin: 0 1em 1em 0;
-      font-size: 1.15em;
-    }
-
-    @include breakpoint($l) {
-      margin: 0 .75em .75em 0;
-      font-size: 1.15em;
-    }
-
-    a {
-      border: 1px solid;
-      text-align: center;
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      padding: .375em;
-      line-height: 1.25; /* keeps the FontAwesome icon centered */
-      @include border-radius(50%);
-    }
-  }
+  @include transform(translateX(-50%) translateY(-50%) translateZ(0));
 }

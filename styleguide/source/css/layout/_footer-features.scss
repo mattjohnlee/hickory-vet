@@ -1,30 +1,77 @@
-.spotlight {
-	.box {
-		border: 1px solid $border-color;
-		overflow: hidden;
+.footer-feature {
+	overflow: hidden;
+	margin-bottom: 2rem;
+
+	@include breakpoint($m) {
+		@include column(6);
+		@include last-col2;
 	}
 
-	img {
-		@include column(3);
+	.footer-feature-title {
+		h3 {
+			padding-left: .5em;
+			margin-left: 1em;
+		}
 	}
-	.spotlight-text {
-		@include column(9);
+
+	.footer-feature-photo {
+		@include column(6);
+		@include border-double($blue, 5px);
+	
+		@include breakpoint($l) {
+			@include column(3);
+		}
+	}
+	.footer-feature-text {
+		@include column(6);
 		padding: $grid_padding $grid_padding $grid_padding 0;
 		@include last;
+	
+		@include breakpoint($l) {
+			@include column(9);
+			@include last;
+		}
+	}
+}
+
+.specialty, .did-you-know {
+	.footer-feature-title {
+		@include title-strikethrough($blue);
+	}
+
+	.footer-feature-photo {
+		@include border-double($blue, 5px);
+	}
+
+	h4 {
+		color: $blue;
+	}
+
+	@include breakpoint($m) {
+		border-right: $dotted-border;
+		margin-right: 0;
+		padding-right: $grid_padding;
 	}
 }
 
 .featured-pet {
-	overflow: hidden;
-	img {
-		@include column(6);
+	.footer-feature-title {
+		@include title-strikethrough($red);
 	}
-	.spotlight-text {
-		@include column(6);
-		padding: $grid_padding $grid_padding $grid_padding 0;
-		@include last;
+
+	.footer-feature-photo {
+		@include border-double($red, 5px);
+		@include border-radius(50%);
+		&:before {
+			@include border-radius(50%);
+		}
+	}
+
+	h4 {
+		color: $red;
 	}
 }
+
 
 .previously-featured-pets {
 	a {
@@ -34,33 +81,15 @@
 	}
 }
 
-.footer-features {
-	.container > * {
-		margin: 0 0 2rem 0;
+/*
+.previously-featured-pets {
+	@include breakpoint($m) {
+		@include column(6);
+		@include last;
 	}
-	.spotlight {
-		@include breakpoint($l) {
-			@include column(6);
-		}
-	}
-
-	.featured-pet {
-		@include breakpoint($m) {
-			@include column(6);
-		}
-		@include breakpoint($l) {
-			@include column(3);
-		}
-	}
-
-	.previously-featured-pets {
-		@include breakpoint($m) {
-			@include column(6);
-			@include last;
-		}
-		@include breakpoint($l) {
-			@include column(3);
-			@include last;
-		}
+	@include breakpoint($l) {
+		@include column(3);
+		@include last;
 	}
 }
+*/

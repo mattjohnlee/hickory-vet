@@ -1,6 +1,41 @@
+@mixin homepage-highlight-coloring($homepage-highlight-color) {
+	ul {
+		li {
+			&:before {
+				color: $homepage-highlight-color;
+			}
+		}
+	}
+
+	h3 {
+		background-color: $homepage-highlight-color;
+		@include background-gradient-h(lighten($homepage-highlight-color, 10%), $homepage-highlight-color);
+		border-color: tint($homepage-highlight-color,50%);
+	}
+
+	em {
+		color: $homepage-highlight-color;
+	}	
+
+	.button-link-arrow {
+		color: $homepage-highlight-color;
+		border-color: $homepage-highlight-color;
+
+		&:before {
+			background-color: $homepage-highlight-color;
+		}
+
+		&:hover {
+			color: white;
+			background-color: tint($homepage-highlight-color, 25%);
+		}
+	}
+}
+
 .highlight-box {
 	border: 1px solid $border-color;
-	padding: 1em;
+	padding: 1em 2em;
+	position: relative;
 
 	ul {
 		@extend .nav-secondary;
@@ -27,11 +62,63 @@
 		margin-bottom: -$section-spacing;
 
 		.highlight-box {
+			border: none;
 			@include breakpoint($m) {
 				@include column(4);
 				@include last-col3;
 				margin-right: 0 !important;
 				width: (100%/3)  !important;				
+				
+				&:after {
+					content: "";
+					border-right: $dotted-border;
+					position: absolute;
+					top: 6rem;
+					bottom: 2rem;
+					right: 0;
+				}
+			}
+
+			&:nth-child(1) {
+				@include homepage-highlight-coloring($red);
+			}
+			&:nth-child(2) {
+				@include homepage-highlight-coloring($tan);
+			}
+			&:nth-child(3) {
+				@include homepage-highlight-coloring($blue);
+				
+				&:after {
+					content: none;
+				}
+			}
+		}
+
+		ul {
+			padding-left: 2em;
+	
+			a {
+				color: $text-color;
+			}
+		}
+
+		h3 {
+			margin: -1rem -2rem 1em;
+			padding: .6rem 2rem .4rem;
+			border-top: .333rem solid;
+			border-bottom: .333rem solid;
+			@include caps;
+
+			a {
+				color: white;
+				text-decoration: none;
+			}
+	
+			&:after {
+				content: "\f178";
+				font-family: "FontAwesome";
+				margin-left: .5em;
+				color: white;
 			}
 		}
 	}

@@ -30,6 +30,10 @@ table.responsive {
 		color: $heading-color; 
 		@include font-bold;
 	}
+
+	i {
+		color: $red;
+	}
 }
 
 

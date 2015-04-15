@@ -10,6 +10,7 @@ Typographic mixins and extends
 
 @mixin title-face {
   color: $heading-color;
+  @include font-display;
 }
 
 @mixin link {
@@ -94,7 +95,7 @@ Typographic mixins and extends
   @include copy-face;
   font-size: 1em; /* for browsers not supporting rem-based scale */
   font-size: ms(0);
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 @mixin li {

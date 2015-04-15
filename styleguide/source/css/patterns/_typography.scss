@@ -94,12 +94,14 @@ dl {
 }
 
 .pullquote {
-  font-size: ms(.75);
+  @include font-displayitalic;
+  font-size: ms(.875);
+  color: $gray;
   font-weight: 200;
   font-style: italic;
-  margin: 1em 2em;
+  margin: 1.5em 2em;
   padding: 0 2em;
-  border-left: 2px solid $border-color;
+  border-left: 3px solid $border-color;
 }
 
 
@@ -151,8 +153,4 @@ Special Formatting
 
 .caps {
   @include caps;
-}
-
-.phone {
-  font-size: ms(1);
 }

@@ -1,5 +1,4 @@
 header {
-	border-bottom: 1px solid black;
 	text-align: center;
 	position: relative;
 
@@ -16,6 +15,11 @@ header {
 		}
 	}
 
+	.phone {
+	  font-size: ms(1);
+	  color: $red;
+	}
+
 	.emergency {
 		padding-bottom: 1em;
 		@include breakpoint($nav-breakpoint) {
@@ -26,6 +30,26 @@ header {
 
 		.button-link {
 			margin-top: 1em;
+			color: $red;
+			border-color: $red;
+			text-transform: uppercase;
+			font-weight: bold;
+
+			&:hover, &:target, &:active {
+				color: white;
+				background-color: $red;
+			}
+	
+			@include breakpoint($nav-breakpoint) {
+				&:before {
+					content: "Click here for ";
+					display: block;
+					@include small;
+					text-transform: none;
+					font-weight: normal;
+					margin-bottom: .25em;
+				}
+			}
 		}
 
 		p {
@@ -53,15 +77,15 @@ header {
 	}
 
 	a {
-		// background: url("../img/logo-temp.svg") 0 0 no-repeat; SVG if possible
-		background: url("../img/logo-temp.png") center no-repeat;
+		background: url("../img/hickory-logo.png") center no-repeat;
+		background: url("../img/hickory-logo.svg") 0 0 no-repeat; // SVG if possible
 		position: relative;
 		display: block;
 		text-indent: -9999px; 
 		text-decoration: none;
-		width: 221px;
-		height: 82px;
-		background-size: 221px 82px;
+		width: 296px;
+		height: 110px;
+		background-size: 296px 110px;
 	}
 }
 
@@ -72,7 +96,8 @@ header {
 .mobilenav-trigger {
 	color: white;
 	padding: 1em;
-	background-color: $gray-light-2;
+	margin-bottom: 1em;
+	background-color: $link-color;
 
 	&:before {
 		content: "\f0c9";

@@ -1,39 +1,71 @@
-.nav-main, .nav-footer {
-	li {
-		display: block;
-		@include divider-bottom;
-
-		&:last-child {
-			border: none;
-		}
-
-		@include breakpoint($nav-breakpoint) {
-			display: inline-block;
-			@include divider-none;
-			padding: 0 .5em;
-		}
-		@include breakpoint($l2) {
-			padding: 0 1em;
-		}
-		@include breakpoint($xl) {
-			padding: 0 1.5em;
-		}
-	}
-}
-
 .nav-main {
 	clear: both;
 	overflow: hidden;
 	max-height: 0;
 	@include animate;
-	margin: 1em 0;
+	background-color: tint($tan, 90%);
 
 	&.active {
 		max-height: 40em;
+		padding: 1.5em 0;
 	}
 
 	@include breakpoint($nav-breakpoint) {
 		max-height: none;
+		padding: 0;
+	}
+
+	li {
+		display: block;
+		@include divider-bottom;
+		padding-bottom: 1em;
+		border-color: $link-color;
+
+		&#search {
+			display: none;
+
+			@include breakpoint($nav-breakpoint) {
+				display: inline-block;
+			}		
+		}
+
+		&:last-child {
+			a {
+				border: none;
+			}
+		}
+
+		@include breakpoint($nav-breakpoint) {
+			display: inline-block;
+			@include divider-none;
+			margin-right: -.3em;
+		}
+
+		a {
+			@include breakpoint($nav-breakpoint) {
+				padding: 1em .5em;
+				border-right: $dotted-border;
+				border-color: tint($tan, 75%);
+			}
+
+			@include breakpoint($l2) {
+				padding: 1em;
+			}
+			@include breakpoint($xl) {
+				padding: 1em 1.5em;
+			}
+
+		}
+	}
+
+	a {
+		color: $text-color;
+	}
+
+	a.active {
+		background: $mainnav-active;
+		font-weight: bold;
+		text-decoration: none;
 	}
 
 	form { /* inline search form on mobile */
@@ -43,26 +75,45 @@
 			display: none;
 		}		
 	}
+}
 
-	a#search {
-		display: none;
+.nav-footer {
+	li {
+		display: block;
+		@include divider-bottom;
+		padding-bottom: 1em;
+		border-color: $link-color;
+
+		&:last-child {
+			a {
+				border: none;
+			}
+		}
 
 		@include breakpoint($nav-breakpoint) {
 			display: inline-block;
-		}		
+			@include divider-none;
+			margin-right: -.3em;
+		}
+
+		a {
+			@include breakpoint($nav-breakpoint) {
+				padding: 1em;
+			}
+		}
 	}
 }
+
 
 .nav-secondary {
 	li {
 		@include divider-bottom;
-	}
 
-	a {
 		&:before {
 			content: "\f178";
 			font-family: "FontAwesome";
 			margin-right: .5em;
+			color: $link-color;
 		}
 	}
 }

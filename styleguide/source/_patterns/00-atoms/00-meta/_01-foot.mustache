@@ -49,6 +49,7 @@
 			/* Megamenu */
 
 		    $(".nav-main #about").click(function(){
+		    	$(".nav-main a").not(this).removeClass("active");
 		    	$(this).toggleClass('active');
 		        $("#megamenu-about").toggleClass("active");
 		    });
@@ -57,6 +58,7 @@
 		    });
 
 		    $(".nav-main #services").click(function(){
+		    	$(".nav-main a").not(this).removeClass("active");
 		    	$(this).toggleClass('active');
 		        $("#megamenu-services").toggleClass("active");
 		    });
@@ -65,6 +67,7 @@
 		    });
 
 		    $(".nav-main #pet-owners").click(function(){
+		    	$(".nav-main a").not(this).removeClass("active");
 		    	$(this).toggleClass('active');
 		        $("#megamenu-pet-owners").toggleClass("active");
 		    });
@@ -73,6 +76,7 @@
 		    });
 
 		    $(".nav-main #veterinarians").click(function(){
+		    	$(".nav-main a").not(this).removeClass("active");
 		    	$(this).toggleClass('active');
 		        $("#megamenu-veterinarians").toggleClass("active");
 		    });
@@ -81,6 +85,7 @@
 		    });
 
 		    $(".nav-main #news-events").click(function(){
+		    	$(".nav-main a").not(this).removeClass("active");
 		    	$(this).toggleClass('active');
 		        $("#megamenu-news-events").toggleClass("active");
 		    });
@@ -88,11 +93,12 @@
 		        $("#megamenu-news-events").removeClass("active");
 		    });
 
-		    $(".nav-main #search").click(function(){
+		    $(".nav-main #search a").click(function(){
+		    	$(".nav-main a").not(this).removeClass("active");
 		    	$(this).toggleClass('active');
 		        $("#megamenu-search").toggleClass("active");
 		    });
-		    $("a").not("#search").click(function(){
+		    $("a").not("#search a").click(function(){
 		        $("#megamenu-search").removeClass("active");
 		    });
 

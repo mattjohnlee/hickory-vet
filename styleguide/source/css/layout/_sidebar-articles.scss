@@ -2,30 +2,35 @@
 	margin-bottom: $section-spacing;
 	position: relative;
 	overflow: hidden;
+}
 
-	h3 {
-		@include divider-bottom(5px);
-	}
+.sidebar-article-title {
+	@include title-strikethrough($blue);
 }
 
 .doctor-quote {
 	@include divider-top;
 	@include divider-bottom;
+	padding: 1em 0;
+	color: $red;
+	
 	p {
-		font-style: italic;
 		margin-left: 3em;
+		@include font-displayitalic;
+		position: relative;
 
 		&:before {
 			content: "“";
-			font-size: 5em;
-			position: absolute;
-			left: 0;
-			top: .5rem;
-			line-height: 1;
+			  font-size: 5em;
+			  position: absolute;
+			  left: -.6em;
+			  top: -.1em;
+			  line-height: 1;
 		}
 	}
 
 	cite {
 		margin-left: 3em;
+		font-family: $serif;
 	}
 }

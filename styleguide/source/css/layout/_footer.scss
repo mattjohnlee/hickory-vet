@@ -1,7 +1,7 @@
 footer {
 	@include clearfix;
 	clear: both;
-	padding: $section-spacing 0 0 0; 
+	padding: $section-spacing*.75 0 0 0; 
 	background-color: $footer-background-color;
 	color: $footer-text-color;
 
@@ -12,6 +12,10 @@ footer {
 	p, li {
 		margin-bottom: 0;
 		@include small;
+	}
+
+	a {
+		color: $footer-text-color;
 	}
 }
 
@@ -28,7 +32,18 @@ footer {
 	margin-bottom: $section-spacing;
 	@include breakpoint($nav-breakpoint) {
 		float: right;
+		margin-bottom: 0;
 	}	
+
+	> * {
+		display: inline-block;
+	}
+
+	.phone {
+		border-right: 1px solid;
+		border-left: 1px solid;
+		padding: 0 1em;
+	}
 }
 
 .backtotop {

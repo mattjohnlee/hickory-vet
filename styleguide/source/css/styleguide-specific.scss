@@ -173,9 +173,19 @@ $animate-quick: 0.2s;
 
 	.sg-swatch {
 		display: block;
-		height: 4em;
+		height: 6em;
 		width: 100%;
-		margin: 0;	
+		margin: 0 0 1em;	
+
+		&.red {
+			background-color: $red;
+		}
+		&.blue {
+			background-color: $blue;
+		}
+		&.tan {
+			background-color: $tan;
+		}
 	}
 
 	.sg-label {
