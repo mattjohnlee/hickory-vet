@@ -9,7 +9,7 @@
 
 	h3 {
 		background-color: $homepage-highlight-color;
-		@include background-gradient-h(lighten($homepage-highlight-color, 10%), $homepage-highlight-color);
+		@include background-gradient-h(tint($homepage-highlight-color, 20%), $homepage-highlight-color);
 		border-color: tint($homepage-highlight-color,50%);
 	}
 
