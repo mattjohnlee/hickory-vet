@@ -28,6 +28,21 @@
 	}
 }
 
+.megamenu-title {
+	@include title-strikethrough($gray-light-5);
+
+	h3 {
+		color: $blue;
+		@include background-gradient-v($mainnav-active, tint($mainnav-active,10%));
+	}
+
+	a, a:hover, a:focus {
+		color: $blue;
+	}
+}
+
+
+
 #megamenu-about, #megamenu-veterinarians, #megamenu-news-events {
 	.nav-secondary {
 		@include column(3);

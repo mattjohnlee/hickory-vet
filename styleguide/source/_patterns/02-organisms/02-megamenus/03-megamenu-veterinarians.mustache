@@ -3,13 +3,17 @@
 		{{>molecules-secondary-nav }}
 		<div class="megamenu-highlights">
 			<div>
-				<h3><a href="{{url}}">Upcoming Education Events</a></h3>
+				<div class="megamenu-title">
+					<h3><a href="{{url}}">Upcoming Education Events</a></h3>
+				</div>
 				{{# listItems.two }}
 				    {{>molecules-news-preview}}
 				{{/ listItems.two }}	
 			</div>
 			<div>
-				<h3>Join Mailing List</h3>
+				<div class="megamenu-title">
+					<h3>Join Mailing List</h3>
+				</div>
 				<p>{{excerpt.short}}</p>
 				{{>molecules-inline-form}}
 			</div>

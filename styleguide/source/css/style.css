@@ -1372,7 +1372,7 @@ h1 {
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
-  font-size: 2.75em;
+  font-size: 2.61803em;
   /* for browsers not supporting rem-based scale */
   font-size: 2.61803rem;
 }
@@ -1402,7 +1402,7 @@ h2 {
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
-  font-size: 2.25em;
+  font-size: 2.32128em;
   /* for browsers not supporting rem-based scale */
   font-size: 2.32128rem;
 }
@@ -1432,9 +1432,11 @@ h3 {
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
-  font-size: 1.5em;
+  font-size: 1.46957em;
   /* for browsers not supporting rem-based scale */
-  font-size: 1.61803rem;
+  font-size: 1.46957rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 /* line 44, lib/_typographic-mixins.scss */
 h3:first-of-type {
@@ -1452,7 +1454,7 @@ h3 a:hover, h3 a:focus {
   text-decoration: underline;
 }
 
-/* line 20, patterns/_typography.scss */
+/* line 21, patterns/_typography.scss */
 h4 {
   color: #21589b;
   font-family: "Noto Serif", Georgia, serif;
@@ -1462,7 +1464,7 @@ h4 {
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
-  font-size: 1.2em;
+  font-size: 1.27202em;
   /* for browsers not supporting rem-based scale */
   font-size: 1.27202rem;
 }
@@ -1482,7 +1484,7 @@ h4 a:hover, h4 a:focus {
   text-decoration: underline;
 }
 
-/* line 24, patterns/_typography.scss */
+/* line 25, patterns/_typography.scss */
 h5 {
   color: #21589b;
   font-family: "Noto Serif", Georgia, serif;
@@ -1512,7 +1514,7 @@ h5 a:hover, h5 a:focus {
   text-decoration: underline;
 }
 
-/* line 28, patterns/_typography.scss */
+/* line 29, patterns/_typography.scss */
 h6 {
   color: #21589b;
   font-family: "Noto Serif", Georgia, serif;
@@ -1522,7 +1524,7 @@ h6 {
   margin: 1.5em 0 0.25em;
   line-height: 1.3;
   clear: both;
-  font-size: 0.875em;
+  font-size: 0.78615em;
   /* for browsers not supporting rem-based scale */
   font-size: 0.78615rem;
 }
@@ -1542,7 +1544,7 @@ h6 a:hover, h6 a:focus {
   text-decoration: underline;
 }
 
-/* line 32, patterns/_typography.scss */
+/* line 33, patterns/_typography.scss */
 .divider-bottom {
   padding-bottom: 0.5em;
   border-bottom: 1px solid;
@@ -1555,7 +1557,7 @@ h6 a:hover, h6 a:focus {
 Block-level Elements
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 44, patterns/_typography.scss */
+/* line 45, patterns/_typography.scss */
 p {
   font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -1568,12 +1570,12 @@ p {
   margin-bottom: 1em;
 }
 
-/* line 50, patterns/_typography.scss */
+/* line 51, patterns/_typography.scss */
 ul li, ol li {
   margin-bottom: 1em;
 }
 
-/* line 55, patterns/_typography.scss */
+/* line 56, patterns/_typography.scss */
 li {
   font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -1585,32 +1587,32 @@ li {
   line-height: 1.7;
 }
 
-/* line 59, patterns/_typography.scss */
+/* line 60, patterns/_typography.scss */
 ul.bullets {
   margin: 0 0 1em 0;
 }
-/* line 63, patterns/_typography.scss */
+/* line 64, patterns/_typography.scss */
 ul.bullets li {
   margin-left: .625em;
   text-indent: -.625em;
 }
-/* line 66, patterns/_typography.scss */
+/* line 67, patterns/_typography.scss */
 ul.bullets li:before {
   content: "• ";
 }
 
-/* line 72, patterns/_typography.scss */
+/* line 73, patterns/_typography.scss */
 ol.numbers {
   list-style: decimal;
   margin: 0 0 1em 1.5em;
 }
 
-/* line 77, patterns/_typography.scss */
+/* line 78, patterns/_typography.scss */
 dl {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 80, patterns/_typography.scss */
+/* line 81, patterns/_typography.scss */
 dl dt {
   font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -1623,12 +1625,12 @@ dl dt {
   float: left;
   clear: left;
 }
-/* line 84, patterns/_typography.scss */
+/* line 85, patterns/_typography.scss */
 dl dt:after {
   content: ":";
   margin-right: .25em;
 }
-/* line 89, patterns/_typography.scss */
+/* line 90, patterns/_typography.scss */
 dl dd {
   font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -1642,7 +1644,7 @@ dl dd {
   margin-bottom: 1em;
 }
 
-/* line 96, patterns/_typography.scss */
+/* line 97, patterns/_typography.scss */
 .pullquote, .thankyou-quote p {
   font-family: "Noto Serif", Georgia, serif;
   font-weight: 400;
@@ -1662,7 +1664,7 @@ dl dd {
 Inline Elements
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 115, patterns/_typography.scss */
+/* line 116, patterns/_typography.scss */
 strong, b {
   font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1670,12 +1672,12 @@ strong, b {
   font-stretch: normal;
 }
 
-/* line 119, patterns/_typography.scss */
+/* line 120, patterns/_typography.scss */
 em, i {
   font-style: italic;
 }
 
-/* line 123, patterns/_typography.scss */
+/* line 124, patterns/_typography.scss */
 .font-bolditalic {
   font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -1683,7 +1685,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 127, patterns/_typography.scss */
+/* line 128, patterns/_typography.scss */
 .font-display {
   font-family: "Noto Serif", Georgia, serif;
   font-weight: 400;
@@ -1691,7 +1693,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 131, patterns/_typography.scss */
+/* line 132, patterns/_typography.scss */
 .font-displayitalic {
   font-family: "Noto Serif", Georgia, serif;
   font-weight: 400;
@@ -1699,7 +1701,7 @@ em, i {
   font-stretch: normal;
 }
 
-/* line 135, patterns/_typography.scss */
+/* line 136, patterns/_typography.scss */
 .font-fallback {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
@@ -1709,19 +1711,19 @@ em, i {
 Special Formatting
 ////////////////////////////////////////////////////////////////////////////
 */
-/* line 146, patterns/_typography.scss */
+/* line 147, patterns/_typography.scss */
 .small {
   font-size: .875em;
 }
 
-/* line 150, patterns/_typography.scss */
+/* line 151, patterns/_typography.scss */
 .smallcaps {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .8em;
 }
 
-/* line 154, patterns/_typography.scss */
+/* line 155, patterns/_typography.scss */
 .caps {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2273,7 +2275,49 @@ footer a {
   padding: 2rem 1em;
 }
 
-/* line 32, layout/_megamenu.scss */
+/* line 31, layout/_megamenu.scss */
+.megamenu-title {
+  position: relative;
+  margin-bottom: 1em;
+}
+/* line 76, lib/_general-mixins.scss */
+.megamenu-title > * {
+  color: #cfccc8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  background-color: #fcfcfc;
+  padding: 0 .5em 0 0;
+  line-height: 1;
+  position: relative;
+}
+/* line 86, lib/_general-mixins.scss */
+.megamenu-title:after {
+  content: "";
+  display: block;
+  border-top: 3px solid #cfccc8;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: .65em;
+  z-index: -1;
+}
+/* line 34, layout/_megamenu.scss */
+.megamenu-title h3 {
+  color: #21589b;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZThkOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZWFkYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4e8d8), color-stop(100%, #f5eadb));
+  background-image: -moz-linear-gradient(top, #f4e8d8, #f5eadb);
+  background-image: -webkit-linear-gradient(top, #f4e8d8, #f5eadb);
+  background-image: linear-gradient(to bottom, #f4e8d8, #f5eadb);
+}
+/* line 39, layout/_megamenu.scss */
+.megamenu-title a, .megamenu-title a:hover, .megamenu-title a:focus {
+  color: #21589b;
+}
+
+/* line 47, layout/_megamenu.scss */
 #megamenu-about .nav-secondary, #megamenu-about .highlight-box ul, .highlight-box #megamenu-about ul, #megamenu-veterinarians .nav-secondary, #megamenu-veterinarians .highlight-box ul, .highlight-box #megamenu-veterinarians ul, #megamenu-news-events .nav-secondary, #megamenu-news-events .highlight-box ul, .highlight-box #megamenu-news-events ul {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2284,7 +2328,7 @@ footer a {
   margin-right: 3.5%;
   margin-left: 0;
 }
-/* line 36, layout/_megamenu.scss */
+/* line 51, layout/_megamenu.scss */
 #megamenu-about .megamenu-highlights, #megamenu-veterinarians .megamenu-highlights, #megamenu-news-events .megamenu-highlights {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2296,7 +2340,7 @@ footer a {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 40, layout/_megamenu.scss */
+/* line 55, layout/_megamenu.scss */
 #megamenu-about .megamenu-highlights > *, #megamenu-veterinarians .megamenu-highlights > *, #megamenu-news-events .megamenu-highlights > * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2327,7 +2371,7 @@ footer a {
   clear: both;
 }
 
-/* line 49, layout/_megamenu.scss */
+/* line 64, layout/_megamenu.scss */
 #megamenu-services .container > * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2358,7 +2402,7 @@ footer a {
   clear: both;
 }
 
-/* line 57, layout/_megamenu.scss */
+/* line 72, layout/_megamenu.scss */
 #megamenu-pet-owners .nav-secondary, #megamenu-pet-owners .highlight-box ul, .highlight-box #megamenu-pet-owners ul {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2369,7 +2413,7 @@ footer a {
   margin-right: 3.5%;
   margin-left: 0;
 }
-/* line 61, layout/_megamenu.scss */
+/* line 76, layout/_megamenu.scss */
 #megamenu-pet-owners .megamenu-highlights {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2382,15 +2426,15 @@ footer a {
   margin-right: 0;
 }
 
-/* line 68, layout/_megamenu.scss */
+/* line 83, layout/_megamenu.scss */
 #megamenu-veterinarians .news-preview, #megamenu-veterinarians .date, #megamenu-news-events .news-preview, #megamenu-news-events .date {
   margin-bottom: 0;
 }
-/* line 72, layout/_megamenu.scss */
+/* line 87, layout/_megamenu.scss */
 #megamenu-veterinarians .news-preview-image, #megamenu-veterinarians .tags, #megamenu-news-events .news-preview-image, #megamenu-news-events .tags {
   display: none;
 }
-/* line 76, layout/_megamenu.scss */
+/* line 91, layout/_megamenu.scss */
 #megamenu-veterinarians h2, #megamenu-news-events h2 {
   font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 400;
