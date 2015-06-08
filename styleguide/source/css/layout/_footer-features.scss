@@ -80,16 +80,3 @@
 		padding-bottom: $grid_padding;
 	}
 }
-
-/*
-.previously-featured-pets {
-	@include breakpoint($m) {
-		@include column(6);
-		@include last;
-	}
-	@include breakpoint($l) {
-		@include column(3);
-		@include last;
-	}
-}
-*/

@@ -1,10 +1,9 @@
 /* 
 ////////////////////////////////////////////////////////////////////////////
-From 40 Weeks, so it'll need some TLC
+site-wide form styles 
 ////////////////////////////////////////////////////////////////////////////
 */
 
-/* site-wide form styles */
 
 
 /* get rid of "default" iOS button styling for submit buttons */
@@ -55,12 +54,6 @@ textarea {
   min-height: 100px;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-    //float: left;
-    //margin-right: $form-padding;
-}
-
 form { 
   position: relative;
 }
@@ -78,23 +71,6 @@ label {
   overflow: hidden;
 
 }
-
-select, input[type="select"] {
-  /*
-  @include appearance(none);
-  font-size: 1rem;
-  outline: none;
-  padding: .65em 40px .65em 0; 
-  position: relative;
-  @include border-radius(0);
-  border: none;
-
-  &:active, &:focus {
-    @include font-regular;
-  } 
-  */
-}
-
 
 .field-container { 
   margin-bottom: 1.5rem;
