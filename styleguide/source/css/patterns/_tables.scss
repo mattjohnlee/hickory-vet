@@ -83,6 +83,13 @@ This query will take effect for any screen smaller than 1024px
 				@include font-bold;
 			}
 
+			&.please-call {
+				padding-left: 2em;
+				&:before {
+					content: none !important;
+				}
+			}
+
 			&:last-child {
 				border-bottom: none;
 			}
@@ -101,7 +108,7 @@ This query will take effect for any screen smaller than 1024px
 	}
 
 	/* Label for data on specific tables */
-	#investment-list {
+	#service-hours {
 		td:nth-of-type(1):before { content: ""; }
 		td:nth-of-type(2):before { content: "Sun"; }
 		td:nth-of-type(3):before { content: "Mon"; }
