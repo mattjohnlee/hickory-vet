@@ -2933,48 +2933,69 @@ footer a {
 }
 /* line 6, layout/_thankyou.scss */
 .thankyou-quote p {
-  padding: 0;
+  color: #413732;
+  padding: 0 0 0 1.5rem;
   margin: 0 0 .5em;
   border: none;
+  position: relative;
 }
-/* line 12, layout/_thankyou.scss */
+/* line 14, layout/_thankyou.scss */
+.thankyou-quote p:before, .thankyou-quote p:after {
+  position: absolute;
+  font-size: 3em;
+  line-height: .7;
+  color: #d9d6d3;
+}
+/* line 21, layout/_thankyou.scss */
 .thankyou-quote p:before {
   content: "“";
+  margin-left: -.55em;
 }
-/* line 15, layout/_thankyou.scss */
+/* line 25, layout/_thankyou.scss */
 .thankyou-quote p:after {
   content: "”";
 }
-/* line 20, layout/_thankyou.scss */
+/* line 30, layout/_thankyou.scss */
 .thankyou-quote cite {
   color: #a09991;
 }
-/* line 22, layout/_thankyou.scss */
+/* line 32, layout/_thankyou.scss */
 .thankyou-quote cite:before {
   content: "– ";
 }
 
-/* line 28, layout/_thankyou.scss */
+/* line 38, layout/_thankyou.scss */
 .thankyou-carousel {
   background: #f5f4f4;
   padding: 4rem 0;
   text-align: center;
 }
+/* line 43, layout/_thankyou.scss */
+.thankyou-carousel .button-link, .thankyou-carousel .button-link-arrow {
+  border-color: #ba2547;
+  background-color: white;
+  color: #ba2547;
+}
+/* line 48, layout/_thankyou.scss */
+.thankyou-carousel .button-link:hover, .thankyou-carousel .button-link-arrow:hover {
+  color: white;
+  background-color: #cb5b75;
+}
 
-/* line 34, layout/_thankyou.scss */
+/* line 55, layout/_thankyou.scss */
 .thankyou-unit {
   padding: 2rem;
   border: 1px solid #d9d6d3;
   margin-bottom: 3.5%;
 }
 
-/* line 40, layout/_thankyou.scss */
+/* line 61, layout/_thankyou.scss */
 .thankyou-featured p {
   font-size: 2em;
 }
 
 @media (min-width: 37.5em) {
-  /* line 45, layout/_thankyou.scss */
+  /* line 66, layout/_thankyou.scss */
   .thankyou-list .thankyou-unit {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3006,7 +3027,7 @@ footer a {
   }
 }
 @media (min-width: 64em) {
-  /* line 45, layout/_thankyou.scss */
+  /* line 66, layout/_thankyou.scss */
   .thankyou-list .thankyou-unit {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3038,7 +3059,7 @@ footer a {
   }
 }
 @media (min-width: 87.5em) {
-  /* line 45, layout/_thankyou.scss */
+  /* line 66, layout/_thankyou.scss */
   .thankyou-list .thankyou-unit {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;

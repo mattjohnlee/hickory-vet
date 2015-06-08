@@ -5,12 +5,22 @@
 
   p {
     @extend .pullquote;
-    padding: 0;
+    color: $text-color;
+    padding: 0 0 0 1.5rem;
     margin: 0 0 .5em;
     border: none;
+    position: relative;
+
+    &:before, &:after {
+      position: absolute;
+      font-size: 3em;
+      line-height: .7;
+      color: $gray-light-6;
+    }
 
     &:before {
       content: "“";
+      margin-left: -.55em;
     }
     &:after {
       content: "”";
@@ -29,6 +39,17 @@
   background: $gray-light-9;
   padding: $section-spacing*2 0;
   text-align: center;
+
+  .button-link {
+    border-color: $red;    
+    background-color: white;
+    color: $red;   
+
+    &:hover {
+      color: white;
+      background-color: tint($red, 25%);
+    } 
+  }
 }
 
 .thankyou-unit {
