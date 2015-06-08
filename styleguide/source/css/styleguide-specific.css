@@ -507,7 +507,7 @@ textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #d8d1cd;
+  color: #ac9b93;
   margin-left: 0;
   margin-right: 0;
   margin: 0;
@@ -549,13 +549,6 @@ textarea {
   min-height: 100px;
 }
 
-/* line 58, patterns/_forms.scss */
-input[type="checkbox"],
-input[type="radio"] {
-  float: left;
-  margin-right: 0.5rem;
-}
-
 /* line 64, patterns/_forms.scss */
 form {
   position: relative;
@@ -573,13 +566,12 @@ label {
   line-height: 1.7;
   font-size: .875em;
   display: block;
-  color: #d8d1cd;
+  color: #ac9b93;
   margin: 0 0 .25rem;
-  /* if you want to hide labels semantically 
+  /* if you want to hide labels semantically */
   position: absolute;
   height: 0;
   overflow: hidden;
-*/
 }
 
 /* line 82, patterns/_forms.scss */
@@ -607,31 +599,37 @@ select, input[type="select"] {
 /* line 105, patterns/_forms.scss */
 fieldset.checkboxes li {
   display: inline-block;
-  margin-right: 1em;
+  margin: .5em 1em 1em 0;
+}
+/* line 110, patterns/_forms.scss */
+fieldset.checkboxes label {
+  color: #413732;
+  position: relative;
+  height: auto;
 }
 
 /* set input placeholder color to text color */
-/* line 115, patterns/_forms.scss */
+/* line 121, patterns/_forms.scss */
 ::-webkit-input-placeholder {
-  color: #d8d1cd;
+  color: #ac9b93;
   vertical-align: top;
 }
 
-/* line 119, patterns/_forms.scss */
+/* line 125, patterns/_forms.scss */
 ::-moz-placeholder {
-  color: #d8d1cd;
+  color: #ac9b93;
   vertical-align: top;
 }
 
-/* line 123, patterns/_forms.scss */
+/* line 129, patterns/_forms.scss */
 :-ms-input-placeholder {
-  color: #d8d1cd;
+  color: #ac9b93;
   vertical-align: top;
 }
 
-/* line 127, patterns/_forms.scss */
+/* line 133, patterns/_forms.scss */
 :-moz-placeholder {
-  color: #d8d1cd;
+  color: #ac9b93;
   vertical-align: top;
 }
 
@@ -3703,11 +3701,6 @@ footer a {
   width: calc(100% - 3.5em);
 }
 /* line 17, layout/_form-group.scss */
-.form-group.inline label {
-  visibility: hidden;
-  height: 0;
-}
-/* line 21, layout/_form-group.scss */
 .form-group.inline button {
   padding: 0.5rem 0;
   margin-left: .5em;

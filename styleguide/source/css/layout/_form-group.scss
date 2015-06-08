@@ -14,10 +14,6 @@
 		fieldset {
 			width: calc(100% - 3.5em);
 		}
-		label {
-			visibility: hidden;
-			height: 0;
-		}
 		button {
 			padding: $form-padding 0;
 			margin-left: .5em;

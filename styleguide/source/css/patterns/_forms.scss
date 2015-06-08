@@ -57,8 +57,8 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-    float: left;
-    margin-right: $form-padding;
+    //float: left;
+    //margin-right: $form-padding;
 }
 
 form { 
@@ -72,11 +72,11 @@ label {
   color: $text-color-subtle;
   margin: 0 0 .25rem;
 
-  /* if you want to hide labels semantically 
+  /* if you want to hide labels semantically */
   position: absolute;
   height: 0;
   overflow: hidden;
-*/
+
 }
 
 select, input[type="select"] {
@@ -104,7 +104,13 @@ fieldset {
   &.checkboxes {
     li {
       display: inline-block;
-      margin-right: 1em;
+      margin: .5em 1em 1em 0;
+    }
+
+    label {
+      color: $text-color;
+      position: relative;
+      height: auto;
     }
   }
 }
