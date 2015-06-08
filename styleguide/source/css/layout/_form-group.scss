@@ -1,0 +1,29 @@
+.form-group {
+	&.inline {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		@include box-sizing(border-box);
+
+		> * {
+			display: inline-block;
+			clear: none;
+			float: none;
+		}
+
+		fieldset {
+			width: calc(100% - 3.5em);
+		}
+		label {
+			visibility: hidden;
+			height: 0;
+		}
+		button {
+			padding: $form-padding 0;
+			margin-left: .5em;
+			text-align: center;
+			width: 3em;
+			line-height: 1;
+		}
+	}
+}

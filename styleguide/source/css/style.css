@@ -892,13 +892,13 @@ figure figcaption {
   text-decoration: none;
 }
 /* line 71, patterns/_navigation.scss */
-.nav-main form {
+.nav-main form.inline {
   /* inline search form on mobile */
   padding: 0 1em;
 }
 @media (min-width: 64em) {
   /* line 71, patterns/_navigation.scss */
-  .nav-main form {
+  .nav-main form.inline {
     display: none;
   }
 }
@@ -3626,6 +3626,39 @@ footer a {
   .news-preview-image {
     width: 25%;
   }
+}
+
+/* line 2, layout/_form-group.scss */
+.form-group.inline {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 8, layout/_form-group.scss */
+.form-group.inline > * {
+  display: inline-block;
+  clear: none;
+  float: none;
+}
+/* line 14, layout/_form-group.scss */
+.form-group.inline fieldset {
+  width: calc(100% - 3.5em);
+}
+/* line 17, layout/_form-group.scss */
+.form-group.inline label {
+  visibility: hidden;
+  height: 0;
+}
+/* line 21, layout/_form-group.scss */
+.form-group.inline button {
+  padding: 0.5rem 0;
+  margin-left: .5em;
+  text-align: center;
+  width: 3em;
+  line-height: 1;
 }
 
 /* individual components, usually from Bower*/

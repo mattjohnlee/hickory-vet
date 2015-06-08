@@ -68,7 +68,7 @@
 		text-decoration: none;
 	}
 
-	form { /* inline search form on mobile */
+	form.inline { /* inline search form on mobile */
 		padding: 0 1em;
 
 		@include breakpoint($nav-breakpoint) {

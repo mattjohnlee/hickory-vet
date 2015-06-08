@@ -901,13 +901,13 @@ figure figcaption {
   text-decoration: none;
 }
 /* line 71, patterns/_navigation.scss */
-.nav-main form {
+.nav-main form.inline {
   /* inline search form on mobile */
   padding: 0 1em;
 }
 @media (min-width: 64em) {
   /* line 71, patterns/_navigation.scss */
-  .nav-main form {
+  .nav-main form.inline {
     display: none;
   }
 }
@@ -920,7 +920,7 @@ figure figcaption {
   margin-bottom: 1em;
   border-color: #d9d6d3;
   padding-bottom: 1em;
-  border-color: #d6a663;
+  border-color: #a09991;
 }
 /* line 88, patterns/_navigation.scss */
 .nav-footer li:last-child a {
@@ -1121,17 +1121,22 @@ input.is-error {
 .social-media li {
   display: inline-block;
   font-size: 1.75em;
-  margin: 1em 1em 1em 0;
+  margin: 0 .5em;
 }
 @media (min-width: 64em) {
   /* line 2, patterns/_social-media.scss */
   .social-media li {
-    margin: 0 .75em .75em 0;
     font-size: 1.25em;
   }
 }
+@media (min-width: 75em) {
+  /* line 2, patterns/_social-media.scss */
+  .social-media li {
+    margin: 0 .75em 0 0;
+  }
+}
 
-/* line 14, patterns/_social-media.scss */
+/* line 16, patterns/_social-media.scss */
 .icon-label {
   position: absolute;
   height: 0;
@@ -2033,6 +2038,7 @@ header .emergency p {
 .main-logo {
   margin-bottom: 20px;
   display: inline-block;
+  max-width: 100%;
 }
 @media (min-width: 64em) {
   /* line 71, layout/_header.scss */
@@ -2040,7 +2046,7 @@ header .emergency p {
     float: none;
   }
 }
-/* line 79, layout/_header.scss */
+/* line 80, layout/_header.scss */
 .main-logo a {
   background: url("../img/hickory-logo.png") center no-repeat;
   background: url("../img/hickory-logo.svg") 0 0 no-repeat;
@@ -2051,32 +2057,33 @@ header .emergency p {
   width: 296px;
   height: 110px;
   background-size: 296px 110px;
+  max-width: 100%;
 }
 
-/* line 92, layout/_header.scss */
+/* line 94, layout/_header.scss */
 .ie8 header .main-logo a {
   background: url("../img/logo-temp.png") 0 0 no-repeat;
 }
 
-/* line 96, layout/_header.scss */
+/* line 98, layout/_header.scss */
 .mobilenav-trigger {
   color: white;
   padding: 1em;
   margin-bottom: 1em;
   background-color: #d6a663;
 }
-/* line 102, layout/_header.scss */
+/* line 104, layout/_header.scss */
 .mobilenav-trigger:before {
   content: "\f0c9";
   font-family: "FontAwesome";
   margin-right: .5em;
 }
-/* line 109, layout/_header.scss */
+/* line 111, layout/_header.scss */
 .mobilenav-trigger.active:before {
   content: "\f00d";
 }
 @media (min-width: 64em) {
-  /* line 96, layout/_header.scss */
+  /* line 98, layout/_header.scss */
   .mobilenav-trigger {
     display: none;
   }
@@ -2091,7 +2098,13 @@ footer {
   background-color: #dbd5c9;
   color: #a09991;
 }
-/* line 8, layout/_footer.scss */
+@media (min-width: 75em) {
+  /* line 1, layout/_footer.scss */
+  footer {
+    padding: 1.5rem 0;
+  }
+}
+/* line 12, layout/_footer.scss */
 footer .footer-padding {
   position: relative;
   margin: auto;
@@ -2103,50 +2116,86 @@ footer .footer-padding {
   *zoom: 1;
   clear: both;
 }
-/* line 12, layout/_footer.scss */
+/* line 16, layout/_footer.scss */
 footer p, footer li {
   margin-bottom: 0;
   font-size: .875em;
 }
-/* line 17, layout/_footer.scss */
+/* line 21, layout/_footer.scss */
 footer a {
   color: #a09991;
 }
 
-/* line 23, layout/_footer.scss */
+/* line 27, layout/_footer.scss */
 .nav-footer li:first-child {
   padding-left: 0;
 }
-@media (min-width: 64em) {
-  /* line 22, layout/_footer.scss */
+@media (min-width: 75em) {
+  /* line 26, layout/_footer.scss */
   .nav-footer {
     float: left;
+    margin-top: .625em;
   }
 }
 
-/* line 31, layout/_footer.scss */
+/* line 36, layout/_footer.scss */
 .footer-contact {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 @media (min-width: 64em) {
-  /* line 31, layout/_footer.scss */
+  /* line 36, layout/_footer.scss */
   .footer-contact {
-    float: right;
-    margin-bottom: 0;
+    width: auto;
   }
 }
-/* line 38, layout/_footer.scss */
-.footer-contact > * {
-  display: inline-block;
+@media (min-width: 75em) {
+  /* line 36, layout/_footer.scss */
+  .footer-contact {
+    float: right;
+    margin: 0;
+  }
 }
-/* line 42, layout/_footer.scss */
+/* line 52, layout/_footer.scss */
+.footer-contact > * {
+  display: block;
+  text-align: center;
+  margin: 1em auto;
+}
+@media (min-width: 37.5em) {
+  /* line 52, layout/_footer.scss */
+  .footer-contact > * {
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
+  }
+}
+/* line 64, layout/_footer.scss */
 .footer-contact .phone {
-  border-right: 1px solid;
-  border-left: 1px solid;
   padding: 0 1em;
 }
+@media (min-width: 37.5em) {
+  /* line 64, layout/_footer.scss */
+  .footer-contact .phone {
+    border-right: 1px solid;
+    border-left: 1px solid;
+  }
+}
+/* line 72, layout/_footer.scss */
+.footer-contact .aaha-logo {
+  width: 2em;
+  margin: 0 auto;
+  padding: 0 1em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
 
-/* line 49, layout/_footer.scss */
+/* line 80, layout/_footer.scss */
 .backtotop {
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -2154,7 +2203,7 @@ footer a {
   clear: both;
   text-align: center;
 }
-/* line 56, layout/_footer.scss */
+/* line 87, layout/_footer.scss */
 .backtotop a {
   color: #dbd5c9;
   padding: 1.5em;
@@ -2162,16 +2211,16 @@ footer a {
   display: block;
   text-decoration: none;
 }
-/* line 63, layout/_footer.scss */
+/* line 94, layout/_footer.scss */
 .backtotop a:hover, .backtotop a:active {
   background-color: #b3ada7;
 }
-/* line 67, layout/_footer.scss */
+/* line 98, layout/_footer.scss */
 .backtotop a i {
   margin-right: 1em;
 }
 @media (min-width: 64em) {
-  /* line 49, layout/_footer.scss */
+  /* line 80, layout/_footer.scss */
   .backtotop {
     display: none;
   }
@@ -2730,10 +2779,10 @@ footer a {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
   border: 5px solid #21589b;
 }
 @media (min-width: 64em) {
@@ -2814,10 +2863,10 @@ footer a {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
   border: 5px solid #21589b;
 }
 /* line 46, layout/_footer-features.scss */
@@ -2873,10 +2922,10 @@ footer a {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
   border: 5px solid #ba2547;
 }
 /* line 65, layout/_footer-features.scss */
@@ -2942,48 +2991,69 @@ footer a {
 }
 /* line 6, layout/_thankyou.scss */
 .thankyou-quote p {
-  padding: 0;
+  color: #413732;
+  padding: 0 0 0 1.5rem;
   margin: 0 0 .5em;
   border: none;
+  position: relative;
 }
-/* line 12, layout/_thankyou.scss */
+/* line 14, layout/_thankyou.scss */
+.thankyou-quote p:before, .thankyou-quote p:after {
+  position: absolute;
+  font-size: 3em;
+  line-height: .7;
+  color: #d9d6d3;
+}
+/* line 21, layout/_thankyou.scss */
 .thankyou-quote p:before {
   content: "“";
+  margin-left: -.55em;
 }
-/* line 15, layout/_thankyou.scss */
+/* line 25, layout/_thankyou.scss */
 .thankyou-quote p:after {
   content: "”";
 }
-/* line 20, layout/_thankyou.scss */
+/* line 30, layout/_thankyou.scss */
 .thankyou-quote cite {
   color: #a09991;
 }
-/* line 22, layout/_thankyou.scss */
+/* line 32, layout/_thankyou.scss */
 .thankyou-quote cite:before {
   content: "– ";
 }
 
-/* line 28, layout/_thankyou.scss */
+/* line 38, layout/_thankyou.scss */
 .thankyou-carousel {
   background: #f5f4f4;
   padding: 4rem 0;
   text-align: center;
 }
+/* line 43, layout/_thankyou.scss */
+.thankyou-carousel .button-link, .thankyou-carousel .button-link-arrow {
+  border-color: #ba2547;
+  background-color: white;
+  color: #ba2547;
+}
+/* line 48, layout/_thankyou.scss */
+.thankyou-carousel .button-link:hover, .thankyou-carousel .button-link-arrow:hover {
+  color: white;
+  background-color: #cb5b75;
+}
 
-/* line 34, layout/_thankyou.scss */
+/* line 55, layout/_thankyou.scss */
 .thankyou-unit {
   padding: 2rem;
   border: 1px solid #d9d6d3;
   margin-bottom: 3.5%;
 }
 
-/* line 40, layout/_thankyou.scss */
+/* line 61, layout/_thankyou.scss */
 .thankyou-featured p {
   font-size: 2em;
 }
 
 @media (min-width: 37.5em) {
-  /* line 45, layout/_thankyou.scss */
+  /* line 66, layout/_thankyou.scss */
   .thankyou-list .thankyou-unit {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3015,7 +3085,7 @@ footer a {
   }
 }
 @media (min-width: 64em) {
-  /* line 45, layout/_thankyou.scss */
+  /* line 66, layout/_thankyou.scss */
   .thankyou-list .thankyou-unit {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3047,7 +3117,7 @@ footer a {
   }
 }
 @media (min-width: 87.5em) {
-  /* line 45, layout/_thankyou.scss */
+  /* line 66, layout/_thankyou.scss */
   .thankyou-list .thankyou-unit {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3565,6 +3635,39 @@ footer a {
   .news-preview-image {
     width: 25%;
   }
+}
+
+/* line 2, layout/_form-group.scss */
+.form-group.inline {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 8, layout/_form-group.scss */
+.form-group.inline > * {
+  display: inline-block;
+  clear: none;
+  float: none;
+}
+/* line 14, layout/_form-group.scss */
+.form-group.inline fieldset {
+  width: calc(100% - 3.5em);
+}
+/* line 17, layout/_form-group.scss */
+.form-group.inline label {
+  visibility: hidden;
+  height: 0;
+}
+/* line 21, layout/_form-group.scss */
+.form-group.inline button {
+  padding: 0.5rem 0;
+  margin-left: .5em;
+  text-align: center;
+  width: 3em;
+  line-height: 1;
 }
 
 /* individual components, usually from Bower*/
