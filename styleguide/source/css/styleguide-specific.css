@@ -1675,10 +1675,7 @@ Inline Elements
 */
 /* line 116, patterns/_typography.scss */
 strong, b {
-  font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-style: normal;
-  font-stretch: normal;
 }
 
 /* line 120, patterns/_typography.scss */
