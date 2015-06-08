@@ -77,6 +77,12 @@ This query will take effect for any screen smaller than 1024px
 			position: relative;
 			padding-left: 50%;
 
+			&:first-child {
+				padding-left: 2em;
+				text-align: center;
+				@include font-bold;
+			}
+
 			&:last-child {
 				border-bottom: none;
 			}
@@ -89,7 +95,6 @@ This query will take effect for any screen smaller than 1024px
 			top: 1.05em; /* compensates for smallcaps styling; if no smallcaps, reset this to .8em so it matches the td padding */
 			left: .7em;
 			width: 45%; 
-			@include font-bold;
 			padding-right: 10px; 
 			white-space: nowrap;
 		}

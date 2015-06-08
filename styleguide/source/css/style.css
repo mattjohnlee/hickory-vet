@@ -1215,10 +1215,19 @@ This query will take effect for any screen smaller than 1024px
     padding-left: 50%;
   }
   /* line 80, patterns/_tables.scss */
+  table.responsive td:first-child {
+    padding-left: 2em;
+    text-align: center;
+    font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+  }
+  /* line 86, patterns/_tables.scss */
   table.responsive td:last-child {
     border-bottom: none;
   }
-  /* line 85, patterns/_tables.scss */
+  /* line 91, patterns/_tables.scss */
   table.responsive td:before {
     /* Now like a table header */
     position: absolute;
@@ -1227,44 +1236,40 @@ This query will take effect for any screen smaller than 1024px
     /* compensates for smallcaps styling; if no smallcaps, reset this to .8em so it matches the td padding */
     left: .7em;
     width: 45%;
-    font-family: "CustomFont", "Montserrat", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
     padding-right: 10px;
     white-space: nowrap;
   }
 
   /* Label for data on specific tables */
-  /* line 100, patterns/_tables.scss */
+  /* line 105, patterns/_tables.scss */
   #investment-list td:nth-of-type(1):before {
     content: "";
   }
-  /* line 101, patterns/_tables.scss */
+  /* line 106, patterns/_tables.scss */
   #investment-list td:nth-of-type(2):before {
     content: "Sun";
   }
-  /* line 102, patterns/_tables.scss */
+  /* line 107, patterns/_tables.scss */
   #investment-list td:nth-of-type(3):before {
     content: "Mon";
   }
-  /* line 103, patterns/_tables.scss */
+  /* line 108, patterns/_tables.scss */
   #investment-list td:nth-of-type(4):before {
     content: "Tues";
   }
-  /* line 104, patterns/_tables.scss */
+  /* line 109, patterns/_tables.scss */
   #investment-list td:nth-of-type(5):before {
     content: "Wed";
   }
-  /* line 105, patterns/_tables.scss */
+  /* line 110, patterns/_tables.scss */
   #investment-list td:nth-of-type(6):before {
     content: "Thu";
   }
-  /* line 106, patterns/_tables.scss */
+  /* line 111, patterns/_tables.scss */
   #investment-list td:nth-of-type(7):before {
     content: "Fri";
   }
-  /* line 107, patterns/_tables.scss */
+  /* line 112, patterns/_tables.scss */
   #investment-list td:nth-of-type(8):before {
     content: "Sat";
   }
