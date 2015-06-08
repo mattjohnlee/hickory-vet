@@ -108,6 +108,8 @@
 .nav-secondary {
 	li {
 		@include divider-bottom;
+		padding-left: 1.5em;
+		text-indent: -1.5em;
 
 		&:before {
 			content: "\f178";
