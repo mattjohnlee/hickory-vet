@@ -2721,10 +2721,10 @@ footer a {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
   border: 5px solid #21589b;
 }
 @media (min-width: 64em) {
@@ -2805,10 +2805,10 @@ footer a {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
   border: 5px solid #21589b;
 }
 /* line 46, layout/_footer-features.scss */
@@ -2864,10 +2864,10 @@ footer a {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
   border: 5px solid #ba2547;
 }
 /* line 65, layout/_footer-features.scss */
