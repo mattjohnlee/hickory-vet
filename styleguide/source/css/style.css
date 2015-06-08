@@ -1304,34 +1304,47 @@ This query will take effect for any screen smaller than 1024px
 }
 
 /* line 9, patterns/_toggle.scss */
+.toggle {
+  margin-bottom: 2em;
+}
+
+/* line 13, patterns/_toggle.scss */
 .toggle-trigger {
   position: relative;
-  padding: 1em 0 1em 1em;
-  border-top: 1px solid;
+  padding: .25em 0 1em 4em;
+  border-top: 1px solid #21589b;
 }
-/* line 14, patterns/_toggle.scss */
+/* line 18, patterns/_toggle.scss */
 .toggle-trigger:before {
   content: '+';
+  font-size: 1.5em;
+  padding: .25em .125em;
+  width: 1.25em;
+  text-align: center;
+  line-height: 1;
   position: absolute;
   left: 0;
+  top: -1px;
+  background-color: #21589b;
+  color: white;
 }
-/* line 20, patterns/_toggle.scss */
+/* line 32, patterns/_toggle.scss */
 .toggle-trigger:hover {
   cursor: pointer;
 }
-/* line 22, patterns/_toggle.scss */
+/* line 34, patterns/_toggle.scss */
 .toggle-trigger:hover > * {
   color: #bb8231;
 }
-/* line 27, patterns/_toggle.scss */
+/* line 39, patterns/_toggle.scss */
 .toggle-trigger.active:before {
-  content: '-';
+  content: '—';
 }
-/* line 31, patterns/_toggle.scss */
+/* line 43, patterns/_toggle.scss */
 .toggle-trigger p {
   margin: 0;
 }
-/* line 35, patterns/_toggle.scss */
+/* line 47, patterns/_toggle.scss */
 .toggle-trigger h2, .toggle-trigger h4, .toggle-trigger h4 {
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -1349,10 +1362,10 @@ This query will take effect for any screen smaller than 1024px
   /* prevents funny bounce on toggle */
 }
 
-/* line 41, patterns/_toggle.scss */
+/* line 53, patterns/_toggle.scss */
 .toggle-target {
   display: none;
-  padding: 0 0 1em 1em;
+  padding: 0 0 1em 4em;
 }
 
 /* 
