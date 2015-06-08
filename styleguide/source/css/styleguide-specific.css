@@ -2124,7 +2124,7 @@ footer a {
 }
 /* line 21, layout/_megamenu.scss */
 .megamenu.active {
-  max-height: 50em;
+  max-height: 60em;
   border-width: .5rem;
 }
 /* line 26, layout/_megamenu.scss */
