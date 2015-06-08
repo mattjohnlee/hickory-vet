@@ -82,7 +82,7 @@
 		display: block;
 		@include divider-bottom;
 		padding-bottom: 1em;
-		border-color: $link-color;
+		border-color: $footer-text-color;
 
 		&:last-child {
 			a {

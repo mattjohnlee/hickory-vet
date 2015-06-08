@@ -71,6 +71,7 @@ header {
 .main-logo {
 	margin-bottom: 20px;
 	display: inline-block;
+	max-width: 100%;
 
 	@include breakpoint($nav-breakpoint) {
 		float: none;
@@ -86,6 +87,7 @@ header {
 		width: 296px;
 		height: 110px;
 		background-size: 296px 110px;
+		max-width: 100%;
 	}
 }
 

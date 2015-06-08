@@ -5,6 +5,10 @@ footer {
 	background-color: $footer-background-color;
 	color: $footer-text-color;
 
+	@include breakpoint($l2) {
+		padding: $section-spacing*.75 0; 
+	}	
+
 	.footer-padding {
 		@include container;
 	}
@@ -23,26 +27,53 @@ footer {
 	li:first-child {
 		padding-left: 0;
 	}
-	@include breakpoint($nav-breakpoint) {
+	@include breakpoint($l2) {
 		float: left;
+		margin-top: .625em;
 	}	
 }
 
 .footer-contact {
-	margin-bottom: $section-spacing;
+	margin: $section-spacing 0;
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	@include box-sizing(border-box);
+
 	@include breakpoint($nav-breakpoint) {
+		width: auto;
+	}
+
+	@include breakpoint($l2) {
 		float: right;
-		margin-bottom: 0;
+		margin: 0;
 	}	
 
 	> * {
-		display: inline-block;
+		display: block;
+		text-align: center;
+		margin: 1em auto;
+
+		@include breakpoint($s) {
+			display: table-cell;
+			margin: 0;
+			vertical-align: middle;
+		}	
 	}
 
 	.phone {
-		border-right: 1px solid;
-		border-left: 1px solid;
 		padding: 0 1em;
+		@include breakpoint($s) {
+			border-right: 1px solid;
+			border-left: 1px solid;
+		}	
+	}
+
+	.aaha-logo {
+		width: 2em;
+		margin: 0 auto;
+		padding: 0 1em;
+		@include opacity(.4);
 	}
 }
 
