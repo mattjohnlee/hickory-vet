@@ -1811,7 +1811,7 @@ header {
   header .contact-info {
     position: absolute;
     top: 1em;
-    left: 1em;
+    left: 3em;
     text-align: left;
   }
 }
@@ -1833,7 +1833,7 @@ header .emergency {
   header .emergency {
     position: absolute;
     top: 1em;
-    right: 1em;
+    right: 3em;
   }
 }
 /* line 31, layout/_header.scss */
