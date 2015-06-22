@@ -4,6 +4,7 @@
 	max-height: 0;
 	@include animate;
 	background-color: tint($tan, 90%);
+	margin: -1em 0 1em;
 
 	&.active {
 		max-height: 40em;
@@ -12,6 +13,7 @@
 
 	@include breakpoint($nav-breakpoint) {
 		max-height: none;
+		margin: 0;
 		padding: 0;
 	}
 

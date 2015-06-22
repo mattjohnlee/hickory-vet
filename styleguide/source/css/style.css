@@ -794,8 +794,9 @@ figure figcaption {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
   background-color: #f7f3ed;
+  margin: -1em 0 1em;
 }
-/* line 8, patterns/_navigation.scss */
+/* line 9, patterns/_navigation.scss */
 .nav-main.active {
   max-height: 40em;
   padding: 1.5em 0;
@@ -804,10 +805,11 @@ figure figcaption {
   /* line 1, patterns/_navigation.scss */
   .nav-main {
     max-height: none;
+    margin: 0;
     padding: 0;
   }
 }
-/* line 18, patterns/_navigation.scss */
+/* line 20, patterns/_navigation.scss */
 .nav-main li {
   display: block;
   padding-bottom: 0.5em;
@@ -817,22 +819,22 @@ figure figcaption {
   padding-bottom: 1em;
   border-color: #d6a663;
 }
-/* line 24, patterns/_navigation.scss */
+/* line 26, patterns/_navigation.scss */
 .nav-main li#search {
   display: none;
 }
 @media (min-width: 64em) {
-  /* line 24, patterns/_navigation.scss */
+  /* line 26, patterns/_navigation.scss */
   .nav-main li#search {
     display: inline-block;
   }
 }
-/* line 33, patterns/_navigation.scss */
+/* line 35, patterns/_navigation.scss */
 .nav-main li:last-child a {
   border: none;
 }
 @media (min-width: 64em) {
-  /* line 18, patterns/_navigation.scss */
+  /* line 20, patterns/_navigation.scss */
   .nav-main li {
     display: inline-block;
     padding: 0;
@@ -842,7 +844,7 @@ figure figcaption {
   }
 }
 @media (min-width: 64em) {
-  /* line 44, patterns/_navigation.scss */
+  /* line 46, patterns/_navigation.scss */
   .nav-main li a {
     padding: 1em .5em;
     border-right: 2px dotted #d9d6d3;
@@ -850,40 +852,40 @@ figure figcaption {
   }
 }
 @media (min-width: 75em) {
-  /* line 44, patterns/_navigation.scss */
+  /* line 46, patterns/_navigation.scss */
   .nav-main li a {
     padding: 1em;
   }
 }
 @media (min-width: 87.5em) {
-  /* line 44, patterns/_navigation.scss */
+  /* line 46, patterns/_navigation.scss */
   .nav-main li a {
     padding: 1em 1.5em;
   }
 }
-/* line 61, patterns/_navigation.scss */
+/* line 63, patterns/_navigation.scss */
 .nav-main a {
   color: #413732;
 }
-/* line 65, patterns/_navigation.scss */
+/* line 67, patterns/_navigation.scss */
 .nav-main a.active {
   background: #f4e8d8;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 71, patterns/_navigation.scss */
+/* line 73, patterns/_navigation.scss */
 .nav-main form.inline {
   /* inline search form on mobile */
   padding: 0 1em;
 }
 @media (min-width: 64em) {
-  /* line 71, patterns/_navigation.scss */
+  /* line 73, patterns/_navigation.scss */
   .nav-main form.inline {
     display: none;
   }
 }
 
-/* line 81, patterns/_navigation.scss */
+/* line 83, patterns/_navigation.scss */
 .nav-footer li {
   display: block;
   padding-bottom: 0.5em;
@@ -893,12 +895,12 @@ figure figcaption {
   padding-bottom: 1em;
   border-color: #a09991;
 }
-/* line 88, patterns/_navigation.scss */
+/* line 90, patterns/_navigation.scss */
 .nav-footer li:last-child a {
   border: none;
 }
 @media (min-width: 64em) {
-  /* line 81, patterns/_navigation.scss */
+  /* line 83, patterns/_navigation.scss */
   .nav-footer li {
     display: inline-block;
     padding: 0;
@@ -908,13 +910,13 @@ figure figcaption {
   }
 }
 @media (min-width: 64em) {
-  /* line 99, patterns/_navigation.scss */
+  /* line 101, patterns/_navigation.scss */
   .nav-footer li a {
     padding: 1em;
   }
 }
 
-/* line 109, patterns/_navigation.scss */
+/* line 111, patterns/_navigation.scss */
 .nav-secondary li, .highlight-box ul li {
   padding-bottom: 0.5em;
   border-bottom: 1px solid;
@@ -923,7 +925,7 @@ figure figcaption {
   padding-left: 1.5em;
   text-indent: -1.5em;
 }
-/* line 114, patterns/_navigation.scss */
+/* line 116, patterns/_navigation.scss */
 .nav-secondary li:before, .highlight-box ul li:before {
   content: "\f178";
   font-family: "FontAwesome";
